@@ -1,6 +1,10 @@
 /*/
-!/NLogSample/
 
+# ホワイトリスト
+!/NLogSample/
+!/OxyPlotSample/
+
+# 共通設定
 .vs/
 bin/
 obj/
