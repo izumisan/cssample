@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Prism.Mvvm;
 using OxyPlot;
+using OxyPlot.Axes;
 using OxyPlot.Series;
 
 namespace OxyPlotSample2
@@ -31,10 +32,23 @@ namespace OxyPlotSample2
             line.Points.Add( new DataPoint( 2.0, 0.0 ) );
             line.Points.Add( new DataPoint( 3.0, 1.0 ) );
             line.Points.Add( new DataPoint( 4.0, 0.0 ) );
+            line.Points.Add( new DataPoint( 5.0, 1.0 ) );
+            line.Points.Add( new DataPoint( 6.0, 0.0 ) );
 
             line.Title = "line";
 
             Model.Series.Add( line );
+
+
+            // 軸の設定
+            Model.Axes.Add( new LinearAxis
+            {
+                Position = AxisPosition.Bottom,
+                Minimum = 0.0,
+                Maximum = 6.0
+            } );
+
+            Model.InvalidatePlot( true );
         }
 
         public PlotModel Model { get; private set; } = new PlotModel();
