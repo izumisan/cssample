@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OxyPlotSample", "OxyPlotSample\OxyPlotSample.csproj", "{A838A387-D48F-4021-B834-5AC6EEA71F84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OxyPlotSample2", "OxyPlotSample2\OxyPlotSample2.csproj", "{0795256C-FF9C-4978-82F2-13C20441AC26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A838A387-D48F-4021-B834-5AC6EEA71F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A838A387-D48F-4021-B834-5AC6EEA71F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A838A387-D48F-4021-B834-5AC6EEA71F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A838A387-D48F-4021-B834-5AC6EEA71F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0795256C-FF9C-4978-82F2-13C20441AC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0795256C-FF9C-4978-82F2-13C20441AC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0795256C-FF9C-4978-82F2-13C20441AC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0795256C-FF9C-4978-82F2-13C20441AC26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D56715B-9CCF-4DA4-A347-6D8EB82E3115}
+	EndGlobalSection
+EndGlobal
