@@ -2,6 +2,7 @@
 /*/
 
 # ホワイトリスト
+!/ConfigurationTransformSample/
 !/NLogSample/
 !/OxyPlotSample/
 !/SpeechSynthesizerSample/
