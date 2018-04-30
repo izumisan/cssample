@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextToSpeech", "TextToSpeech\TextToSpeech.csproj", "{C43FD64F-30E1-4B7E-8004-B78CFA783B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechSynthesizerSapmple", "SpeechSynthesizerSapmple\SpeechSynthesizerSapmple.csproj", "{AB8F5FFE-969C-475A-9CF3-A201355190D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechSynthesizerSample", "SpeechSynthesizerSample\SpeechSynthesizerSample.csproj", "{AB8F5FFE-969C-475A-9CF3-A201355190D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

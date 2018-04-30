@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AB8F5FFE-969C-475A-9CF3-A201355190D2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SpeechSynthesizerSapmple</RootNamespace>
-    <AssemblyName>SpeechSynthesizerSapmple</AssemblyName>
+    <RootNamespace>SpeechSynthesizerSample</RootNamespace>
+    <AssemblyName>SpeechSynthesizerSample</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

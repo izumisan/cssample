@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Speech.Synthesis;
 
-namespace SpeechSynthesizerSapmple
+namespace SpeechSynthesizerSample
 {
     class Program
     {
