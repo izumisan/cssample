@@ -6,6 +6,7 @@
 !/NLogSample/
 !/OxyPlotSample/
 !/SpeechSynthesizerSample/
+!/StatelessSample/
 
 # 共通設定
 .vs/
