@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactivePropertySample", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactivePropertySample2", "ReactivePropertySample2\ReactivePropertySample2.csproj", "{172385CD-542A-4C67-93EA-CBABBD49DCAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactivePropertySample3", "ReactivePropertySample3\ReactivePropertySample3.csproj", "{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{172385CD-542A-4C67-93EA-CBABBD49DCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172385CD-542A-4C67-93EA-CBABBD49DCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172385CD-542A-4C67-93EA-CBABBD49DCAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
