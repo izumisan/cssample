@@ -13,3 +13,8 @@ ReactivePropertyの基礎
 ReactivePropertyの基礎（その2）
 - CompositeDisposable
 - RxプロパティからRxコマンドの生成
+
+## ReactivePropertySample3
+
+ReactivePropertyの基礎（その3）
+- ReactivePropertyによる値の検証
