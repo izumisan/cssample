@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactivePropertySample2", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactivePropertySample3", "ReactivePropertySample3\ReactivePropertySample3.csproj", "{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableSample", "ObservableSample\ObservableSample.csproj", "{6CCA0D70-0711-4680-A4AA-FEBB5BC0F49A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C88DC04-30A7-43B0-9E1B-A605C2A6F890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCA0D70-0711-4680-A4AA-FEBB5BC0F49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCA0D70-0711-4680-A4AA-FEBB5BC0F49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCA0D70-0711-4680-A4AA-FEBB5BC0F49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCA0D70-0711-4680-A4AA-FEBB5BC0F49A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
