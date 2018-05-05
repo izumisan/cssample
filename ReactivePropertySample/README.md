@@ -18,3 +18,21 @@ ReactivePropertyの基礎（その2）
 
 ReactivePropertyの基礎（その3）
 - ReactivePropertyによる値の検証
+
+## ObservableSample
+
+IObservable\<T\>の生成
+- Observable.Repeat()
+- Observable.Range()
+- Observable.Generate()
+- Observable.Defer()
+- Observable.Timer()
+- Observable.Interval()
+
+# Hot / Cold Observable
+
+- Hot Observable  
+    IObservable\<T\>を購読している全てのIObserver\<T\>に対し、同時に同じ値を発行する
+
+- Cold Observable  
+    IObservable\<T\>を購読しているそれぞれのIObserver\<T\>に対し、それぞれ個別に値を発行する
