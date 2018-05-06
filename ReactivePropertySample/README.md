@@ -26,8 +26,16 @@ IObservable\<T\>の生成
 - Observable.Range()
 - Observable.Generate()
 - Observable.Defer()
+- Observable.Skip()
+- Observable.Take()
+
+## ObservableSample2
+
+IObservable\<T\>の生成（その2）
 - Observable.Timer()
 - Observable.Interval()
+- Observable.Delay()
+- Observable.Sample()
 
 # Hot / Cold Observable
 
