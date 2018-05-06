@@ -28,11 +28,11 @@ namespace ObservableSample
             Debug.Print( @"---Observable.Defer()" );
             DeferExample();
 
-            Debug.Print( @"---Observable.Timer()" );
-            TimerExample();
+            Debug.Print( @"---Observable.Skip()" );
+            SkipExample();
 
-            Debug.Print( @"---Observable.Interval()" );
-            IntervalExample();
+            Debug.Print( @"---Observable.Take()" );
+            TakeExample();
         }
 
         /// <summary>
@@ -99,21 +99,26 @@ namespace ObservableSample
 
         static void GenerateExample2()
         {
-            // 2秒おきに値を発行するIO<T>を生成する
+            // 0.1秒おきに値を発行するIO<T>を生成する
             var source = Observable.Generate(
                 0,
-                i => i < 5,
+                i => i < 10,
                 i => ++i,
                 i => i,
-                _ => TimeSpan.FromSeconds( 2.0 ) );
+                _ => TimeSpan.FromSeconds( 0.1 ) );
+
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
             var subscription = source.Subscribe(
-                i => Debug.Print( $@"OnNext({i})" ),
-                ex => Debug.Print( $@"OnError({ex.Message})" ),
-                () => Debug.Print( $@"Completed()" ) );
+                i => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnNext({i})" ),
+                ex => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnError({ex.Message})" ),
+                () => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) Completed()" ) );
 
-            // Completedが発行されるまでの10秒以上待機する
-            Task.Delay( TimeSpan.FromSeconds( 10.5 ) ).Wait();
+            // Completedが発行されるまでの1秒以上待機する
+            Task.Delay( TimeSpan.FromSeconds( 1.2 ) ).Wait();
+
+            stopwatch.Stop();
 
             subscription.Dispose();
         }
@@ -171,45 +176,35 @@ namespace ObservableSample
         }
 
         /// <summary>
-        /// Observable.Timer()
-        /// 
-        /// 指定した時間おきに値を発行するIO<T>を生成する
+        /// Observble.Skip()
         /// </summary>
-        static void TimerExample()
+        static void SkipExample()
         {
-            // 5秒後から1秒おきに発行するIO<T>の生成
-            var source = Observable.Timer(
-                TimeSpan.FromSeconds( 5.0 ),
-                TimeSpan.FromSeconds( 1.0 ) );
-                
-            var subscription = source.Subscribe(
+            var source = Observable.Range( 0, 10 );
+
+            var subscription = source
+                .Skip( 3 )
+                .Subscribe(
                 i => Debug.Print( $@"OnNext({i})" ),
                 ex => Debug.Print( $@"OnError({ex.Message})" ),
                 () => Debug.Print( $@"Completed()" ) );
-
-            // 動作確認のためのウェイト
-            Task.Delay( TimeSpan.FromSeconds( 10.0 ) ).Wait();
 
             subscription.Dispose();
         }
 
         /// <summary>
-        /// Observable.Interval()
-        /// 
-        /// 指定した時間おきに値を発行するIO<T>を生成する
+        /// Observable.Take()
         /// </summary>
-        static void IntervalExample()
+        static void TakeExample()
         {
-            // 1秒おきに発行するIO<T>の生成
-            var source = Observable.Interval( TimeSpan.FromSeconds( 1.0 ) );
+            var source = Observable.Range( 0, 10 );
 
-            var subscription = source.Subscribe(
+            var subscription = source
+                .Take( 3 )
+                .Subscribe(
                 i => Debug.Print( $@"OnNext({i})" ),
                 ex => Debug.Print( $@"OnError({ex.Message})" ),
                 () => Debug.Print( $@"Completed()" ) );
-
-            // 動作確認のためのウェイト
-            Task.Delay( TimeSpan.FromSeconds( 5.0 ) ).Wait();
 
             subscription.Dispose();
         }
