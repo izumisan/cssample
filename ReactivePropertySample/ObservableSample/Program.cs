@@ -107,13 +107,18 @@ namespace ObservableSample
                 i => i,
                 _ => TimeSpan.FromSeconds( 2.0 ) );
 
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             var subscription = source.Subscribe(
-                i => Debug.Print( $@"OnNext({i})" ),
-                ex => Debug.Print( $@"OnError({ex.Message})" ),
-                () => Debug.Print( $@"Completed()" ) );
+                i => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnNext({i})" ),
+                ex => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnError({ex.Message})" ),
+                () => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) Completed()" ) );
 
             // Completedが発行されるまでの10秒以上待機する
             Task.Delay( TimeSpan.FromSeconds( 10.5 ) ).Wait();
+
+            stopwatch.Stop();
 
             subscription.Dispose();
         }
@@ -181,14 +186,19 @@ namespace ObservableSample
             var source = Observable.Timer(
                 TimeSpan.FromSeconds( 5.0 ),
                 TimeSpan.FromSeconds( 1.0 ) );
-                
+
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             var subscription = source.Subscribe(
-                i => Debug.Print( $@"OnNext({i})" ),
-                ex => Debug.Print( $@"OnError({ex.Message})" ),
-                () => Debug.Print( $@"Completed()" ) );
+                i => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnNext({i})" ),
+                ex => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnError({ex.Message})" ),
+                () => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) Completed()" ) );
 
             // 動作確認のためのウェイト
             Task.Delay( TimeSpan.FromSeconds( 10.0 ) ).Wait();
+
+            stopwatch.Stop();
 
             subscription.Dispose();
         }
@@ -203,13 +213,18 @@ namespace ObservableSample
             // 1秒おきに発行するIO<T>の生成
             var source = Observable.Interval( TimeSpan.FromSeconds( 1.0 ) );
 
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             var subscription = source.Subscribe(
-                i => Debug.Print( $@"OnNext({i})" ),
-                ex => Debug.Print( $@"OnError({ex.Message})" ),
-                () => Debug.Print( $@"Completed()" ) );
+                i => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnNext({i})" ),
+                ex => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) OnError({ex.Message})" ),
+                () => Debug.Print( $@"({stopwatch.ElapsedMilliseconds} msec) Completed()" ) );
 
             // 動作確認のためのウェイト
             Task.Delay( TimeSpan.FromSeconds( 5.0 ) ).Wait();
+
+            stopwatch.Stop();
 
             subscription.Dispose();
         }
