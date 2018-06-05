@@ -3,6 +3,7 @@
 
 # ホワイトリスト
 !/ConfigurationTransformSample/
+!/MSTestSample/
 !/NLogSample/
 !/OxyPlotSample/
 !/ReactivePropertySample/
@@ -14,3 +15,4 @@
 bin/
 obj/
 packages/
+[Tt]est[Rr]esult*/
