@@ -91,13 +91,13 @@ namespace MSTestSample
 
         [TestMethod]
         [TestCategory( "S" )]
-        [Description( "テストケースによるテストメソッド" )]
+        [Description( "外部ファイルによるパラメトリックテスト" )]
         [DataSource( "Microsoft.VisualStudio.TestTools.DataSource.CSV", @"|DataDirectory|\testdata\SumCalculatorTestData.csv", "SumCalculatorTestData#csv", DataAccessMethod.Sequential )]
-        public void SumCalculatorのテスト3()
+        public void SumCalculatorのパラメトリックテスト()
         {
             //@@@ DataSourceを利用するには、参照先に「System.Data」を追加する必要がある
 
-            Trace.WriteLine( nameof( SumCalculatorのテスト3 ) );
+            Trace.WriteLine( nameof( SumCalculatorのパラメトリックテスト ) );
 
             double a = double.Parse( TestContext.DataRow["arg1"].ToString() );
             double b = double.Parse( TestContext.DataRow["arg2"].ToString() );

@@ -22,6 +22,13 @@
 - ExpectedException
 - Timeout
 
+# パラメトリックテスト
+
+- DataSourceでデータファイルを指定する
+- DataTestMethod, DataRowでテストケースを設定する
+- DataTestMethod, DynamicDataでデータメソッドを指定する
+- DataTestMethod, DynamicDataでデータプロパティを指定する
+
 # Privateメソッドのテスト
 
 PrivateObjectクラスを利用する.
