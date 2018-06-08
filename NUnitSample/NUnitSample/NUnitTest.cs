@@ -34,6 +34,7 @@ namespace NUnitSample
 
         #region テストターゲット
         private Func<double, double, double> SumCalculator { get; set; } = ( a, b ) => { return a + b; };
+        private Action ThrowExceptionAction { get; set; } = () => { throw new Exception( "hoge" ); };
         #endregion
 
         //----------------------------------------------------------------------
@@ -148,6 +149,31 @@ namespace NUnitSample
             yield return new object[] { 1.0, 3.0, 4.0 };
             yield return new object[] { 2.0, 6.0, 8.0 };
             yield return new object[] { 2.0, -6.0, -4.0 };
+        }
+
+        //----------------------------------------------------------------------
+        /// <summary>
+        /// 例外のテスト (旧アサーション)
+        /// </summary>
+        [Test]
+        public void 例外のテスト_旧モデル()
+        {
+            Trace.WriteLine( nameof( 例外のテスト_旧モデル ) );
+
+            Assert.Throws<Exception>( () => ThrowExceptionAction() );
+        }
+
+        //----------------------------------------------------------------------
+        /// <summary>
+        /// 例外のテスト (新アサーション)
+        /// </summary>
+        [Test]
+        public void 例外のテスト_新モデル()
+        {
+            Trace.WriteLine( nameof( 例外のテスト_新モデル ) );
+
+            Assert.That( () => ThrowExceptionAction(), Throws.Exception );
+            Assert.That( () => ThrowExceptionAction(), Throws.Exception.TypeOf<Exception>().And.Message.EqualTo( "hoge" ) );
         }
 
         //----------------------------------------------------------------------
