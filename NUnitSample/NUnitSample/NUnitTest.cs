@@ -149,5 +149,24 @@ namespace NUnitSample
             yield return new object[] { 2.0, 6.0, 8.0 };
             yield return new object[] { 2.0, -6.0, -4.0 };
         }
+
+        //----------------------------------------------------------------------
+        [Test]
+        [Property( "key1", 10 )]
+        [Property( "key1", 20 )]
+        [Property( "key1", 30 )]
+        public void Property属性の利用()
+        {
+            var context = TestContext.CurrentContext;
+
+            Trace.WriteLine( context.Test.Name );
+
+            var key1 = context.Test.Properties["key1"];
+
+            Assert.That( key1.Count(), Is.EqualTo( 3 ) );
+            Assert.That( key1.ElementAt( 0 ), Is.EqualTo( 10 ) );
+            Assert.That( key1.ElementAt( 1 ), Is.EqualTo( 20 ) );
+            Assert.That( key1.ElementAt( 2 ), Is.EqualTo( 30 ) );
+        }
     }
 }
