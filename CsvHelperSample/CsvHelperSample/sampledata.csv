@@ -1,0 +1,12 @@
+string,int,double,month,month2,month3
+hoge0,0,0.0,0,none,none
+hoge1,1,1.1,1,jan,jan
+hoge2,2,2.2,2,feb,feb
+# comment line
+hoge3,3,3.3,3,3,3
+# blank line
+
+hoge4,4,4.4,4,4,4
+# empty data
+,,,,,
+hoge5,5,5.5,5,5,5
