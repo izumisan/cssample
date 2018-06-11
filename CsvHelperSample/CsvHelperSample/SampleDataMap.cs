@@ -27,6 +27,9 @@ namespace CsvHelperSample
 
             // 汎用コンバータを使用(数値指定 or 要素名指定 に対応)
             Map( x => x.Month3 ).Name( "month3" ).TypeConverter<GenericEnumConverter<MonthEnum>>().Default( 0 );
+
+
+            References<FooDataMap>( x => x.Foo );
         }
     }
 }

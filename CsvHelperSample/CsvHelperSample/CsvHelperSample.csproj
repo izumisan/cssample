@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FooData.cs" />
+    <Compile Include="FooDataMap.cs" />
     <Compile Include="GenericEnumConverter.cs" />
     <Compile Include="MonthEnum.cs" />
     <Compile Include="MonthEnumConverter.cs" />
