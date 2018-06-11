@@ -14,5 +14,7 @@ namespace CsvHelperSample
         public MonthEnum Month { get; set; } = MonthEnum.None;
         public MonthEnum Month2 { get; set; } = MonthEnum.None;
         public MonthEnum Month3 { get; set; } = MonthEnum.None;
+
+        public FooData Foo { get; set; } = new FooData();
     }
 }
