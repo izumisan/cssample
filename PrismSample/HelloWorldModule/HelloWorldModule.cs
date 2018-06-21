@@ -22,10 +22,10 @@ namespace HelloWorldModule
 
         public void Initialize()
         {
-            // ViewModelの登録
+            // UnityコンテナにViewModelを登録
             this.Container.RegisterType<MessageProvider>( new ContainerControlledLifetimeManager() );
 
-            // Viewの登録
+            // UnityコンテナにViewを登録
             this.Container.RegisterType<object, HelloWorldView>( nameof( HelloWorldView ) );
 
             this.RegionManager.RequestNavigate( "MainRegion", nameof( HelloWorldView ) );

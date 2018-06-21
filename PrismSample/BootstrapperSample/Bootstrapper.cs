@@ -28,6 +28,7 @@ namespace BootstrapperSample
         {
             base.ConfigureModuleCatalog();
 
+            // モジュールをカタログに追加
             var catalog = this.ModuleCatalog as ModuleCatalog;
             catalog.AddModule( typeof( HelloWorldModule.HelloWorldModule ) );
         }
