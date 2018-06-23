@@ -32,6 +32,7 @@ namespace InteractionRequestApp
             var catalog = this.ModuleCatalog as ModuleCatalog;
 
             catalog.AddModule( typeof( NotificationModule.NotificationModule ) );
+            catalog.AddModule( typeof( ConfirmationModule.ConfirmationModule ) );
         }
     }
 }
