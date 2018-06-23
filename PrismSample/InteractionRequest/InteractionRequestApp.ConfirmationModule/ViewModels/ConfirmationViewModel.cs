@@ -34,22 +34,22 @@ namespace InteractionRequestApp.ConfirmationModule.ViewModels
         {
             Message = "now selecting...";
 
-            var confirmation = new Confirmation
+            ConfirmationRequest.Raise( new Confirmation
             {
                 Title = "タイトル",
                 Content = "コンテンツ"
-            };
-
-            ConfirmationRequest.Raise( confirmation );
-
-            if ( confirmation.Confirmed )
+            },
+            ( c ) =>
             {
-                Message = "OK selected.";
-            }
-            else
-            {
-                Message = "Cancel selected.";
-            }
+                if ( c.Confirmed )
+                {
+                    Message = "OK selected.";
+                }
+                else
+                {
+                    Message = "Cancel selected.";
+                }
+            } );
         }
     }
 }
