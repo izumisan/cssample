@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldModule", "HelloWorldModule\HelloWorldModule.csproj", "{4F70A0C6-0339-4C74-A0E4-809C5E843A74}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrapper", "Bootstrapper", "{F9F560A8-D0F9-4A9C-A9F6-0DBD70AD8C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapperSample", "BootstrapperSample\BootstrapperSample.csproj", "{39F61A87-7605-4D7A-87A2-DD195CB650F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapperSample", "Bootstrapper\BootstrapperSample\BootstrapperSample.csproj", "{39F61A87-7605-4D7A-87A2-DD195CB650F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldModule", "Bootstrapper\HelloWorldModule\HelloWorldModule.csproj", "{4F70A0C6-0339-4C74-A0E4-809C5E843A74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InteractionRequest", "InteractionRequest", "{6FDA80AD-3A78-4557-8EF4-9C87B373F440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp", "InteractionRequest\InteractionRequestApp\InteractionRequestApp.csproj", "{3DE6C6CE-06A6-43A6-9E93-4480EE38127D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.NotificationModule", "InteractionRequest\InteractionRequestApp.NotificationModule\InteractionRequestApp.NotificationModule.csproj", "{4CB86035-0E46-426E-87DE-4E93ABD83D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.ConfirmationModule", "InteractionRequest\InteractionRequestApp.ConfirmationModule\InteractionRequestApp.ConfirmationModule.csproj", "{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.CustomModule", "InteractionRequest\InteractionRequestApp.CustomModule\InteractionRequestApp.CustomModule.csproj", "{1139B0E3-44D2-4BEF-883F-82026FB92E50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +25,41 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39F61A87-7605-4D7A-87A2-DD195CB650F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39F61A87-7605-4D7A-87A2-DD195CB650F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F61A87-7605-4D7A-87A2-DD195CB650F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F61A87-7605-4D7A-87A2-DD195CB650F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F70A0C6-0339-4C74-A0E4-809C5E843A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE6C6CE-06A6-43A6-9E93-4480EE38127D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE6C6CE-06A6-43A6-9E93-4480EE38127D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE6C6CE-06A6-43A6-9E93-4480EE38127D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE6C6CE-06A6-43A6-9E93-4480EE38127D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB86035-0E46-426E-87DE-4E93ABD83D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB86035-0E46-426E-87DE-4E93ABD83D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB86035-0E46-426E-87DE-4E93ABD83D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB86035-0E46-426E-87DE-4E93ABD83D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39F61A87-7605-4D7A-87A2-DD195CB650F3} = {F9F560A8-D0F9-4A9C-A9F6-0DBD70AD8C73}
+		{4F70A0C6-0339-4C74-A0E4-809C5E843A74} = {F9F560A8-D0F9-4A9C-A9F6-0DBD70AD8C73}
+		{3DE6C6CE-06A6-43A6-9E93-4480EE38127D} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
+		{4CB86035-0E46-426E-87DE-4E93ABD83D58} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
+		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
+		{1139B0E3-44D2-4BEF-883F-82026FB92E50} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3ADE7C6-52F2-42E4-8A03-0DFF368C719F}
