@@ -16,6 +16,14 @@ Prism.UnityによるBootstarapperのサンプル
 
 InteractionRequestを用いたダイアログ表示のサンプル
 
+### Module
+
+- NotificationModule
+- ConfirmationModule
+- CustomModule
+- DefaultDialogModule
+
+
 ### Memo
 
 - InteractionRequestはMessengerパターンにおけるMessegerクラス

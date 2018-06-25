@@ -34,6 +34,7 @@ namespace InteractionRequestApp
             catalog.AddModule( typeof( NotificationModule.NotificationModule ) );
             catalog.AddModule( typeof( ConfirmationModule.ConfirmationModule ) );
             catalog.AddModule( typeof( CustomModule.CustomModule ) );
+            catalog.AddModule( typeof( DefaultDialogModule.DefaultDialogModule ) );
         }
     }
 }

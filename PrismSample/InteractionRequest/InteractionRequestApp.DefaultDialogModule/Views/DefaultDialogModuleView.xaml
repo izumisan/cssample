@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="InteractionRequestApp.DefaultDialogModule.Views.DefaultDialogModuleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:view="clr-namespace:InteractionRequestApp.DefaultDialogModule.Views"
+             xmlns:ta="clr-namespace:InteractionRequestApp.DefaultDialogModule.TriggerAction"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest}">
+            <ta:DefaultDialogAction/>
+        </prism:InteractionRequestTrigger>
+
+        <prism:InteractionRequestTrigger SourceObject="{Binding ConfirmationRequest}">
+            <ta:DefaultDialogAction/>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="4. DefaultDialogModule"/>
+        <Label Grid.Row="1" Content="{Binding Message}"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="OK Dialog" Command="{Binding NotificationCommand}"/>
+            <Button Grid.Column="1" Content="OK Cancel Dialog" Command="{Binding ConfirmationCommand}"/>
+        </Grid>
+        
+    </Grid>
+</UserControl>
