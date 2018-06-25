@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.Confi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.CustomModule", "InteractionRequest\InteractionRequestApp.CustomModule\InteractionRequestApp.CustomModule.csproj", "{1139B0E3-44D2-4BEF-883F-82026FB92E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestApp.DefaultDialogModule", "InteractionRequest\InteractionRequestApp.DefaultDialogModule\InteractionRequestApp.DefaultDialogModule.csproj", "{423DD1E3-CB7E-4C3A-8912-10E9D1954712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1139B0E3-44D2-4BEF-883F-82026FB92E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423DD1E3-CB7E-4C3A-8912-10E9D1954712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423DD1E3-CB7E-4C3A-8912-10E9D1954712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423DD1E3-CB7E-4C3A-8912-10E9D1954712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423DD1E3-CB7E-4C3A-8912-10E9D1954712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{4CB86035-0E46-426E-87DE-4E93ABD83D58} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
 		{D10A0E83-7B4E-42E0-B89E-AF2E0B9A98D1} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
 		{1139B0E3-44D2-4BEF-883F-82026FB92E50} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
+		{423DD1E3-CB7E-4C3A-8912-10E9D1954712} = {6FDA80AD-3A78-4557-8EF4-9C87B373F440}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3ADE7C6-52F2-42E4-8A03-0DFF368C719F}
