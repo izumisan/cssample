@@ -31,3 +31,17 @@ InteractionRequestを用いたダイアログ表示のサンプル
 - Notificationは、「OK」ボタンのみ
 - Confirmationは、「OK」「Cancel」ボタン
 - InteractionRequest.RaiseAsyncメソッドは廃止されたっぽい [#672](https://github.com/PrismLibrary/Prism/issues/678)
+
+## 3. DIContainerAppプロジェクト
+
+- UnityによるDIサンプル
+- Prism Template Packを利用してみた
+
+### DIContainerApp.CountModule
+
+ViewModelにModelをDI（コンストラクタインジェクション）したサンプル
+
+### DIContainerApp.DoubleModule
+
+ViewModelにModelをDI（プロパティインジェクション）したサンプル
+
