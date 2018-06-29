@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIContainerApp.CountModule"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIContainerApp.DoubleModule", "DIContainer\DIContainerApp.DoubleModule\DIContainerApp.DoubleModule.csproj", "{AB777E75-CF65-4DB0-91C8-523AC2C9B986}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifetimeManagerSample", "DIContainer\LifetimeManagerSample\LifetimeManagerSample.csproj", "{48488E25-A6C9-4988-BE70-3DEFE80522A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{AB777E75-CF65-4DB0-91C8-523AC2C9B986}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB777E75-CF65-4DB0-91C8-523AC2C9B986}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB777E75-CF65-4DB0-91C8-523AC2C9B986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48488E25-A6C9-4988-BE70-3DEFE80522A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48488E25-A6C9-4988-BE70-3DEFE80522A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48488E25-A6C9-4988-BE70-3DEFE80522A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48488E25-A6C9-4988-BE70-3DEFE80522A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{3F277D86-39F7-44E1-8B3A-A6807A938D5A} = {27ABB381-005C-4999-BFE0-365832B6CEF0}
 		{05E8A02D-ACF2-422B-86A5-E14E2EA43099} = {27ABB381-005C-4999-BFE0-365832B6CEF0}
 		{AB777E75-CF65-4DB0-91C8-523AC2C9B986} = {27ABB381-005C-4999-BFE0-365832B6CEF0}
+		{48488E25-A6C9-4988-BE70-3DEFE80522A0} = {27ABB381-005C-4999-BFE0-365832B6CEF0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3ADE7C6-52F2-42E4-8A03-0DFF368C719F}
