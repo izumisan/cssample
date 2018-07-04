@@ -1,0 +1,14 @@
+﻿<Window x:Class="NavigationApp.Views.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="Navigation" Height="350" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ItemsControl Grid.Column="0" prism:RegionManager.RegionName="SelectionRegion"/>
+        <ContentControl Grid.Column="1" prism:RegionManager.RegionName="MainRegion"/>
+    </Grid>
+</Window>
