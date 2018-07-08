@@ -5,3 +5,4 @@
 1. [Unity DIコンテナによるDependencyInjection](DIContainer/README.md)
 1. [EventAggregatorによるモジュール間通信](EventAggregator/README.md)
 1. [画面遷移（ナビゲーション）](Navigation/README.md)
+1. [Moduleの読み込み制御](LoadModule/README.md)
