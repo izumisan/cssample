@@ -11,10 +11,13 @@ Prism Navigationによる画面遷移のサンプル
 
 ## Note
 
+- Prism.Regions.IRegionManager.RequestNavigate()で画面を遷移する
 - Prism.Regionによるナビゲーションでは、一度生成したViewを再利用する
     - 画面遷移時のデータ初期化に注意
+- Prism.Regions.INavigationAwareを継承し、画面遷移時の処理をフックする
 - IsNavigationTarget()
     - trueを返す場合、引数のコンテキストのターゲットViewを再利用する
+    - falseを返す場合、新しいViewを作る
 - OnNavigatedTo()
     - 遷移してきた時に実行される
 - OnNavigatedFrom()

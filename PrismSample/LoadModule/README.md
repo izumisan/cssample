@@ -3,7 +3,7 @@
 - PrismのModule読み込み順序の制御
 - モジュール内クラスのコンテナへの自動登録
 
-# Module
+## Module
 
 - LoadModuleApp
     - Shell, Bootstrapperを有するWPFアプリケーション
@@ -13,12 +13,9 @@
 - FooModule
     - オンデマンドでロードするモジュール
 
-# Note
+## Note
 
-- モジュールカタログにモジュールを追加する際、依存モジュールを指定する
-    1. MonitorModule
-    1. LoaderModule
-    1. FooModule
+- モジュールカタログにモジュールを追加する時（IModuleCatalog.AddModule()）、ロードタイミング（スタートアップ or オンデマンド）や依存モジュールを指定する
 
     ```cs
     protected override void ConfigureModuleCatalog()
@@ -37,7 +34,7 @@
     }
     ```
 
-- ModuleManager.LoadModule()でモジュールをロードする
+- IModuleManager.LoadModule()でモジュールをロードする
 
     ```cs
     private void loadFooCommandExecute()

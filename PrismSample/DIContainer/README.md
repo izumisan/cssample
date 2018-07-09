@@ -2,17 +2,18 @@
 
 UnityによるDIコンテナを用いたサンプル
 
-## DIContainerApp
+# DIContainerApp
 
-- CountModule
+## Module
+
+- DIContainerApp.CountModule
     - ViewModelにModelをDI（コンストラクタインジェクション）したサンプル
-- DuobleModule
+- DIContainerApp.DuobleModule
     - ViewModelにModelを`[Dependency]`属性を使用してDI（セッターインジェクション）したサンプル
-
 
 ※ 本プロジェクトでは、Prism Template Packを利用してみた
 
-## LifetimeManagerSample
+# LifetimeManagerSample
 
 - ContainerControlledLifetimeManager
     - コンテナ単位で同じインスタンスを返す（コンテナが異なれば別インスタンス）
