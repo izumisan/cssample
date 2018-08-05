@@ -1,0 +1,75 @@
+﻿<Window x:Class="LiveChartsSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:LiveChartsSample.Views"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 上段 -->
+        <lvc:CartesianChart Grid.Row="0"
+                            Series="{Binding SeriesCollection}" 
+                            LegendLocation="Right">
+            <!-- X軸 -->
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis MinValue="0" MaxValue="5"/>
+            </lvc:CartesianChart.AxisX>
+            <!-- Y軸 -->
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis MinValue="-2" MaxValue="2"/>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+
+        <!-- 下段 -->
+        <lvc:CartesianChart Grid.Row="1"
+                            LegendLocation="Right">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="Sin"
+                                Values="{Binding SinValues}"
+                                LineSmoothness="0"
+                                PointGeometrySize="0"
+                                Stroke="Black"
+                                StrokeThickness="5"
+                                StrokeDashArray="1"
+                                Fill="Transparent"/>
+                <lvc:LineSeries Title="Cos"
+                                Values="{Binding CosValues}"
+                                PointGeometrySize="0"
+                                StrokeDashArray="2"
+                                LineSmoothness="0"
+                                Fill="Transparent"/>
+                <lvc:LineSeries Title="Tan"
+                                Values="{Binding TanValues}"
+                                PointGeometrySize="0"
+                                StrokeDashArray="10"
+                                LineSmoothness="0"
+                                Fill="Transparent"/>
+                <lvc:LineSeries Title="Foo"
+                                Values="{Binding FooValues}"
+                                DataLabels="True"
+                                Foreground="Blue"
+                                PointForeground="LightGray"
+                                PointGeometrySize="20"
+                                LineSmoothness="0"
+                                Fill="Transparent"/>
+            </lvc:CartesianChart.Series>
+            <!-- X軸 -->
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis MinValue="0" MaxValue="5"/>
+            </lvc:CartesianChart.AxisX>
+            <!-- Y軸 -->
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis MinValue="-2" MaxValue="2"/>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+    </Grid>
+</Window>
