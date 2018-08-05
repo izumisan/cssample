@@ -4,6 +4,7 @@
 # ホワイトリスト
 !/ConfigurationTransformSample/
 !/CsvHelperSample/
+!/LiveChartsSample/
 !/MSTestSample/
 !/NLogSample/
 !/NUnitSample/
