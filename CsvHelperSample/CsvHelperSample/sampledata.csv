@@ -1,12 +1,12 @@
-string,int,double,month,month2,month3,foo.data1,foo.data2,
-hoge0,0,0.0,0,none,none,0,0
-hoge1,1,1.1,1,jan,jan,1,1
-hoge2,2,2.2,2,feb,feb,2,2
-# comment line
-hoge3,3,3.3,3,3,3,3,3
-# blank line
-
-hoge4,4,4.4,4,4,4,4,4
-# empty data
-,,,,,,,
-hoge5,5,5.5,5,5,5,5,5
+string,int,double,month,month2,foo.data1,foo.data2
+hoge0,0,0,0,none,0,0
+hoge1,1,1.1,1,jan,1,1
+hoge2,2,2.2,2,feb,2,2
+# comment line,,,,,,
+hoge3,3,3.3,3,3,3,3
+# blank line,,,,,,
+,,,,,,
+hoge4,4,4.4,4,4,4,4
+# empty data,,,,,,
+,,,,,,
+hoge5,5,5.5,5,5,5,5

@@ -8,10 +8,10 @@ using CsvHelper.TypeConversion;
 
 namespace CsvHelperSample
 {
-    public class GenericEnumConverter<T> : EnumConverter 
+    public class EnumConverter<T> : EnumConverter 
         where T : struct
     {
-        public GenericEnumConverter()
+        public EnumConverter()
             : base( typeof( T ) )
         {
         }

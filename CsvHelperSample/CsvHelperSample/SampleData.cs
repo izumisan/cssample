@@ -12,6 +12,7 @@ namespace CsvHelperSample
         public int Int { get; set; } = 0;
         public double Double { get; set; } = 0.0;
         public MonthEnum Month { get; set; } = MonthEnum.None;
+        public MonthEnum Month1 { get; set; } = MonthEnum.None;
         public MonthEnum Month2 { get; set; } = MonthEnum.None;
         public MonthEnum Month3 { get; set; } = MonthEnum.None;
 

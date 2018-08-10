@@ -17,10 +17,10 @@
     - EnumConverter.ConvertFromStringは、数値 or 文字列から列挙型に変換してくれる
 - 列挙型用汎用コンバータとして、以下のようなコンバータを用意しておくと便利
     ```cs
-    public class GenericEnumConverter<T> : EnumConverter 
+    public class EnumConverter<T> : EnumConverter 
         where T : struct
     {
-        public GenericEnumConverter()
+        public EnumConverter()
             : base( typeof( T ) )
         {
         }

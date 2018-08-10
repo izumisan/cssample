@@ -47,7 +47,8 @@
   <ItemGroup>
     <Compile Include="FooData.cs" />
     <Compile Include="FooDataMap.cs" />
-    <Compile Include="GenericEnumConverter.cs" />
+    <Compile Include="EnumConverter.cs" />
+    <Compile Include="MonthConverter.cs" />
     <Compile Include="MonthEnum.cs" />
     <Compile Include="MonthEnumConverter.cs" />
     <Compile Include="Program.cs" />
