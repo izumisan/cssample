@@ -51,17 +51,56 @@ namespace AssertThat
         {
             var list = new List<int> { 0, 1, 2, 3, 4, 5 };
 
+            // メンバー"1"を持っている
             Assert.That( list, Has.Member( 1 ) );
+
+            // "2"をいくつか持っている
             Assert.That( list, Has.Some.EqualTo( 2 ) );
 
+            // Countは"6"である
             Assert.That( list, Has.Count.EqualTo( 6 ) );
+
+            // "1"より小さいのは1つである
             Assert.That( list, Has.One.LessThan( 1 ) );
+
+            // 全て"100"より小さい
             Assert.That( list, Has.All.LessThan( 100 ) );
 
+            // メンバー"10"は持っていない
             Assert.That( list, Has.No.Member( 10 ) );
+
+            // "100"より大きいものはない
             Assert.That( list, Has.None.GreaterThan( 100 ) );
             
+            // 全てemptyである
             Assert.That( new List<int>(), Has.All.Empty );
+        }
+
+        [Test]
+        public void Collectionのテスト()
+        {
+            var list = new List<int> { 1, 2, 2, 3, 3, 3 };
+
+            // 条件を満たす"メンバー数"に関するアサーション
+
+            // "2"に等しいメンバーは2つである
+            Assert.That( list, Has.Exactly( 2 ).EqualTo( 2 ) );
+
+            // "3"より小さいメンバーは3つである
+            Assert.That( list, Has.Exactly( 3 ).LessThan( 3 ) );
+
+
+            // 集合に関するアサーション
+
+            var expected1 = new List<int> { 0, 1, 2, 2, 3, 3, 3, 4, 5, 6 };
+            // listはexpected1のサブセット(部分集合)である
+            // ( list ⊆ expected1 )
+            Assert.That( list, Is.SubsetOf( expected1 ) );
+
+            var expected2 = new List<int> { 1, 2, 3 };
+            // listはexpected2のスーパーセットである
+            // ( list ⊇ expected2 )
+            Assert.That( list, Is.SupersetOf( expected2 ) );
         }
 
         [Test]
