@@ -10,29 +10,9 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="500">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
-        </Grid.ColumnDefinitions>
-        
-        <lvc:CartesianChart Grid.Column="0">
-            <lvc:CartesianChart.Series>
-                <lvc:LineSeries Values="{Binding Pentagon}"
-                                LineSmoothness="0"/>
-            </lvc:CartesianChart.Series>
-            <!-- X軸設定 -->
-            <lvc:CartesianChart.AxisX>
-                <lvc:Axis MinValue="-2" MaxValue="2"/>
-            </lvc:CartesianChart.AxisX>
-            <!-- Y軸設定 -->
-            <lvc:CartesianChart.AxisY>
-                <lvc:Axis MinValue="-2" MaxValue="2"/>
-            </lvc:CartesianChart.AxisY>
-        </lvc:CartesianChart>
-
-        <StackPanel Grid.Column="1">
+        Title="MainWindow" Height="400" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Right">
             <Button Content="P1" Command="{Binding P1Command}"/>
             <Button Content="P2" Command="{Binding P2Command}"/>
             <Button Content="P3" Command="{Binding P3Command}"/>
@@ -42,5 +22,66 @@
             <Button Content="R" Command="{Binding RotationRight}"/>
             <Button Content="L" Command="{Binding RotationLeft}"/>
         </StackPanel>
-    </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Chart No.1 -->
+            <lvc:CartesianChart Grid.Column="0"
+                                LegendLocation="Top">
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Title="横軸X - 縦軸Y"
+                                    Values="{Binding Pentagon}"
+                                    LineSmoothness="0"/>
+                </lvc:CartesianChart.Series>
+                <!-- X軸設定 -->
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="X" MinValue="-2" MaxValue="2"/>
+                </lvc:CartesianChart.AxisX>
+                <!-- Y軸設定 -->
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Y" MinValue="-2" MaxValue="2"/>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+
+            <!-- Chart No.2 -->
+            <!-- X座標とY座標を入れ替えたチャート -->
+            <lvc:CartesianChart Grid.Column="1"
+                                AnimationsSpeed="0:0:0.1"
+                                LegendLocation="Top">
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Title="横軸Y - 縦軸X"
+                                    Values="{Binding Pentagon}"
+                                    LineSmoothness="0"
+                                    Configuration="{Binding Mapper}"
+                                    Fill="Transparent"/>
+                </lvc:CartesianChart.Series>
+                 <!--X軸設定--> 
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Y" MinValue="-2" MaxValue="2">
+                        <lvc:Axis.Sections>
+                            <!-- X=1のライン -->
+                            <lvc:AxisSection Value="1.0" 
+                                             Stroke="Red"
+                                             StrokeThickness="1"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                 <!--Y軸設定--> 
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="X" MinValue="-2" MaxValue="2">
+                        <lvc:Axis.Sections>
+                            <!-- Y=[-0.5,0.5]の帯域 -->
+                            <lvc:AxisSection Value="-0.5" 
+                                             SectionWidth="1" 
+                                             Fill="LightGreen"/>
+                        </lvc:Axis.Sections>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </Grid>
+    </DockPanel>
 </Window>
