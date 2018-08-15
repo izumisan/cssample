@@ -1,0 +1,39 @@
+﻿<Window x:Class="IpcSample.Client.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IpcSample.Client"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="Client" Height="400" Width="400" Background="#FFE0E0E0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" 
+                  Header="{Binding MonitorCount.Value}" 
+                  HeaderStringFormat="{}Monitor (per 5sec) {0}" 
+                  Margin="1">
+            <StackPanel >
+                <UniformGrid Columns="2">
+                    <Label Content="Value"/>
+                    <Label Content="{Binding IpcValue.Value}" HorizontalContentAlignment="Right"/>
+                </UniformGrid>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Header="Input" Margin="1">
+            <StackPanel>
+                <Label Content="Value"/>
+                <UniformGrid Columns="2">
+                    <TextBox Text="{Binding InputValue}" HorizontalContentAlignment="Right"/>
+                    <Button Content="セット" Command="{Binding InputValueCommand}"/>
+                </UniformGrid>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
