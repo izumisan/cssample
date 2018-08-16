@@ -1,9 +1,25 @@
 # IPCサンプル
 
+# プロジェクト
+
+- IPCSample.Shared
+    - 共有クラスライブラリ
+- IPCSample.Server
+    - IPCサーバー側アプリケーション
+    - WPFアプリケーション
+- IPCSample.Client
+    - IPCクライアント側アプリケーション
+    - WPFアプリケーション
+- IPCSample.CLRConsole
+    - IPCSample.Sharedを利用したCLRコンソールアプリケーション
+
 # 起動
 
-1. IpcSample.Serverを起動
-2. IpcSample.Clientを起動
+1. サーバープログラムを起動する
+    - IpcSample.Server
+1. クライアントプログラムを起動する
+    - IpcSample.Client
+    - IpcSample.CLRConsole
 
 # 要点
 
