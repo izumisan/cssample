@@ -85,7 +85,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>xcopy /Y /I /S $(SolutionDir)IpcSample.Shared\bin\$(Configuration)\IpcSample.Shared.dll $(TargetDir)</Command>
+      <Command>xcopy /Y /D /I /S $(SolutionDir)IpcSample.Shared\bin\$(Configuration)\IpcSample.Shared.dll $(TargetDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -111,7 +111,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y /I /S $(SolutionDir)IpcSample.Shared\bin\$(Configuration)\IpcSample.Shared.dll $(TargetDir)</Command>
+      <Command>xcopy /Y /D /I /S $(SolutionDir)IpcSample.Shared\bin\$(Configuration)\IpcSample.Shared.dll $(TargetDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

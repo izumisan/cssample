@@ -8,6 +8,8 @@ int main()
 {
     IpcClient^ client = gcnew IpcClient();
     client->open();
+
+    std::cout << "CLRConsole running..." << std::endl;
     
     std::string input;
 
