@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-#using "IpcSample.Shared.dll"
 using namespace IpcSample::Shared;
 
 int main()
@@ -9,8 +8,8 @@ int main()
     IpcClient^ client = gcnew IpcClient();
     client->open();
 
-    std::cout << "CLRConsole running..." << std::endl;
-    
+    std::cout << "CLRClient running..." << std::endl;
+
     std::string input;
 
     while ( true )
@@ -25,9 +24,9 @@ int main()
             break;
         }
 
-        auto&& rdata = client->IpcData->Value;
+        auto&& rdata = client->ipcData->Value;
         auto&& wdata = rdata + 10;
-        client->IpcData->Value = wdata;
+        client->ipcData->Value = wdata;
 
         std::cout << rdata << " >>> +10 >>> " << wdata << std::endl;
         std::cout << std::endl;
