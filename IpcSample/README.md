@@ -2,23 +2,39 @@
 
 # プロジェクト
 
-- IPCSample.Shared
-    - 共有クラスライブラリ
-- IPCSample.Server
+## C#版
+
+- [C#] IPCSample.Shared
+    - C#クラスライブラリ
+- [C#] IPCSample.Server
     - IPCサーバー側アプリケーション
     - WPFアプリケーション
-- IPCSample.Client
+- [C#] IPCSample.Client
     - IPCクライアント側アプリケーション
     - WPFアプリケーション
-- IPCSample.CLRConsole
-    - IPCSample.Sharedを利用したCLRコンソールアプリケーション
+- [C++/CLI] IPCSample.CLRConsole
+    - IPCクライアント側アプリケーション
+    - C#クラスライブラリ（IPCSample.Shared.dll）を利用したCLRコンソールアプリケーション
+
+## C++/CLI版
+
+- [C++/CLI] IpcSample.CLRLib
+    - CLRクラスライブラリ
+- [C++/CLI] IpcSample.CLRServer
+    - IPCサーバ側アプリケーション
+    - CLRコンソールアプリケーション
+- [C++/CLI] IpcSample.CLRClient
+    - IPCクライアント側アプリケーション
+    - CLRコンソールアプリケーション
+    - CLRConsoleにおいて、C#クラスライブラリ（IPCSample.Shared.dll）の代わりにCLRクラスライブラリ（IpcSample.CLRLib.dll）を使用したバージョン
 
 # 起動
 
 1. サーバープログラムを起動する
-    - IpcSample.Server
+    - IpcSample.Server or IpcSample.CLRServer
 1. クライアントプログラムを起動する
     - IpcSample.Client
+    - IpcSample.CLRClient
     - IpcSample.CLRConsole
 
 # 要点
