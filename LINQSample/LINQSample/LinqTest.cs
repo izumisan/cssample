@@ -198,5 +198,98 @@ namespace LINQSample
 
             Assert.That( source.Intersect( second ), Is.EquivalentTo( expected ) );
         }
+
+        [Test]
+        [Category( "ソート" )]
+        public void OrderByは昇順にソートしたシーケンスを返す()
+        {
+            var sorted = Users.OrderBy( x => x.Age );
+
+            sorted.Aggregate( ( pre, x ) =>
+            {
+                Assert.That( x.Age, Is.GreaterThanOrEqualTo( pre.Age ) );
+                return x;
+            } );
+        }
+
+        [Test]
+        [Category( "ソート" )]
+        public void OrderByDescendingは降順にソートしたシーケンスを返す()
+        {
+            var sorted = Users.OrderByDescending( x => x.Age );
+
+            sorted.Aggregate( ( pre, x ) =>
+            {
+                Assert.That( x.Age, Is.LessThanOrEqualTo( pre.Age ) );
+                return x;
+            } );
+        }
+
+        [Test]
+        [Category( "ソート" )]
+        public void ThenByにより第2ソートキーを指定できる()
+        {
+            // Ageで昇順ソート, Ageが等しい場合はIdで昇順ソート
+            var sorted = Users
+                         .OrderBy( x => x.Age )
+                         .ThenBy( x => x.Id );
+
+            sorted.Aggregate( ( pre, x ) =>
+            {
+                // Ageで昇順ソートされていること
+                Assert.That( x.Age, Is.GreaterThanOrEqualTo( pre.Age ) );
+
+                // Ageが等しい場合は、Idで昇順ソートされていること
+                if ( x.Age == pre.Age )
+                {
+                    Assert.That( x.Id, Is.GreaterThan( pre.Id ) );
+                }
+                return x;
+            });
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void ToDictionaryは連想配列を返す()
+        {
+            Dictionary<int, User> id2user = Users.ToDictionary( x => x.Id );
+
+            Assert.That( id2user[1], Is.EqualTo( new User { Id = 1, Name = "Foo1", Age = 10 } ) );
+            Assert.That( id2user[10], Is.EqualTo( new User { Id = 10, Name = "Foo", Age = 10 } ) );
+
+
+            Dictionary<int, string> id2name = Users.ToDictionary( x => x.Id, x => x.Name );
+
+            Assert.That( id2name[1], Is.EqualTo( "Foo1" ) );
+            Assert.That( id2name[2], Is.EqualTo( "Foo2" ) );
+        }
+
+        private static IEnumerable<User> Users
+        {
+            get
+            {
+                yield return new User { Id = 10, Name = "Foo", Age = 10 };
+                yield return new User { Id = 11, Name = "Foo", Age = 11 };
+                yield return new User { Id = 12, Name = "Foo", Age = 12 };
+
+                yield return new User { Id = 1, Name = "Foo1", Age = 10 };
+                yield return new User { Id = 2, Name = "Foo2", Age = 10 };
+                yield return new User { Id = 3, Name = "Foo3", Age = 20 };
+                yield return new User { Id = 4, Name = "Foo4", Age = 20 };
+                yield return new User { Id = 5, Name = "Foo5", Age = 30 };
+
+                yield return new User { Id = 39, Name = "Foo", Age = 39 };
+                yield return new User { Id = 38, Name = "Foo", Age = 38 };
+                yield return new User { Id = 37, Name = "Foo", Age = 37 };
+
+                yield return new User { Id = 41, Name = "Foo1", Age = 41 };
+                yield return new User { Id = 42, Name = "Foo2", Age = 42 };
+                yield return new User { Id = 43, Name = "Foo3", Age = 43 };
+
+                yield return new User { Id = 20, Name = "User", Age = 12 };
+                yield return new User { Id = 21, Name = "User", Age = 11 };
+                yield return new User { Id = 22, Name = "User", Age = 10 };
+            }
+        }
     }
 }
