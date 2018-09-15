@@ -245,7 +245,55 @@ namespace LINQSample
                     Assert.That( x.Id, Is.GreaterThan( pre.Id ) );
                 }
                 return x;
-            });
+            } );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void GroupByは指定したキーでグループ化したシーケンスを返す()
+        {
+            var list = new List<User>
+            {
+                new User { Id = 1, Name = "foo", Age = 10 },
+                new User { Id = 2, Name = "foo", Age = 11 },
+                new User { Id = 3, Name = "foo", Age = 12 },
+                new User { Id = 4, Name = "fuga", Age = 13 },
+                new User { Id = 5, Name = "fuga", Age = 14 }
+            };
+
+            var nameGroup = list.GroupBy( x => x.Name );
+
+            Assert.That( nameGroup.Count(), Is.EqualTo( 2 ) );
+
+            foreach ( var sameName in nameGroup )
+            {
+                List<User> expected = null;
+
+                if ( sameName.Key == "foo" )
+                {
+                    expected = new List<User>
+                    {
+                        new User { Id = 1, Name = "foo", Age = 10 },
+                        new User { Id = 2, Name = "foo", Age = 11 },
+                        new User { Id = 3, Name = "foo", Age = 12 }
+                    };
+                }
+                else if ( sameName.Key == "fuga" )
+                {
+                    expected = new List<User>
+                    {
+                        new User { Id = 4, Name = "fuga", Age = 13 },
+                        new User { Id = 5, Name = "fuga", Age = 14 }
+                    };
+                }
+                else
+                {
+                    Assert.Fail();
+                }
+
+                Assert.That( sameName, Is.EquivalentTo( expected ) );
+            }
+
         }
 
         [Test]
@@ -263,6 +311,17 @@ namespace LINQSample
             Assert.That( id2name[1], Is.EqualTo( "Foo1" ) );
             Assert.That( id2name[2], Is.EqualTo( "Foo2" ) );
         }
+
+        [Test]
+        [Category( "変換" )]
+        public void ToLookupは1対多のディクショナリを返す()
+        {
+            var nameTable = Users.ToLookup( x => x.Name );
+
+            Assert.That( nameTable["Foo"].Count(), Is.GreaterThanOrEqualTo( 3 ) );
+            Assert.That( nameTable["User"], Has.Member( new User { Id = 20, Name = "User", Age = 12 } ) );
+        }
+
 
         private static IEnumerable<User> Users
         {
