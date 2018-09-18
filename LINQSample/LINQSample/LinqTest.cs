@@ -297,6 +297,60 @@ namespace LINQSample
         }
 
         [Test]
+        [Category( "結合" )]
+        public void Joinは内部結合したシーケンスを返す()
+        {
+            // カテゴリテーブルとアイテムテーブルを内部結合し、
+            // ( カテゴリ名, アイテム名 )の匿名オブジェクトテーブルを作る
+            var innerJoin = CategoryTable.Join( ItemTable,
+                c => c.Id,
+                i => i.CategoryId,
+                ( c, i ) => new { CategoryName = c.Name, ItemName = i.Name } );
+
+            var expected = new List<dynamic>
+            {
+                new { CategoryName = "category1", ItemName = "item1" },
+                new { CategoryName = "category2", ItemName = "item2" },
+                new { CategoryName = "category2", ItemName = "item3" },
+                new { CategoryName = "category3", ItemName = "item4" },
+                new { CategoryName = "category3", ItemName = "item5" },
+                new { CategoryName = "category3", ItemName = "item6" }
+            };
+
+            Assert.That( innerJoin.Count(), Is.EqualTo( 6 ) );
+            Assert.That( innerJoin, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "結合" )]
+        public void GroupJoinは左外部結合したシーケンスを返す()
+        {
+            // カテゴリテーブルにアイテムテーブルを外部結合し、
+            // ( カテゴリ名, 1stアイテム名, アイテム数 )の匿名オブジェクトテーブルを作る
+            var outerJoin = CategoryTable.GroupJoin( ItemTable,
+                c => c.Id,
+                i => i.CategoryId,
+                ( c, i ) => new
+                {
+                    CategoryName = c.Name,
+                    FirstItemName = i.FirstOrDefault()?.Name ?? string.Empty,
+                    ItemCount = i.Count()
+                } );
+
+            var expected = new List<dynamic>
+            {
+                new { CategoryName = "category1", FirstItemName = "item1", ItemCount = 1 },
+                new { CategoryName = "category2", FirstItemName = "item2", ItemCount = 2 },
+                new { CategoryName = "category3", FirstItemName = "item4", ItemCount = 3 },
+                new { CategoryName = "category4", FirstItemName = string.Empty, ItemCount = 0 },
+                new { CategoryName = "category5", FirstItemName = string.Empty, ItemCount = 0 }
+            };
+
+            Assert.That( outerJoin.Count(), Is.EqualTo( 5 ) );
+            Assert.That( outerJoin, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
         [Category( "変換" )]
         public void ToDictionaryは連想配列を返す()
         {
@@ -348,6 +402,41 @@ namespace LINQSample
                 yield return new User { Id = 20, Name = "User", Age = 12 };
                 yield return new User { Id = 21, Name = "User", Age = 11 };
                 yield return new User { Id = 22, Name = "User", Age = 10 };
+            }
+        }
+
+        private static IEnumerable<Category> CategoryTable
+        {
+            get
+            {
+                return new List<Category>
+                {
+                    new Category { Id = 1, Name = "category1" },
+                    new Category { Id = 2, Name = "category2" },
+                    new Category { Id = 3, Name = "category3" },
+                    new Category { Id = 4, Name = "category4" },
+                    new Category { Id = 5, Name = "category5" },
+                };
+            }
+        }
+
+        private static IEnumerable<Item> ItemTable
+        {
+            get
+            {
+                return new List<Item>
+                {
+                    new Item { Id = 1, Name = "item1", CategoryId = 1 },
+                    new Item { Id = 2, Name = "item2", CategoryId = 2 },
+                    new Item { Id = 3, Name = "item3", CategoryId = 2 },
+                    new Item { Id = 4, Name = "item4", CategoryId = 3 },
+                    new Item { Id = 5, Name = "item5", CategoryId = 3 },
+                    new Item { Id = 6, Name = "item6", CategoryId = 3 },
+
+                    new Item { Id = 10, Name = "item10", CategoryId = 10 },
+                    new Item { Id = 11, Name = "item11", CategoryId = 11 },
+                    new Item { Id = 12, Name = "item12", CategoryId = 12 },
+                };
             }
         }
     }
