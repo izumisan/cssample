@@ -351,6 +351,21 @@ namespace LINQSample
         }
 
         [Test]
+        [Category( "結合" )]
+        public void Zipは2つのシーケンスを結合する()
+        {
+            var num = new List<int> { 1, 2, 3, 4, 5 };
+            var str = new List<string> { "one", "two", "three" };
+
+            var actual = num.Zip( str, ( n, s ) => $"{ n } is { s }" );
+
+            var expected = new List<string> { "1 is one", "2 is two", "3 is three" };
+
+            Assert.That( actual.Count(), Is.EqualTo( 3 ) );
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
         [Category( "変換" )]
         public void ToDictionaryは連想配列を返す()
         {
