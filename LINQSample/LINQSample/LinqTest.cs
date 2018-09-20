@@ -250,6 +250,71 @@ namespace LINQSample
 
         [Test]
         [Category( "射影" )]
+        public void Selectは要素を別オブジェクトに写像する()
+        {
+            var actual = ItemTable.Select( x => x.Name.ToUpper() );
+
+            Assert.That( actual.ElementAt( 0 ), Is.EqualTo( "ITEM1" ) );
+            Assert.That( actual.ElementAt( 1 ), Is.EqualTo( "ITEM2" ) );
+            Assert.That( actual.ElementAt( 2 ), Is.EqualTo( "ITEM3" ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void Selectの2つ目のパラメータでインデックスが取得できる()
+        {
+            // 要素を1つ取り出し、"インデックス: アイテム名"の文字列に射影する
+            var actual = ItemTable.Select( ( x, i ) => $"{ i }: { x.Name }" );
+
+            Assert.That( actual.ElementAt( 0 ), Is.EqualTo( "0: item1" ) );
+            Assert.That( actual.ElementAt( 1 ), Is.EqualTo( "1: item2" ) );
+            Assert.That( actual.ElementAt( 2 ), Is.EqualTo( "2: item3" ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void SelectManyで入れ子のシーケンスを平坦化できる()
+        {
+            var source = new List<List<int>>
+            {
+                new List<int> { 11, 12, 13 },
+                new List<int> { 21, 22, 23 },
+                new List<int> { 31, 32, 33 }
+            };
+
+            var actual = source.SelectMany( x => x );
+
+            var expected = new List<int> { 11, 12, 13, 21, 22, 23, 31, 32, 33 };
+
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void SelectManyの2つ目のパラメータでインデックスが取得できる()
+        {
+            var source = new int[][]
+            {
+                new int[] { 11, 12, 13 },
+                new int[] { 21, 22, 23 },
+                new int[] { 31, 32, 33 }
+            };
+
+            var actual = source.SelectMany( ( row, i ) => 
+                row.Select( ( x, j ) => $"({ i + 1 },{ j + 1 })={ x }" ) );
+
+            var expected = new string[]
+            {
+                "(1,1)=11", "(1,2)=12", "(1,3)=13",
+                "(2,1)=21", "(2,2)=22", "(2,3)=23",
+                "(3,1)=31", "(3,2)=32", "(3,3)=33"
+            };
+
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
         public void GroupByは指定したキーでグループ化したシーケンスを返す()
         {
             var list = new List<User>
