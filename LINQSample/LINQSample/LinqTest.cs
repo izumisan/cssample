@@ -250,6 +250,71 @@ namespace LINQSample
 
         [Test]
         [Category( "射影" )]
+        public void Selectは要素を別オブジェクトに写像する()
+        {
+            var actual = ItemTable.Select( x => x.Name.ToUpper() );
+
+            Assert.That( actual.ElementAt( 0 ), Is.EqualTo( "ITEM1" ) );
+            Assert.That( actual.ElementAt( 1 ), Is.EqualTo( "ITEM2" ) );
+            Assert.That( actual.ElementAt( 2 ), Is.EqualTo( "ITEM3" ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void Selectの2つ目のパラメータでインデックスが取得できる()
+        {
+            // 要素を1つ取り出し、"インデックス: アイテム名"の文字列に射影する
+            var actual = ItemTable.Select( ( x, i ) => $"{ i }: { x.Name }" );
+
+            Assert.That( actual.ElementAt( 0 ), Is.EqualTo( "0: item1" ) );
+            Assert.That( actual.ElementAt( 1 ), Is.EqualTo( "1: item2" ) );
+            Assert.That( actual.ElementAt( 2 ), Is.EqualTo( "2: item3" ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void SelectManyで入れ子のシーケンスを平坦化できる()
+        {
+            var source = new List<List<int>>
+            {
+                new List<int> { 11, 12, 13 },
+                new List<int> { 21, 22, 23 },
+                new List<int> { 31, 32, 33 }
+            };
+
+            var actual = source.SelectMany( x => x );
+
+            var expected = new List<int> { 11, 12, 13, 21, 22, 23, 31, 32, 33 };
+
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
+        public void SelectManyの2つ目のパラメータでインデックスが取得できる()
+        {
+            var source = new int[][]
+            {
+                new int[] { 11, 12, 13 },
+                new int[] { 21, 22, 23 },
+                new int[] { 31, 32, 33 }
+            };
+
+            var actual = source.SelectMany( ( row, i ) => 
+                row.Select( ( x, j ) => $"({ i + 1 },{ j + 1 })={ x }" ) );
+
+            var expected = new string[]
+            {
+                "(1,1)=11", "(1,2)=12", "(1,3)=13",
+                "(2,1)=21", "(2,2)=22", "(2,3)=23",
+                "(3,1)=31", "(3,2)=32", "(3,3)=33"
+            };
+
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "射影" )]
         public void GroupByは指定したキーでグループ化したシーケンスを返す()
         {
             var list = new List<User>
@@ -348,6 +413,92 @@ namespace LINQSample
 
             Assert.That( outerJoin.Count(), Is.EqualTo( 5 ) );
             Assert.That( outerJoin, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "結合" )]
+        public void Zipは2つのシーケンスを結合する()
+        {
+            var num = new List<int> { 1, 2, 3, 4, 5 };
+            var str = new List<string> { "one", "two", "three" };
+
+            var actual = num.Zip( str, ( n, s ) => $"{ n } is { s }" );
+
+            var expected = new List<string> { "1 is one", "2 is two", "3 is three" };
+
+            Assert.That( actual.Count(), Is.EqualTo( 3 ) );
+            Assert.That( actual, Is.EquivalentTo( expected ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void OfTypeは指定した型にキャストする()
+        {
+            var items = new List<ItemA>
+            {
+                new ItemA { Id = 1 },
+                new ItemA { Id = 2 },
+                new ItemA { Id = 3 }
+            };
+
+            var actual = items.OfType<Item>();
+
+            Assert.That( actual.Count(), Is.EqualTo( 3 ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void OfTypeはキャストできない要素やnull要素は除外される()
+        {
+            var items = new List<Item>
+            {
+                new Item { Id = 1, Name = "item" },
+                new ItemA { Id = 2, Name = "item a" },
+                new ItemA { Id = 3, Name = "item a" },
+                new ItemB { Id = 4, Name = "item b" },
+                new ItemB { Id = 5, Name = "item b" },
+                new ItemB { Id = 6, Name = "item b" },
+                null,
+                null,
+                null,
+                null
+            };
+
+            Assert.That( items.OfType<Item>().Count(), Is.EqualTo( 6 ) );
+            Assert.That( items.OfType<ItemA>().Count(), Is.EqualTo( 2 ) );
+            Assert.That( items.OfType<ItemB>().Count(), Is.EqualTo( 3 ) );
+            Assert.That( items.OfType<object>().Count(), Is.EqualTo( 6 ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void Castはキャストできない要素がある場合は例外となる()
+        {
+            var listA = new List<ItemA>
+            {
+                new ItemA { Id = 1, Name = "item a" },
+                new ItemA { Id = 2, Name = "item a" }
+            };
+
+            Assert.That( () => listA.Cast<Item>().ToList(), Throws.Nothing );
+            Assert.That( () => listA.Cast<ItemB>().ToList(), Throws.Exception );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void Castはnull要素はnullのまま残る()
+        {
+            var items = new List<Item>
+            {
+                new Item { Id = 1, Name = "item" },
+                new ItemA { Id = 2, Name = "item a" },
+                new ItemB { Id = 3, Name = "item b" },
+                null,
+                null,
+                null,
+            };
+
+            Assert.That( items.Cast<Item>().Count(), Is.EqualTo( 6 ) );
         }
 
         [Test]
