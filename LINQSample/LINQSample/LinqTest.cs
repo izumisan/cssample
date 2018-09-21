@@ -472,6 +472,37 @@ namespace LINQSample
 
         [Test]
         [Category( "変換" )]
+        public void Castはキャストできない要素がある場合は例外となる()
+        {
+            var listA = new List<ItemA>
+            {
+                new ItemA { Id = 1, Name = "item a" },
+                new ItemA { Id = 2, Name = "item a" }
+            };
+
+            Assert.That( () => listA.Cast<Item>().ToList(), Throws.Nothing );
+            Assert.That( () => listA.Cast<ItemB>().ToList(), Throws.Exception );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void Castはnull要素はnullのまま残る()
+        {
+            var items = new List<Item>
+            {
+                new Item { Id = 1, Name = "item" },
+                new ItemA { Id = 2, Name = "item a" },
+                new ItemB { Id = 3, Name = "item b" },
+                null,
+                null,
+                null,
+            };
+
+            Assert.That( items.Cast<Item>().Count(), Is.EqualTo( 6 ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
         public void ToDictionaryは連想配列を返す()
         {
             Dictionary<int, User> id2user = Users.ToDictionary( x => x.Id );
