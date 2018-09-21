@@ -432,6 +432,46 @@ namespace LINQSample
 
         [Test]
         [Category( "変換" )]
+        public void OfTypeは指定した型にキャストする()
+        {
+            var items = new List<ItemA>
+            {
+                new ItemA { Id = 1 },
+                new ItemA { Id = 2 },
+                new ItemA { Id = 3 }
+            };
+
+            var actual = items.OfType<Item>();
+
+            Assert.That( actual.Count(), Is.EqualTo( 3 ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
+        public void OfTypeはキャストできない要素やnull要素は除外される()
+        {
+            var items = new List<Item>
+            {
+                new Item { Id = 1, Name = "item" },
+                new ItemA { Id = 2, Name = "item a" },
+                new ItemA { Id = 3, Name = "item a" },
+                new ItemB { Id = 4, Name = "item b" },
+                new ItemB { Id = 5, Name = "item b" },
+                new ItemB { Id = 6, Name = "item b" },
+                null,
+                null,
+                null,
+                null
+            };
+
+            Assert.That( items.OfType<Item>().Count(), Is.EqualTo( 6 ) );
+            Assert.That( items.OfType<ItemA>().Count(), Is.EqualTo( 2 ) );
+            Assert.That( items.OfType<ItemB>().Count(), Is.EqualTo( 3 ) );
+            Assert.That( items.OfType<object>().Count(), Is.EqualTo( 6 ) );
+        }
+
+        [Test]
+        [Category( "変換" )]
         public void ToDictionaryは連想配列を返す()
         {
             Dictionary<int, User> id2user = Users.ToDictionary( x => x.Id );

@@ -12,4 +12,12 @@ namespace LINQSample
         public string Name { get; set; } = string.Empty;
         public int CategoryId { get; set; } = 0;
     }
+
+    public class ItemA : Item
+    {
+    }
+
+    public class ItemB : Item
+    {
+    }
 }
