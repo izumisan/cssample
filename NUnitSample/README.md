@@ -3,14 +3,10 @@
 # overview
 
 1. NUnitSampleプロジェクト
-    - NUnitの基本
+    - NUnitの基本的な使い方のサンプル
 1. AssertThatプロジェクト
-    - Assert.Thatの使い方
+    - Assert.Thatの基本的な使い方のサンプル
         - 制約クラスの基本的な使い方
-        - Is: オブジェクト単体に対する制約を作成
-        - Has: コレクションの要素に対する制約を作成
-        - Does: （文字列に対する制約だったりコレクションに対する制約だったり、いろいろできる）
-        - Throws: 例外に関する制約を作成
     - ConsoleRunnerのおためし
         - ビルド後イベントでConsoleRunnerを指定
         - テスト失敗はビルドエラー扱い
@@ -19,7 +15,7 @@
 
 ## Classic Model
 
-httpする//github.com/nunit/docs/wiki/Classic-Model
+https://github.com/nunit/docs/wiki/Classic-Model
 
 ## Constraint Model
 
@@ -28,9 +24,13 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 ## 制約クラス
 
 - Is
+    - オブジェクトに対する制約を作成する
 - Has
+    - コレクションの要素に対する制約を作成する
 - Does
+    - 文字列に対する制約やコレクションに対する制約を作成する
 - Throws
+    - 例外に関する制約を作成する
 
 # Attribute
 
@@ -38,10 +38,12 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 
 |Attribute|説明|
 |---|---|
-|TestFixture|テストクラスに付与する（SetupFixtureとの違いは理解できていない）|
-|SetUpFixture|テストクラスに付与する（TestFixtureとの違いは理解できていない）|
+|SetUpFixture|テストクラスに付与する。SetUpFixtureを付与したテストクラスは、OneTimeSetUpとOneTimeTearDown以外のNUnit属性を付与したメソッドを持つことができない。<br>SetUpFixture属性をもつテストクラスのOneTimeSetUpのメソッドは、同一名前空間の全てのTestFixtureに先行して一度だけ実行される（OneTimeTearDownも同様、全てのTextFixtureの最後に一度だけ実行される）|
+|TestFixture|テストクラス（TestFixture）|
 |OneTimeSetUp|全てのテストメソッド実行前に一度だけ呼び出される|
 |OneTimeTearDown|全てのテストメソッド実行後に一度だけ呼び出される|
+|~~TestFixtureSetUp~~|(deprecated)|
+|~~TestFixtureTearDown~~|(deprecated)|
 |SetUp|各テストメソッド前に呼び出される|
 |TearDown|各テストメソッド後に呼び出される|
 |Test|テストメソッド|
@@ -59,10 +61,10 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 
 |Attribute|説明|
 |---|---|
-|Random|テストメソッド引数に指定し、ランダム値を生成する|
-|Range|テストメソッド引数に指定し、指定した範囲内の値を生成する|
-|Values|テストメソッド引数に指定し、指定したパラメータセットの値を生成する|
-|ValueSource|テストメソッド引数に指定し、指定したメソッドorプロパティの値を生成する|
+|Random|テストメソッドの引数に付与する。ランダム値を生成する。|
+|Range|テストメソッドの引数に付与する。指定した範囲内の値を生成する。|
+|Values|テストメソッドの引数に付与する。指定したパラメータセットの値を生成する。|
+|ValueSource|テストメソッドの引数に付与する。指定したメソッドorプロパティの値を生成する。|
 
 以下の属性で、組み合わせ方法を指定できる。
 
@@ -76,7 +78,7 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 
 |Attribute|説明|
 |---|---|
-|Property||
+|Property|テストクラスorテストメソッドで利用できるプロパティを定義できる。|
 |MaxTime|実行時間が指定した時間を超過している場合、テスト失敗となる。|
 |Timeout|実行時間が指定した時間を超過した時、ただちにテストメソッドはキャンセルされ、テスト失敗となる。|
 
