@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}</ProjectGuid>
+    <ProjectGuid>{8F948616-671D-4B8E-9AC6-375F9B749284}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NUnitSample</RootNamespace>
-    <AssemblyName>NUnitSample</AssemblyName>
+    <RootNamespace>ParametricTest</RootNamespace>
+    <AssemblyName>ParametricTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NUnitTest.cs" />
+    <Compile Include="DayOfWeek.cs" />
+    <Compile Include="ParametricTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

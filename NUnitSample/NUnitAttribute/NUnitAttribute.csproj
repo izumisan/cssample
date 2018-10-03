@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}</ProjectGuid>
+    <ProjectGuid>{7A7E988C-F756-43EE-93EF-BB39606141A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NUnitSample</RootNamespace>
-    <AssemblyName>NUnitSample</AssemblyName>
+    <RootNamespace>NUnitAttribute</RootNamespace>
+    <AssemblyName>NUnitAttribute</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NUnitTest.cs" />
+    <Compile Include="BarTest.cs" />
+    <Compile Include="FooTest.cs" />
+    <Compile Include="SetUpFixtureClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
