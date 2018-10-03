@@ -10,6 +10,11 @@
     - ConsoleRunnerのおためし
         - ビルド後イベントでConsoleRunnerを指定
         - テスト失敗はビルドエラー扱い
+1. NUnitAttributeプロジェクト
+    - メソッド呼び出し順序の確認
+1. ParametricTestプロジェクト
+    - テストデータの自動生成
+    - 組み合わせテスト
 
 # Assert
 
@@ -72,7 +77,7 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 |---|---|
 |Combinatiorial|全組み(default)|
 |Pairwise|ペアワイズ法（オールペア法）|
-|Sequencetial|順組み|
+|Sequential|順組み|
 
 ## その他
 
