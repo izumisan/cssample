@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssertThat", "AssertThat\As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitSample", "NUnitSample\NUnitSample.csproj", "{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitAttribute", "NUnitAttribute\NUnitAttribute.csproj", "{7A7E988C-F756-43EE-93EF-BB39606141A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4151F23-4BDC-4506-B07D-A4B6DC6473AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7E988C-F756-43EE-93EF-BB39606141A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7E988C-F756-43EE-93EF-BB39606141A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7E988C-F756-43EE-93EF-BB39606141A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7E988C-F756-43EE-93EF-BB39606141A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
