@@ -17,6 +17,8 @@ namespace XamlReader
             var p = System.Windows.Markup.XamlReader.Load( xaml ) as Person;
 
             Console.WriteLine( $"Birthday: { p.Birthday }" );
+            Console.WriteLine( $"    Name: { p.Name }" );
+            Console.WriteLine( $"     Age: { p.Age }" );
         }
     }
 }
