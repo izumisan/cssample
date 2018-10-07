@@ -1,0 +1,40 @@
+﻿<Window x:Class="FileDialog1.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:view="clr-namespace:FileDialog1.View"
+        xmlns:vm="clr-namespace:FileDialog1.ViewModel"
+        xmlns:ta="clr-namespace:FileDialog1.TriggerAction"
+        mc:Ignorable="d"
+        Title="MainWindow - FileDialog1" Height="200" Width="800">
+    
+    <!-- DataContextの設定 -->
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <!-- TriggarAction -->
+    <i:Interaction.Triggers>
+        <i:EventTrigger SourceObject="{Binding}" EventName="FileSelectRequest">
+            <ta:FileSelectTriggerAction/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Grid VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" 
+               Content="FileName"/>
+        <Label Grid.Column="1"
+               Content="{Binding FileName}"/>
+        <Button Grid.Column="2" 
+                Content="Select"
+                Command="{Binding SelectCommand}"/>
+    </Grid>
+</Window>
