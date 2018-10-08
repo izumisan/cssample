@@ -40,8 +40,6 @@ namespace FileDialog1.ViewModel
 
         private void selectCommandExecute()
         {
-            this.FileName = string.Empty;
-
             var args = new FileSelectRequestEventArgs
             {
                 Title = "ファイルを選択してください",
