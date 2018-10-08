@@ -38,8 +38,6 @@ namespace FileDialog2.ViewModels
 
         private void selectCommandExecute()
         {
-            this.FileName = string.Empty;
-
             FileSelectRequest.Raise(
                 new Notification { Title = "ファイルを選択してください" },
                 ( c ) => this.FileName = c.Content as string );
