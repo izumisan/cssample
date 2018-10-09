@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0F0AA8E-A452-4336-9507-010DA3655714}</ProjectGuid>
+    <ProjectGuid>{A6ABDE97-5095-4735-B4DE-4258FC999BF9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GridSplitterH</RootNamespace>
-    <AssemblyName>GridSplitterH</AssemblyName>
+    <RootNamespace>GridSplitter</RootNamespace>
+    <AssemblyName>GridSplitter</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,6 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="GridSplitterH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridSplitterV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -61,6 +69,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridSplitterH.xaml.cs">
+      <DependentUpon>GridSplitterH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridSplitterV.xaml.cs">
+      <DependentUpon>GridSplitterV.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

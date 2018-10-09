@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GridSplitterH.Properties
+namespace GridSplitter.Properties
 {
 
 

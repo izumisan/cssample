@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GridSplitterV.Properties
+namespace GridSplitter.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace GridSplitterV.Properties
             {
                 if ( ( resourceMan == null ) )
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager( "GridSplitterV.Properties.Resources", typeof( Resources ).Assembly );
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager( "GridSplitter.Properties.Resources", typeof( Resources ).Assembly );
                     resourceMan = temp;
                 }
                 return resourceMan;

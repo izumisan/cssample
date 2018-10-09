@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GridSplitterV
+namespace GridSplitter
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// GridSplitterH.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GridSplitterH : UserControl
     {
-        public MainWindow()
+        public GridSplitterH()
         {
             InitializeComponent();
         }
