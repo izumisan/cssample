@@ -1,5 +1,19 @@
 # LiveChartsサンプル
 
+# Overview
+
+## LiveChartsSample
+
+![](capture/LiveChartsSample.png)
+
+## LiveChartsSample2
+
+![](capture/LiveChartsSample2.png)
+
+## ZoomSample
+
+![](capture/ZoomSample.png)
+
 # 参考
 
 - [Live Charts](https://lvcharts.net/)
