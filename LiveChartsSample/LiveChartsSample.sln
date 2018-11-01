@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveChartsSample", "LiveCha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveChartsSample2", "LiveChartsSample2\LiveChartsSample2.csproj", "{35075E24-AF77-49CA-AAEC-64C7186EA3E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoomSample", "ZoomSample\ZoomSample.csproj", "{0B14B7AD-4ABD-425B-A2C7-EAAFA003C8A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{35075E24-AF77-49CA-AAEC-64C7186EA3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35075E24-AF77-49CA-AAEC-64C7186EA3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35075E24-AF77-49CA-AAEC-64C7186EA3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B14B7AD-4ABD-425B-A2C7-EAAFA003C8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B14B7AD-4ABD-425B-A2C7-EAAFA003C8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B14B7AD-4ABD-425B-A2C7-EAAFA003C8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B14B7AD-4ABD-425B-A2C7-EAAFA003C8A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

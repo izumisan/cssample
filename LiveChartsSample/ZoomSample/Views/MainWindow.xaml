@@ -1,0 +1,21 @@
+﻿<Window x:Class="ZoomSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:ZoomSample"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Zoomプロパティを指定することで、マウススクロールで拡大・縮小できる -->
+        <lvc:CartesianChart Zoom="X">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Values="{Binding SinValues}"/>
+            </lvc:CartesianChart.Series>
+        </lvc:CartesianChart>
+        
+    </Grid>
+</Window>
