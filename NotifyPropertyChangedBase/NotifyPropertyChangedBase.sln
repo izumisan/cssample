@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyPropertyChangedBase", "NotifyPropertyChangedBase\NotifyPropertyChangedBase.csproj", "{E418FA41-2339-4E3F-B3AB-F262D8445D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyPropertyChangedBase.Test", "NotifyPropertyChangedBase.Test\NotifyPropertyChangedBase.Test.csproj", "{31B8E0E6-CFA4-47BD-9A40-8D29C2BF2546}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E418FA41-2339-4E3F-B3AB-F262D8445D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E418FA41-2339-4E3F-B3AB-F262D8445D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E418FA41-2339-4E3F-B3AB-F262D8445D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E418FA41-2339-4E3F-B3AB-F262D8445D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B8E0E6-CFA4-47BD-9A40-8D29C2BF2546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B8E0E6-CFA4-47BD-9A40-8D29C2BF2546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B8E0E6-CFA4-47BD-9A40-8D29C2BF2546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B8E0E6-CFA4-47BD-9A40-8D29C2BF2546}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43AAEC24-683F-4653-9AB8-ED7A0CE1BDA5}
+	EndGlobalSection
+EndGlobal
