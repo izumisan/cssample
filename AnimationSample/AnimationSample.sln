@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationSample", "AnimationSample\AnimationSample.csproj", "{7118624C-043D-4752-A602-F09CE69AAC9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationSample2", "AnimationSample2\AnimationSample2.csproj", "{3E7A38D0-CC36-4498-B3A0-72E5C931B061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7118624C-043D-4752-A602-F09CE69AAC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7118624C-043D-4752-A602-F09CE69AAC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7118624C-043D-4752-A602-F09CE69AAC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
