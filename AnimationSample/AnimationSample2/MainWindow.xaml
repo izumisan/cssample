@@ -11,8 +11,8 @@
         <Storyboard x:Key="_animation">
             <DoubleAnimation Storyboard.TargetName="_rect"
                              Storyboard.TargetProperty="RenderTransform.Angle"
-                             From="0"
-                             To="180"
+                             From="0" 
+                             To="360"
                              Duration="0:0:12"/>
         </Storyboard>
     </Window.Resources>
@@ -23,7 +23,9 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Name="_rect" Grid.Row="0" Width="100" Height="100" Fill="RoyalBlue">
+        <Rectangle Name="_rect" Grid.Row="0" 
+                   Width="100" Height="100" 
+                   Fill="RoyalBlue">
             <Rectangle.RenderTransform>
                 <RotateTransform CenterX="50" CenterY="50" Angle="0"/>
             </Rectangle.RenderTransform>
@@ -47,25 +49,38 @@
 
             <UniformGrid.Triggers>
                 <EventTrigger SourceName="_beginButton" RoutedEvent="Button.Click">
-                    <BeginStoryboard Name="_beginStoryboard" 
-                                     Storyboard="{StaticResource ResourceKey=_animation}"/>
+                    <!-- BeginStoryboard
+                         ストーリーボードを開始する -->
+                    <BeginStoryboard Name="_beginStoryboard" Storyboard="{StaticResource ResourceKey=_animation}"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_pauseButton" RoutedEvent="Button.Click">
+                    <!-- PauseStoryboard
+                         ストーリーボードを一時停止する -->
                     <PauseStoryboard BeginStoryboardName="_beginStoryboard"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_resumeButton" RoutedEvent="Button.Click">
+                    <!-- ResumeStoryboard
+                         一時停止中のストーリーボードを再開する -->
                     <ResumeStoryboard BeginStoryboardName="_beginStoryboard"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_changeSpeedButton" RoutedEvent="Button.Click">
+                    <!-- SetStoryboardSpeedRatio
+                         ストーリーボードの速度（レート）を変更する -->
                     <SetStoryboardSpeedRatio BeginStoryboardName="_beginStoryboard" SpeedRatio="4"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_skipButton" RoutedEvent="Button.Click">
+                    <!-- SkipStoryboardToFill
+                    　   ストーリーボードを最後まで進める（スキップ） -->
                     <SkipStoryboardToFill BeginStoryboardName="_beginStoryboard"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_stopButton" RoutedEvent="Button.Click">
+                    <!-- StopStoryboard
+                         ストリーボードを停止する -->
                     <StopStoryboard BeginStoryboardName="_beginStoryboard"/>
                 </EventTrigger>
                 <EventTrigger SourceName="_removeButton" RoutedEvent="Button.Click">
+                    <!-- RemoveStoryboard
+                         ストリーボードを削除する -->
                     <RemoveStoryboard BeginStoryboardName="_beginStoryboard"/>
                 </EventTrigger>
             </UniformGrid.Triggers>
