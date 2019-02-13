@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationSample", "Animatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationSample2", "AnimationSample2\AnimationSample2.csproj", "{3E7A38D0-CC36-4498-B3A0-72E5C931B061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyFrameAnimation", "KeyFrameAnimation\KeyFrameAnimation.csproj", "{0CE6BFBE-2FEB-4829-B22D-DFCDDACA15F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E7A38D0-CC36-4498-B3A0-72E5C931B061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE6BFBE-2FEB-4829-B22D-DFCDDACA15F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE6BFBE-2FEB-4829-B22D-DFCDDACA15F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE6BFBE-2FEB-4829-B22D-DFCDDACA15F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE6BFBE-2FEB-4829-B22D-DFCDDACA15F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
