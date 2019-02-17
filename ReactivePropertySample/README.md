@@ -41,6 +41,10 @@ IObservable\<T\>の生成（その2）
 - Observable.Delay()
 - Observable.Sample()
 
+## BooleanNotiferSample
+
+- BooleanNotifierを使ったサンプルプログラム
+
 # 覚書
 
 # Hot / Cold Observable
