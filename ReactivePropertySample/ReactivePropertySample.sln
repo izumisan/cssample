@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableSample", "Observa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableSample2", "ObservableSample2\ObservableSample2.csproj", "{22826C5A-15EA-4A79-BE40-947FBA58FDA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooleanNotifierSample", "BooleanNotifierSample\BooleanNotifierSample.csproj", "{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{22826C5A-15EA-4A79-BE40-947FBA58FDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22826C5A-15EA-4A79-BE40-947FBA58FDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22826C5A-15EA-4A79-BE40-947FBA58FDA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
