@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableSample2", "Observ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooleanNotifierSample", "BooleanNotifierSample\BooleanNotifierSample.csproj", "{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifier", "Notifier", "{4DE9C6EC-01CA-47C6-B7BF-AD42A12BDC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountNotifierSample", "CountNotifierSample\CountNotifierSample.csproj", "{5B374335-C38D-431E-AC18-D4FBE0734D5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +49,17 @@ Global
 		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B374335-C38D-431E-AC18-D4FBE0734D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B374335-C38D-431E-AC18-D4FBE0734D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B374335-C38D-431E-AC18-D4FBE0734D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B374335-C38D-431E-AC18-D4FBE0734D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9174D237-9EF5-44B5-82D3-C9F09B7DFE58} = {4DE9C6EC-01CA-47C6-B7BF-AD42A12BDC2D}
+		{5B374335-C38D-431E-AC18-D4FBE0734D5F} = {4DE9C6EC-01CA-47C6-B7BF-AD42A12BDC2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {292B395B-5E15-41CB-B946-4294BAC788B6}
