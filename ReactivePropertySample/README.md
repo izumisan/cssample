@@ -41,9 +41,14 @@ IObservable\<T\>の生成（その2）
 - Observable.Delay()
 - Observable.Sample()
 
-## BooleanNotiferSample
+## Notifier系クラス
 
-- BooleanNotifierを使ったサンプルプログラム
+- BooleanNotifierSample
+    - BooleanNotifierのサンプルプログラム
+- CountNotifierSample
+    - CountNotifierのサンプルプログラム
+- SingleProcessByCountNotifier
+    - CountNotifierを利用して、多重実行を抑制したサンプルプログラム
 
 # 覚書
 
