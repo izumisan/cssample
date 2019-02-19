@@ -1,0 +1,20 @@
+﻿<Window x:Class="BooleanNotifierSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BooleanNotifierSample"
+        mc:Ignorable="d"
+        Title="BooleanNotifier" Height="200" Width="200">
+    
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <StackPanel VerticalAlignment="Center">
+        <Label Content="{Binding BooleanNotifier.Value}" HorizontalContentAlignment="Center"/>
+        <Button Content="TurnOn" Command="{Binding TurnOnCommand}"/>
+        <Button Content="TernOff" Command="{Binding TurnOffCommand}"/>
+        <Button Content="SwitchValue" Command="{Binding SwitchValueCommand}"/>
+    </StackPanel>
+</Window>
