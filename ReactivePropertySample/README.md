@@ -48,10 +48,13 @@ IObservable\<T\>の生成（その2）
 - CountNotifierSample
     - CountNotifierのサンプルプログラム
 - SingleProcessByCountNotifier
-    - CountNotifierを利用して、多重実行を抑制したサンプルプログラム
+    - CountNotifierによる、多重実行を抑制したサンプルプログラム
+    - 多重実行の抑制（ver. CountNotifier）
 - ScheduledNotifierSample
     - ScheduledNotifierによる遅延実行サンプル
-
+- BusyNotifierSample
+    - BusyNotifierによる、多重実行を抑制したサンプルプログラム
+    - 多重実行の抑制（ver. BusyNotifier）
 
 # 覚書
 
