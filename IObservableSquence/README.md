@@ -1,5 +1,11 @@
 # IObservable sequence
 
+イベントから`IObservable<T>`（Observableシーケンス）の生成まとめ
+
+# oberview
+
+- IObservableSequence
+
 # `IObserver<T>`, `IObservable<T>`
 
 - `IObserver<T>`
@@ -29,8 +35,9 @@ IDisposable Subscribe<T>( this IObservable<T> source,
                           Action<T> onNext, 
                           Action<Exception> onError, 
                           Action onCompleted );
-````
+```
 
 # 参考リンク
 
 - [Rxでのイベント変換まとめ - FromEvent vs FromEventPattern](http://neue.cc/2011/07/06_332.html)
+- [Re:FromEvent vs FromEventPattern](http://neue.cc/2011/09/10_342.html)
