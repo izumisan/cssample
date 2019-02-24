@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IObservableSequence", "IObservableSequence\IObservableSequence.csproj", "{CBC3CEE5-2A92-4BE0-A95E-3168DF809FF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBC3CEE5-2A92-4BE0-A95E-3168DF809FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC3CEE5-2A92-4BE0-A95E-3168DF809FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC3CEE5-2A92-4BE0-A95E-3168DF809FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC3CEE5-2A92-4BE0-A95E-3168DF809FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1603651-4955-4509-8CBE-3D24042EAAEC}
+	EndGlobalSection
+EndGlobal
