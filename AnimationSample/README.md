@@ -8,6 +8,9 @@ WPFアニメーションのサンプル
     - 単純なアニメーションのサンプル
 - AnimationSample2
     - 開始・停止等のアニメーション制御のサンプル
+- ColorAnimationSample
+    - `ColorAnimation`を使った単純なアニメーションサンプル
+    - Brush.Colorを#AARRGGBB形式で表示できていない...
 - KeyFrameAnimation
     - キーフレームアニメーションのサンプル
 
