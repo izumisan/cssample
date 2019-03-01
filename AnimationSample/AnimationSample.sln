@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyFrameAnimation", "KeyFra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorAnimationSample", "ColorAnimationSample\ColorAnimationSample.csproj", "{2F600D19-9124-4705-BE38-AD33616D042C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTriggerAnimation", "DataTriggerAnimation\DataTriggerAnimation.csproj", "{AF5761F2-E753-4034-88B2-55B1EF0B702F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTriggerAnimation2", "DataTriggerAnimation2\DataTriggerAnimation2.csproj", "{354E1D4B-A863-4B63-93CB-380D7B6FB5B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{2F600D19-9124-4705-BE38-AD33616D042C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F600D19-9124-4705-BE38-AD33616D042C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F600D19-9124-4705-BE38-AD33616D042C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5761F2-E753-4034-88B2-55B1EF0B702F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5761F2-E753-4034-88B2-55B1EF0B702F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5761F2-E753-4034-88B2-55B1EF0B702F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5761F2-E753-4034-88B2-55B1EF0B702F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354E1D4B-A863-4B63-93CB-380D7B6FB5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354E1D4B-A863-4B63-93CB-380D7B6FB5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354E1D4B-A863-4B63-93CB-380D7B6FB5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354E1D4B-A863-4B63-93CB-380D7B6FB5B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

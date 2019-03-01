@@ -13,6 +13,12 @@ WPFアニメーションのサンプル
     - Brush.Colorを#AARRGGBB形式で表示できていない...
 - KeyFrameAnimation
     - キーフレームアニメーションのサンプル
+- DataTriggerAnimation
+    - DataTriggerでアニメーションを開始するサンプル
+    - 標準のDataTriggerを用いたサンプル
+- DataTriggerAnimation
+    - DataTriggerでアニメーションを開始するサンプル
+    - BlendのDataTriggerを用いたサンプル
 
 # 覚書
 
