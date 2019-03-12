@@ -1,0 +1,15 @@
+{
+  "name": "quicktypesample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "quicktype": "quicktype"
+  },
+  "author": "izumisan",
+  "license": "MIT",
+  "dependencies": {
+    "quicktype": "^15.0.174"
+  }
+}
