@@ -4,14 +4,8 @@
     <Filter Include="src">
       <UniqueIdentifier>{0cda811e-0496-4d1a-934f-aa496ea9d5c7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="nlohmann">
-      <UniqueIdentifier>{36970f0d-e930-4f60-bc5d-2ef9abe64f36}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="nlohmann\json.hpp">
-      <Filter>nlohmann</Filter>
-    </ClInclude>
     <ClInclude Include="src\welcome.h">
       <Filter>src</Filter>
     </ClInclude>
