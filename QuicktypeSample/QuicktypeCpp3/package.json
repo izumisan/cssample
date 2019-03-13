@@ -1,13 +1,13 @@
 {
-  "name": "quicktypesample",
+  "name": "quicktypecpp3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "quicktype": "quicktype"
+    "quicktype": "quicktype --lang=c++ -o foo.h --include-location global-include --no-boost --msbuildPermissive use-permissive foo.json"
   },
-  "author": "izumisan",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "quicktype": "^15.0.174"

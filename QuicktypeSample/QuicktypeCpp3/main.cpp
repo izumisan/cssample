@@ -7,7 +7,9 @@ int main()
     "name": "foo",
     "ivalue": 1,
     "dvalue": 3.14,
-    "success": true
+    "success": true,
+    "key": { "value": 7 },
+    "key2": { "value": 77 }
 })"_json;
 
     auto&& foo = quicktype::Foo();
