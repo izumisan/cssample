@@ -1,0 +1,12 @@
+{
+  "name": "quicktypecpp4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "quicktype": "quicktype --lang=c++ --include-location global-include --no-boost --src=json/ --source-style multi-source --out=./"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "quicktype": "^15.0.174"
+  }
+}

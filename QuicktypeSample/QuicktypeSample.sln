@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuicktypeCpp2", "QuicktypeC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuicktypeCpp3", "QuicktypeCpp3\QuicktypeCpp3.vcxproj", "{667E808B-8360-4351-B1EF-318F7A238341}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuicktypeCpp4", "QuicktypeCpp4\QuicktypeCpp4.vcxproj", "{08892291-3E39-464E-B7CE-20C745AE513E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,17 @@ Global
 		{667E808B-8360-4351-B1EF-318F7A238341}.Release|x64.Build.0 = Release|x64
 		{667E808B-8360-4351-B1EF-318F7A238341}.Release|x86.ActiveCfg = Release|Win32
 		{667E808B-8360-4351-B1EF-318F7A238341}.Release|x86.Build.0 = Release|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|Any CPU.Build.0 = Debug|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|x64.ActiveCfg = Debug|x64
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|x64.Build.0 = Debug|x64
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|x86.ActiveCfg = Debug|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Debug|x86.Build.0 = Debug|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Release|x64.ActiveCfg = Release|x64
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Release|x64.Build.0 = Release|x64
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Release|x86.ActiveCfg = Release|Win32
+		{08892291-3E39-464E-B7CE-20C745AE513E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

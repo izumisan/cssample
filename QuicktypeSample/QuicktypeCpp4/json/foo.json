@@ -1,0 +1,7 @@
+{
+    "name": "foo",
+    "fooValue": {
+        "value1": "foo value1",
+        "value2": "foo value2"
+    }
+}
