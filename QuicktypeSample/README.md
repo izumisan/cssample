@@ -27,8 +27,21 @@ JSONのシリアライズ・デシリアライズコードを自動生成するq
 - QuicktypeCpp2
     - 自動生成コードを、`boost/optional.hpp`ではなくC++17の`<optional>`ヘッダとしたC++コードのお試しプロジェクト
 - QuicktypeCpp3
-    - npmパッケージ版を利用し、ビルド前イベントで`quicktype`コマンドを実行するサンプル
+    - ビルド前イベントで`quicktype`コマンドを実行するサンプル
+    - npmパッケージを利用
     - オプションを変更した際の生成コード確認用
+- QuicktypeCpp4
+    - 複数のjsonファイルを入力とし、`--source-style multi-source`としたサンプル
+        - 下記オプションで変換エラーが表示されるが、特に問題なくhppファイルが生成される
+            ```
+            > quicktype --lang=c++ --include-location global-include --no-boost --src=json/ --source-style multi-source --out=./
+            ```
+        - `--source-style multi-source`と`--msbuildPermissive use-permissive`を合わせて使うと、`Generators.hpp`で下記ようのコードが生成されてしまい、ビルドできない
+            ```cpp
+            #include "quicktype::Foo.hpp"
+            ```
+    - 生成コード確認のため、変換コマンドはビルドイベントに登録していない
+    - yarnパッケージを利用
 
 # 利用方法
 
