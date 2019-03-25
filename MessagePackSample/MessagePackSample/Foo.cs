@@ -11,6 +11,9 @@ namespace MessagePackSample
     [MessagePackObject]
     public class Foo
     {
+        // Keyアトリビュートでint型を指定した場合、
+        // パラメータは配列としてシリアライズされる
+
         [Key(0)]
         public int Value1 { get; set; } = 0;
 

@@ -37,7 +37,8 @@ namespace MessagePackSample
             Console.WriteLine( refoo.Name );
 
             // JSON文字列化
-            // デフォルトでは、プロパティ名（Jsonキー）が除かれた文字列が生成される
+            // Keyアトリビュートにint型を指定しているため
+            // 各パラメータを配列としたJSON文字列となる
             string json = MessagePackSerializer.ToJson( bytes );
 
             Console.WriteLine( json );
