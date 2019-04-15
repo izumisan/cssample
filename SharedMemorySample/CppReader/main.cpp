@@ -9,18 +9,13 @@ int main()
 
     Foo rdata = {};
 
-    while ( true )
+    while ( rdata.exitFlag == 0 )
     {
         shm.read( rdata );
 
         std::cout << "count: " << rdata.count << ", "
                   << "ivalue: " << rdata.ivalue << ", "
                   << "dvalue: " << rdata.dvalue << std::endl;
-
-        if ( rdata.exitFlag != 0 )
-        {
-            break;
-        }
 
         std::this_thread::sleep_for( std::chrono::seconds( 1 ) );
     }
