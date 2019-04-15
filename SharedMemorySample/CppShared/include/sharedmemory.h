@@ -14,7 +14,7 @@ public:
     void open();
     void close();
 
-    void read( Foo& foo );
+    void read( Foo& foo ) const;
     void write( const Foo& foo );
 
 private:

@@ -47,7 +47,7 @@ void SharedMemory::close()
     ::CloseHandle( m_handle );
 }
 
-void SharedMemory::read( Foo& foo )
+void SharedMemory::read( Foo& foo ) const
 {
     ::memcpy( &foo, m_memory, memorySize_ );
 }
