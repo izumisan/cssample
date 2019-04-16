@@ -3,10 +3,10 @@
 struct Foo
 {
     int count;
-    int ivalue;
-    double dvalue;
+    double value;
+    bool lucky;
     int array[512];
-    int exitFlag;
+    bool exitFlag;
 };
 
 #endif // FOO_H

@@ -8,14 +8,16 @@ using System.Runtime.InteropServices;
 
 namespace CsShared
 {
-    [StructLayout( LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4 )]
+    [StructLayout( LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 8 )]
     public class Foo
     {
         public Int32 _count;
-        public Int32 _ivalue;
-        public Double _dvalue;
+        public Double _value;
+        [MarshalAs(UnmanagedType.U1)]
+        bool _lucky;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 512 )]
         public Int32[] _array = new Int32[512];
-        public Int32 _exitFlag;
+        [MarshalAs( UnmanagedType.U1 )]
+        public bool _exitFlag;
     }
 }

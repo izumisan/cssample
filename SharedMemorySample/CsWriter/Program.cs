@@ -24,8 +24,7 @@ namespace CsWriter
                 while ( exitFlag != true )
                 {
                     wdata._count = count;
-                    wdata._ivalue = count + 1;
-                    wdata._dvalue = count + 0.777;
+                    wdata._value = count + 0.777;
                     for ( int i = 0; i < 512; ++i )
                     {
                         wdata._array[i] = count + i;
@@ -39,7 +38,7 @@ namespace CsWriter
                     ++count;
                 }
 
-                wdata._exitFlag = 1;
+                wdata._exitFlag = true;
                 shm.write( wdata );
             } );
 

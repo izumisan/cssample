@@ -16,11 +16,11 @@ namespace CsReader
 
             var rdata = new Foo();
 
-            while ( rdata._exitFlag == 0 )
+            while ( rdata._exitFlag == false )
             {
                 shm.read( ref rdata );
 
-                Console.WriteLine( $"count: { rdata._count }, ivalue: { rdata._ivalue }, dvalue: { rdata._dvalue }, array[511]: { rdata._array[511] }" );
+                Console.WriteLine( $"count: { rdata._count }, value: { rdata._value }, array[511]: { rdata._array[511] }" );
 
                 Task.Delay( 1000 ).Wait();
             }

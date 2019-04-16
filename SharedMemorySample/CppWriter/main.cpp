@@ -19,8 +19,7 @@ int main()
         while ( exitFlag != true )
         {
             wdata.count = count;
-            wdata.ivalue = count + 1;
-            wdata.dvalue = count + 0.777;
+            wdata.value = count + 0.777;
             for ( int i = 0; i < 512; ++i )
             {
                 wdata.array[i] = count + i;
@@ -34,7 +33,7 @@ int main()
             ++count;
         }
 
-        wdata.exitFlag = 1;
+        wdata.exitFlag = true;
         shm.write( wdata );
     } );
 
