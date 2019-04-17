@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Reactive.Linq;
 using CsShared;
 
 namespace CsWriter
@@ -14,41 +15,35 @@ namespace CsWriter
         {
             Console.WriteLine( "<<< Quit on press Enter key >>>" );
 
-            bool exitFlag = false;
-            var task = Task.Run( () =>
+            using ( var shm = new SharedMemory() )
             {
-                var shm = new SharedMemory();
                 var wdata = new Foo();
 
-                int count = 0;
-                while ( exitFlag != true )
+                var source = Observable.Interval( TimeSpan.FromSeconds( 1 ) );
+
+                var writer = source.Subscribe( n =>
                 {
-                    wdata._count = count;
-                    wdata._value = count + 0.777;
-                    wdata._lucky = ( count % 2 == 0 );
+                    wdata._count = (int)n;
+                    wdata._value = n + 0.777;
+                    wdata._lucky = ( n % 2 == 0 );
                     wdata._name = "ABCDEFG";
-                    for ( int i = 0; i < wdata._array.Count(); ++i )
+                    for ( int i = 0; i < wdata._array.Length; ++i )
                     {
-                        wdata._array[i] = count + i;
+                        wdata._array[i] = (int)( n + i );
                     }
 
                     shm.write( wdata );
 
-                    Console.WriteLine( $"write: { count }" );
+                    Console.WriteLine( $"write: { n }" );
+                } );
 
-                    Task.Delay( 1000 ).Wait();
-                    ++count;
-                }
+                Console.ReadLine();
 
                 wdata._exitFlag = true;
                 shm.write( wdata );
-            } );
 
-            Console.ReadLine();
-
-            exitFlag = true;
-
-            Task.WaitAll( task );
+                writer.Dispose();
+            }
         }
     }
 }
