@@ -65,8 +65,11 @@ namespace CsShared
             byte[] bytes = new byte[size];
             IntPtr ptr = Marshal.AllocCoTaskMem( size );
 
+            // 共有メモリ（メモリマップトファイル）からデータを読み出す
             _accessor.ReadArray( 0, bytes, 0, size );
+            // バイト列データ(マネージデータ)をIntPtr(アンマネージポインタ)にコピー
             Marshal.Copy( bytes, 0, ptr, size );
+            // アンマネージデータをマネージデータにマーシャリング
             Marshal.PtrToStructure( ptr, foo );
 
             Marshal.FreeCoTaskMem( ptr );
@@ -78,8 +81,11 @@ namespace CsShared
             byte[] bytes = new byte[size];
             IntPtr ptr = Marshal.AllocCoTaskMem( size );
 
+            // マネージデータをアンマネージデータにマーシャリング
             Marshal.StructureToPtr( foo, ptr, false );
+            // IntPtr(アンマネージポインタ)をバイト列データ(マネージデータ)にコピー
             Marshal.Copy( ptr, bytes, 0, size );
+            // バイト列データを共有メモリ（メモリマップトファイル）に書き出す
             _accessor.WriteArray( 0, bytes, 0, size );
 
             Marshal.FreeCoTaskMem( ptr );
