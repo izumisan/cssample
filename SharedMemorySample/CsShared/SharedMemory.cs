@@ -9,7 +9,7 @@ using System.IO.MemoryMappedFiles;
 
 namespace CsShared
 {
-    public class SharedMemory
+    public class SharedMemory : IDisposable
     {
         public SharedMemory()
         {
@@ -18,8 +18,34 @@ namespace CsShared
 
         ~SharedMemory()
         {
-            close();
+            Dispose( false );
         }
+
+        #region Disposeパターン
+
+        private bool _disposed = false;
+
+        public void Dispose()
+        {
+            Dispose( true );
+            GC.SuppressFinalize( this );
+        }
+
+        protected virtual void Dispose( bool disposing )
+        {
+            if ( !_disposed )
+            {
+                if ( disposing )
+                {
+                    close();
+                }
+                _disposed = true;
+            }
+        }
+        #endregion
+
+        private MemoryMappedFile _mmf = null;
+        private MemoryMappedViewAccessor _accessor = null;
 
         public void open()
         {
@@ -42,6 +68,7 @@ namespace CsShared
             _accessor.ReadArray( 0, bytes, 0, size );
             Marshal.Copy( bytes, 0, ptr, size );
             Marshal.PtrToStructure( ptr, foo );
+
             Marshal.FreeCoTaskMem( ptr );
         }
 
@@ -53,12 +80,9 @@ namespace CsShared
 
             Marshal.StructureToPtr( foo, ptr, false );
             Marshal.Copy( ptr, bytes, 0, size );
-            Marshal.FreeCoTaskMem( ptr );
-
             _accessor.WriteArray( 0, bytes, 0, size );
-        }
 
-        private MemoryMappedFile _mmf;
-        private MemoryMappedViewAccessor _accessor;
+            Marshal.FreeCoTaskMem( ptr );
+        }
     }
 }
