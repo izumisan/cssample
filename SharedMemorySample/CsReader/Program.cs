@@ -20,7 +20,11 @@ namespace CsReader
             {
                 shm.read( ref rdata );
 
-                Console.WriteLine( $"count: { rdata._count }, value: { rdata._value }, array[511]: { rdata._array[511] }" );
+                Console.Write( $"count: { rdata._count }, " );
+                Console.Write( $"value: { rdata._value }, " );
+                Console.Write( $"lucky: { rdata._lucky }, " );
+                Console.Write( $"name: { rdata._name }, " );
+                Console.WriteLine( $"array[7]: { rdata._array[7] }" );
 
                 Task.Delay( 1000 ).Wait();
             }

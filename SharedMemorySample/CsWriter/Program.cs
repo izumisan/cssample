@@ -25,7 +25,9 @@ namespace CsWriter
                 {
                     wdata._count = count;
                     wdata._value = count + 0.777;
-                    for ( int i = 0; i < 512; ++i )
+                    wdata._lucky = ( count % 2 == 0 );
+                    wdata._name = "ABCDEFG";
+                    for ( int i = 0; i < wdata._array.Count(); ++i )
                     {
                         wdata._array[i] = count + i;
                     }
