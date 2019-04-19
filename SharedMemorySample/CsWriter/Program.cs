@@ -43,7 +43,11 @@ namespace CsWriter
                 shm.write( wdata );
 
                 writer.Dispose();
+
+                Console.WriteLine( $"Average: { shm.AverageTime }, Max: { shm.MaxTime }, Min: { shm.MinTime } [msec]" );
             }
+
+            Console.ReadLine();
         }
     }
 }

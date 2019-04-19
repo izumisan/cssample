@@ -28,7 +28,11 @@ namespace CsReader
 
                     Task.Delay( 1000 ).Wait();
                 }
+
+                Console.WriteLine( $"Average: { shm.AverageTime }, Max: { shm.MaxTime }, Min: { shm.MinTime } [msec]" );
             }
+
+            Console.ReadLine();
         }
     }
 }
