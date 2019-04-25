@@ -22,15 +22,19 @@
             <TextBlock x:Name="Face5" Style="{DynamicResource FaceStyle}" Text="5" Background="#FF29D214"/>
             <TextBlock x:Name="Face6" Style="{DynamicResource FaceStyle}" Text="6" Background="#FF4444BB"/>
         </Grid>
+        <!-- Viewport3D: カメラ、ライト、オブジェクトを配置する -->
         <Viewport3D>
+            <!-- カメラ： Viewport3D.Camera プロパティに指定する -->
             <Viewport3D.Camera>
                 <PerspectiveCamera Position="0,0,10"/>
             </Viewport3D.Camera>
+            <!-- ライト： オブジェクトとして、Viewport3D.Children プロパティに指定する -->
             <ModelVisual3D>
                 <ModelVisual3D.Content>
                     <AmbientLight/>
                 </ModelVisual3D.Content>
             </ModelVisual3D>
+            <!-- オブジェクト： Viewport3D.Children プロパティに指定する -->
             <ModelVisual3D>
                 <ModelVisual3D.Transform>
                     <Transform3DGroup>
@@ -47,18 +51,38 @@
                 </ModelVisual3D.Transform>
                 <ModelVisual3D.Content>
                     <Model3DGroup>
+                        <!-- GeometryModel3Dでオブジェクト（No1の面）を指定する -->
                         <GeometryModel3D>
+                            <!-- マテリアル -->
                             <GeometryModel3D.Material>
+                                <!-- DiffuseMaterialを用いてTextBlockをテクスチャとして指定 -->
                                 <DiffuseMaterial>
                                     <DiffuseMaterial.Brush>
                                         <VisualBrush Visual="{Binding ElementName=Face1}"/>
                                     </DiffuseMaterial.Brush>
                                 </DiffuseMaterial>
                             </GeometryModel3D.Material>
+                            
+                            <!-- マテリアルの表示位置を指定する -->
                             <GeometryModel3D.Geometry>
-                                <MeshGeometry3D Positions="-1,-1,1 1,-1,1 1,1,1 -1,1,1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,1 1,1 1,0 0,0"/>
+                                <!-- 
+                                MeshGeometry3D
+                                
+                                Positionsプロパティ
+                                P0(-1,-1,1), P1(1,-1,1), P2(1,1,1), P3(-1,1,1)の4点を指定
+                                
+                                TriangleIndicesプロパティ
+                                P0-P1-P2とP0-P2-P3の2つの三角形を指定
+                                
+                                TextureCoordinatesプロパティ
+                                P0を左下(0,1)、P1を右下(1,1)、P2を右上(1,0)、P3を左上(0,0)となるようにテクスチャを描画する
+                                -->
+                                <MeshGeometry3D Positions="-1,-1,1 1,-1,1 1,1,1 -1,1,1" 
+                                                TriangleIndices="0,1,2 0,2,3" 
+                                                TextureCoordinates="0,1 1,1 1,0 0,0"/>
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
+                        
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
