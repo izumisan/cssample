@@ -83,6 +83,7 @@
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
                         
+                        <!-- No2の面のオブジェクト -->
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
@@ -95,6 +96,8 @@
                                 <MeshGeometry3D Positions="-1,-1,-1 1,-1,-1 1,-1,1 -1,-1,1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,1 1,1 1,0 0,0"/>
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
+
+                        <!-- No3の面のオブジェクト -->
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
@@ -107,6 +110,8 @@
                                 <MeshGeometry3D Positions="1,-1,-1 1,1,-1 1,1,1 1,-1,1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,1 1,1 1,0 0,0"/>
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
+
+                        <!-- No4の面のオブジェクト -->
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
@@ -119,6 +124,8 @@
                                 <MeshGeometry3D Positions="-1,1,-1 -1,-1,-1 -1,-1,1 -1,1,1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,1 1,1 1,0 0,0"/>
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
+
+                        <!-- No5の面のオブジェクト -->
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
@@ -131,6 +138,8 @@
                                 <MeshGeometry3D Positions="1,1,-1 -1,1,-1 -1,1,1 1,1,1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,1 1,1 1,0 0,0"/>
                             </GeometryModel3D.Geometry>
                         </GeometryModel3D>
+
+                        <!-- No6の面のオブジェクト -->
                         <GeometryModel3D>
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial>
