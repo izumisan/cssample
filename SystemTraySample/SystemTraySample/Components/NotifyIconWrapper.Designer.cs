@@ -35,6 +35,8 @@
             this.menuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.quitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip.SuspendLayout();
             // 
             // notifyIcon
@@ -50,9 +52,11 @@
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItem1,
             this.menuItem2,
+            this.menuItem3,
+            this.toolStripSeparator1,
             this.quitMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(170, 112);
+            this.contextMenuStrip.Size = new System.Drawing.Size(170, 154);
             // 
             // menuItem1
             // 
@@ -71,6 +75,17 @@
             this.quitMenuItem.Name = "quitMenuItem";
             this.quitMenuItem.Size = new System.Drawing.Size(169, 36);
             this.quitMenuItem.Text = "終了";
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Name = "menuItem3";
+            this.menuItem3.Size = new System.Drawing.Size(169, 36);
+            this.menuItem3.Text = "メニュー3";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(166, 6);
             this.contextMenuStrip.ResumeLayout(false);
 
         }
@@ -82,5 +97,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem1;
         private System.Windows.Forms.ToolStripMenuItem menuItem2;
         private System.Windows.Forms.ToolStripMenuItem quitMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
