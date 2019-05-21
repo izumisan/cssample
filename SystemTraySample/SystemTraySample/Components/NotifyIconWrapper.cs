@@ -21,6 +21,7 @@ namespace SystemTraySample.Components
                 var window1 = new Window1();
                 window1.Show();
             };
+
             menuItem2.Click += ( s, e ) =>
             {
                 Debug.Print( "item2 clicked" );
@@ -28,9 +29,19 @@ namespace SystemTraySample.Components
                 var window2 = new Window2();
                 window2.Show();
             };
+
+            menuItem3.Click += ( s, e ) =>
+            {
+                Debug.Print( "item3 clicked" );
+
+                // トースト通知（Toast Notification）
+                notifyIcon.ShowBalloonTip( 10000 /*10sec*/, "タイトル", "テキスト", System.Windows.Forms.ToolTipIcon.Info );
+            };
+
             quitMenuItem.Click += ( s, e ) =>
             {
                 Debug.Print( "quit clicked" );
+
                 System.Windows.Application.Current.Shutdown();
             };
         }

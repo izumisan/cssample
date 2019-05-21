@@ -1,9 +1,12 @@
 # SystemTraySample
 
+システムトレイ（タスクトレイ）常駐アプリのサンプル
+
 # overview
 
 - SystemTraySample
     - System.Windows.Forms.NotifyIconを用いたサンプル
+    - NotifyIcon.ShowBalloonTip()によるトースト通知のサンプル
 
 # SystemTraySample覚書
 
