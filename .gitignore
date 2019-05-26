@@ -3,6 +3,7 @@
 
 # ホワイトリスト
 !/AnimationSample/
+!/ByteArraySample/
 !/ConfigurationTransformSample/
 !/CsvHelperSample/
 !/IObservableSquence/
