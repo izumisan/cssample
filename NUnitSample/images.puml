@@ -1,0 +1,19 @@
+@startuml act.attribute
+
+|SetUpFixture|
+start
+:OneTimeSetUp;
+
+|TestFixture|
+partition "each test" {
+:SetUp;
+:Test
+TestCase
+TestSource;
+:TearDown;
+}
+
+|SetUpFixture|
+:OneTimeTearDown;
+stop
+@enduml

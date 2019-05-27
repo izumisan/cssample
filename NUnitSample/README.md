@@ -41,6 +41,8 @@ https://github.com/nunit/docs/wiki/Constraint-Model
 
 ## 基本
 
+![Test Attribute](images/act.attribute.png)
+
 |Attribute|説明|
 |---|---|
 |SetUpFixture|テストクラスに付与する。SetUpFixtureを付与したテストクラスは、OneTimeSetUpとOneTimeTearDown以外のNUnit属性を付与したメソッドを持つことができない。<br>SetUpFixture属性をもつテストクラスのOneTimeSetUpのメソッドは、同一名前空間の全てのTestFixtureに先行して一度だけ実行される（OneTimeTearDownも同様、全てのTextFixtureの最後に一度だけ実行される）|
