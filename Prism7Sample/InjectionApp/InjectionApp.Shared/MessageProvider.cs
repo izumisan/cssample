@@ -13,9 +13,8 @@ namespace InjectionApp.Shared
             System.Diagnostics.Debug.Print( "MessageProvider.ctor" );
 
             ++_count;
-            Message = $"{ DateTime.Now.ToString() }: count={ _count }";
 
-            System.Threading.Thread.Sleep( 1000 );
+            Message = $"{ DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff") } : count={ _count }";
         }
 
         private static int _count = 0;

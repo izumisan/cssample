@@ -36,6 +36,7 @@ namespace InjectionApp
 
             moduleCatalog.AddModule<FooModule.FooModule>();
             moduleCatalog.AddModule<BarModule.BarModule>();
+            moduleCatalog.AddModule<BazModule.BazModule>();
         }
     }
 }
