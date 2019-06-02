@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Unity;
+using Prism.Ioc;
 using InjectionApp.Shared;
 
 namespace InjectionApp.BazModule.ViewModels
@@ -15,8 +15,11 @@ namespace InjectionApp.BazModule.ViewModels
         /// コンストラクタ
         /// </summary>
         /// <param name="container">コンテナそのものをインジェクション</param>
-        public BazViewModel( IUnityContainer container )
+        public BazViewModel( IContainerExtension container )
         {
+            // Prism.Ioc.IContainerExtensionではなく、
+            // Unity.IUnityContainerもDIとして取得可能
+
             System.Diagnostics.Debug.Print( "BazViewModel.ctor" );
 
             // インジェクトされたコンテナからオブジェクトを取得する
