@@ -36,6 +36,30 @@
     - Prism 7でBootstrapperの代わりに追加されたApplicationクラス
     - Appの親クラスとして利用する
 
+# 利用頻度が高いクラス（インタフェース）
+
+よく出てくるクラス（インタフェース）とその基本的な用途
+
+- Prism.Unity名前空間
+    - `PrismApplication`
+- Prism.Modularity名前空間
+    - `IModule`
+    - `IModuleCatalog`
+        - モジュールを登録する
+        - コンテナから取得可能
+- Prism.Regions名前空間
+    - `IRegionManager`
+        - リージョンにViewを登録する
+        - コンテナから取得可能
+- Prism.Ioc名前空間
+    - `IContainerProvider`
+        - コンテナからオブジェクトを取得する
+    - `IContainerRegistry`
+        - コンテナに型（オブジェクト）を登録する
+    - `IContainerExtension`
+        - `IContainerProvider`と`IContainerRegistry`の両インタフェースを継承
+        - コンテナから取得可能
+
 # Prism公式サンプル - GitHub
 
 - PrismLibrary/Prism-Samples-Wpf
