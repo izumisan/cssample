@@ -22,6 +22,8 @@ namespace AttributeSample
         }
 
         public string Name { get; private set; } = string.Empty;
+
+        // Attributeクラスのpublicフィールドは、属性指定時に指定できる
         public string Message { get; set; } = string.Empty;
         public int Value { get; set; } = 0;
         public bool Lucky { get; set; } = false;
