@@ -66,5 +66,21 @@ namespace AttributeSample.Tests
 
             Assert.That( methodAttribute.Count(), Is.EqualTo( 1 ) );
         }
+
+        [Test]
+        public void DisplayNameAttributeを取得する()
+        {
+            var displayNames = typeof( MonthEnum ).GetFields()
+                .Select( x => x.GetCustomAttribute<DisplayNameAttribute>() )
+                .Where( x => x != null )
+                .Select( x => x.DisplayName )
+                .ToList();
+
+            Assert.That( displayNames.Count(), Is.EqualTo( 12 ) );
+
+            Assert.That( typeof( MonthEnum ).GetField( MonthEnum.Jan.ToString() ).GetCustomAttribute<DisplayNameAttribute>()?.DisplayName, Is.EqualTo( "睦月" ) );
+            Assert.That( typeof( MonthEnum ).GetField( MonthEnum.Mar.ToString() ).GetCustomAttribute<DisplayNameAttribute>()?.DisplayName, Is.EqualTo( "弥生" ) );
+            Assert.That( typeof( MonthEnum ).GetField( MonthEnum.May.ToString() ).GetCustomAttribute<DisplayNameAttribute>()?.DisplayName, Is.EqualTo( "皐月" ) );
+        }
     }
 }

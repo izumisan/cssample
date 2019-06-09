@@ -52,6 +52,7 @@
     <Compile Include="BarTestClass.cs" />
     <Compile Include="BazTestClass.cs" />
     <Compile Include="FooTestClass.cs" />
+    <Compile Include="MonthEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
