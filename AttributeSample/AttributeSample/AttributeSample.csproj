@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarAttribute.cs" />
+    <Compile Include="BazAttribute.cs" />
     <Compile Include="FooAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

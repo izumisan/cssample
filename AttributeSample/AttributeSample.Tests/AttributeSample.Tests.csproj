@@ -50,6 +50,7 @@
     <Compile Include="AttributeTest.cs" />
     <Compile Include="BarDerivedTestClass.cs" />
     <Compile Include="BarTestClass.cs" />
+    <Compile Include="BazTestClass.cs" />
     <Compile Include="FooTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

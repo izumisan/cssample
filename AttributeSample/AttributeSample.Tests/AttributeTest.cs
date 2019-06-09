@@ -52,5 +52,19 @@ namespace AttributeSample.Tests
             Assert.That( attributes.Count(), Is.EqualTo( 2 ) );
             Assert.That( attributes.All( x => x.GetType() == typeof( BarAttribute ) ), Is.True );
         }
+
+        [Test]
+        public void BazAttributeを取得する()
+        {
+            var classAttribute = Attribute.GetCustomAttributes( typeof( BazTestClass ) );
+            Assert.That( classAttribute.Count(), Is.Zero );
+
+            MethodInfo method = typeof( BazTestClass ).GetMethods().First( x => x.Name.Equals( "DoSomething" ) );
+
+            // MethodInfoのGetCustomAttributes()により、メソッドの属性を取得する
+            var methodAttribute = method.GetCustomAttributes();
+
+            Assert.That( methodAttribute.Count(), Is.EqualTo( 1 ) );
+        }
     }
 }
