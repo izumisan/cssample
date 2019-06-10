@@ -9,7 +9,10 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ResourceSample.Shared;component/Dictionary1.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ResourceSample.Shared;component/Dictionary1.xaml"/>
+                
+                <!-- これでも良い（packは省略できる？？？） -->
+                <!--<ResourceDictionary Source="/ResourceSample.Shared;component/Dictionary1.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
