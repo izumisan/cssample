@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="VSImageLibrarySample.ImageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VSImageLibrarySample"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/VSImages.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 左列 -->
+        <StackPanel Grid.Column="0">
+            <!-- x1 -->
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Resources/Compliant_16x.png"/>
+                <Image Source="Resources/CS_16x.png"/>
+                <Image Source="Resources/FeedbackSmile_16x.png"/>
+            </StackPanel>
+            
+            <!-- x2 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="32"/>
+                        <Setter Property="Height" Value="32"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="Resources/Compliant_16x.png"/>
+                <Image Source="Resources/CS_16x.png"/>
+                <Image Source="Resources/FeedbackSmile_16x.png"/>
+            </StackPanel>
+
+            <!-- x4 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="64"/>
+                        <Setter Property="Height" Value="64"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="Resources/Compliant_16x.png"/>
+                <Image Source="Resources/CS_16x.png"/>
+                <Image Source="Resources/FeedbackSmile_16x.png"/>
+            </StackPanel>
+
+            <!-- x8 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="128"/>
+                        <Setter Property="Height" Value="128"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="Resources/Compliant_16x.png"/>
+                <Image Source="Resources/CS_16x.png"/>
+                <Image Source="Resources/FeedbackSmile_16x.png"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 右列 -->
+        <StackPanel Grid.Column="1">
+            <!-- x1 -->
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{StaticResource CompliantImage}"/>
+                <Image Source="{StaticResource CSImage}"/>
+                <Image Source="{StaticResource FeedbackSmileImage}"/>
+            </StackPanel>
+
+            <!-- x2 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="32"/>
+                        <Setter Property="Height" Value="32"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="{StaticResource CompliantImage}"/>
+                <Image Source="{StaticResource CSImage}"/>
+                <Image Source="{StaticResource FeedbackSmileImage}"/>
+            </StackPanel>
+
+            <!-- x4 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="64"/>
+                        <Setter Property="Height" Value="64"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="{StaticResource CompliantImage}"/>
+                <Image Source="{StaticResource CSImage}"/>
+                <Image Source="{StaticResource FeedbackSmileImage}"/>
+            </StackPanel>
+
+            <!-- x8 -->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="128"/>
+                        <Setter Property="Height" Value="128"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Image Source="{StaticResource CompliantImage}"/>
+                <Image Source="{StaticResource CSImage}"/>
+                <Image Source="{StaticResource FeedbackSmileImage}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
