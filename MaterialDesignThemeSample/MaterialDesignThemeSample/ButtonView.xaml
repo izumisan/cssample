@@ -7,14 +7,116 @@
              xmlns:local="clr-namespace:MaterialDesignThemeSample"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <WrapPanel>
-        <Button
-  Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
-  ToolTip="MaterialDesignFloatingActionMiniLightButton">
-            <materialDesign:PackIcon
-    Kind="Alarm"
-    Height="24"
-    Width="24" />
-        </Button>
-    </WrapPanel>
+    <StackPanel>
+        <Label Content="Button" FontSize="24"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                    ToolTip="MaterialDesignFloatingActionMiniLightButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                    ToolTip="MaterialDesignFloatingActionMiniButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+                    ToolTip="MaterialDesignFloatingActionMiniDarkButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                    ToolTip="MaterialDesignFloatingActionMiniAccentButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+                    ToolTip="MaterialDesignFloatingActionLightButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    ToolTip="MaterialDesignFloatingActionButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                    ToolTip="MaterialDesignFloatingActionDarkButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+            <Button Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+                    ToolTip="MaterialDesignFloatingActionAccentButton">
+                <materialDesign:PackIcon Kind="Alarm" Height="24" Width="24" />
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Content="LIGHT"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton"/>
+            <Button Content="MID"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedButton"/>
+            <Button Content="DARK"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"/>
+            <Button Content="ACCENT"
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedAccentButton"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <materialDesign:Badged Badge="3" Margin="10">
+                <Button Content="MAIL"/>
+            </materialDesign:Badged>
+
+            <Button Content="{materialDesign:PackIcon AirplaneTakeoff}"
+                    ToolTip="Icon" />
+
+            <Button Content="{materialDesign:PackIcon AirplaneTakeoff}"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    ToolTip="MaterialDesignFlatButton"/>
+
+            <Button Content="ACCEPT"
+                    Style="{StaticResource MaterialDesignFlatButton}"
+                    ToolTip="MaterialDesignFlatButton"/>
+        </StackPanel>
+        
+        <Label Content="ToggleButton" FontSize="24"/>
+        <StackPanel Orientation="Horizontal">
+            <ToggleButton Content="C"
+                          Style="{StaticResource MaterialDesignActionLightToggleButton}"
+                          ToolTip="MaterialDesignActionLightToggleButton" />
+            <ToggleButton Content="H"
+                          Style="{StaticResource MaterialDesignActionToggleButton}"
+                          ToolTip="MaterialDesignActionToggleButton" />
+            <ToggleButton Content="E"
+                          Style="{StaticResource MaterialDesignActionDarkToggleButton}"
+                          ToolTip="MaterialDesignActionDarkToggleButton" />
+            <ToggleButton Content="C"
+                          Style="{StaticResource MaterialDesignActionAccentToggleButton}"
+                          ToolTip="MaterialDesignActionAccentToggleButton" />
+            
+            <!-- Image付ToggleButton -->
+            <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}"
+                          ToolTip="MaterialDesignActionToggleButton">
+                <Image Source="Resources/dambo.jpg"/>
+            </ToggleButton>
+
+            <!-- ON時のContentを変更したToggleButton -->
+            <ToggleButton Style="{StaticResource MaterialDesignActionToggleButton}"
+                          ToolTip="MaterialDesignActionLightToggleButton">
+                <ToggleButton.Content>
+                    <materialDesign:PackIcon Kind="EmoticonSad" />
+                </ToggleButton.Content>
+                <materialDesign:ToggleButtonAssist.OnContent>
+                    <materialDesign:PackIcon Kind="EmoticonHappy" />
+                </materialDesign:ToggleButtonAssist.OnContent>
+            </ToggleButton>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
