@@ -1,0 +1,3 @@
+# MaterialDesignTheme
+
+DemoプログラムのStyleをコピペするだけで良い感じになる便利なMaterialDesignThemesのサンプル
