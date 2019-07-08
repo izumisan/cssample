@@ -24,7 +24,7 @@ namespace CsvHelperSample
 
             // MonthConverter
             // 愚直に実装したコンバータ
-            Map( x => x.Month1 ).Name( "month2" ).TypeConverter<MonthConverter>().Default( 0 );
+            Map( x => x.Month1 ).Name( "month1" ).TypeConverter<MonthConverter>().Default( 0 );
 
             // MonthEnumConverter
             // EnumConverterを継承して作成したMonthEnum専用コンバータ
@@ -32,7 +32,7 @@ namespace CsvHelperSample
 
             // EnumConverter<T>
             // 列挙型用汎用コンバータ
-            Map( x => x.Month3 ).Name( "month2" ).TypeConverter<EnumConverter<MonthEnum>>().Default( 0 );
+            Map( x => x.Month3 ).Name( "month3" ).TypeConverter<EnumConverter<MonthEnum>>().Default( 0 );
 
 
             References<FooDataMap>( x => x.Foo );
