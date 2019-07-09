@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryDialog", "Director
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryDialog2", "DirectoryDialog\DirectoryDialog2\DirectoryDialog2.csproj", "{87D72B69-2452-4F31-A698-990EEA918BF5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileDrop", "FileDrop", "{4732869F-623D-4E9A-84D6-9DC234A61E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDrop", "FileDrop\FileDrop\FileDrop.csproj", "{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,10 @@ Global
 		{87D72B69-2452-4F31-A698-990EEA918BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D72B69-2452-4F31-A698-990EEA918BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D72B69-2452-4F31-A698-990EEA918BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +103,7 @@ Global
 		{03C2ADEB-D898-4F83-A945-92DE245C89EF} = {9517991E-4CB3-488D-B4DD-A707B27D5253}
 		{3330572D-BA8F-4916-B7AC-98A4966965E1} = {95A40A42-CBE1-4785-9150-392245F055DF}
 		{87D72B69-2452-4F31-A698-990EEA918BF5} = {95A40A42-CBE1-4785-9150-392245F055DF}
+		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210} = {4732869F-623D-4E9A-84D6-9DC234A61E48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDFA6F13-22C2-4C65-8D49-135C4E6BCF5F}
