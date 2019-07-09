@@ -1,0 +1,20 @@
+﻿<Window x:Class="FileDrop.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:bv="clr-namespace:FileDrop.Behaviors"
+        xmlns:view="clr-namespace:FileDrop.Views"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="FileDrop" Height="450" Width="800">
+    <ListView ItemsSource="{Binding Files}"
+              AllowDrop="True">
+        <i:Interaction.Behaviors>
+            <!-- FileDropBehavior.DropFileをOneWayToSourceでVMに流し込む -->
+            <bv:FileDropBehavior DropFile="{Binding DropFile, Mode=OneWayToSource}"/>
+        </i:Interaction.Behaviors>
+    </ListView>
+</Window>
