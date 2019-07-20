@@ -1,0 +1,31 @@
+﻿<Window x:Class="IDataErrorInfoSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:IDataErrorInfoSample.Views"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="IDataErrorInfoの実装さんぷる" Height="400" Width="500">
+    <StackPanel VerticalAlignment="Center">
+        <!-- IDataErrorInfoインタフェースを実装している場合、ValidatesOnDataErrors=Trueとすることで赤枠が表示される -->
+        <TextBox Text="{Binding Input, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" FontSize="20" Margin="2,1">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <!-- エラーがある場合、エラーメッセージをツールチップに表示し、背景色を変更する -->
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+                            <Setter Property="Background" Value="Pink"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <Style TargetType="{x:Type ToolTip}">
+                    <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=TextBox}, Path=FontSize}"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button Content="空欄ではない時に押せるボタン" Command="{Binding FooCommand}" FontSize="20" Margin="2,1"/>
+    </StackPanel>
+</Window>
