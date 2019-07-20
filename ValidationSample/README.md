@@ -4,6 +4,8 @@ WPFの入力値検証についてのサンプルプログラム
 
 # overview
 
+- ValidateOnExceptions
+    - 例外によるシンプルなエラー通知
 - IDataErrorInfoSample
     - `IDataErrorInfo`インタフェースの実装サンプル
 - ErrorContainerSample
