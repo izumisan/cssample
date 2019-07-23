@@ -1,0 +1,15 @@
+﻿<Window x:Class="ErrorContainerSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:ErrorContainerSample.Views"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="Prism ErrorContainerを用いたINotifyDataErrorInfoの実装さんぷる" Height="400" Width="500">
+    <StackPanel VerticalAlignment="Center">
+        <TextBox Text="{Binding Input, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="20" Margin="2,1"/>
+        <Button Content="[Required] 空欄ではない時に押せるボタン" Command="{Binding FooCommand}" FontSize="20" Margin="2,1"/>
+    </StackPanel>
+</Window>

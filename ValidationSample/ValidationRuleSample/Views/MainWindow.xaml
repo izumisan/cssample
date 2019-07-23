@@ -1,0 +1,24 @@
+﻿<Window x:Class="ValidationRuleSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:ValidationRuleSample.Views"
+        xmlns:rules="clr-namespace:ValidationRuleSample.ValidationRules"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="ValidationRuleさんぷる" Height="400" Width="500">
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock Text="1～5文字の場合に有効" FontSize="20"/>
+        <TextBox FontSize="20" Margin="2,1">
+            <TextBox.Text>
+                <Binding Path="Input" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <rules:InputRule MinLength="1" MaxLength="5" ValidatesOnTargetUpdated="True"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+    </StackPanel>
+</Window>

@@ -1,0 +1,66 @@
+﻿<Window x:Class="ValidationAttributeSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:ValidationAttributeSample.Views"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="ValidationAttributeさんぷる" Height="600" Width="500">
+    <Window.Resources>
+        <ControlTemplate x:Key="ValidationTemplate">
+            <StackPanel>
+                <AdornedElementPlaceholder x:Name="adornedelem"/>
+                <ItemsControl ItemsSource="{Binding AdornedElement.(Validation.Errors), ElementName=adornedelem}"
+                              HorizontalAlignment="Right">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Foreground="Red" Text="{Binding ErrorContent}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ControlTemplate>
+    </Window.Resources>
+    <StackPanel VerticalAlignment="Center">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="Margin" Value="2,1"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="Margin" Value="2,1,2,12"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <TextBlock Text="Range(0.0, 10.0)"/>
+        <TextBox Text="{Binding RangeValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+
+        <TextBlock Text="RegularExpression"/>
+        <TextBox Text="{Binding RegularExpressionValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+
+        <TextBlock Text="MinLength(5)"/>
+        <TextBox Text="{Binding MinLengthValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+        
+        <TextBlock Text="MaxLength(5)"/>
+        <TextBox Text="{Binding MaxLengthValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+
+        <TextBlock Text="MinLength(2) &amp; MaxLength(5)"/>
+        <TextBox Text="{Binding MinMaxLengthValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+
+        <TextBlock Text="StringLength(5){MinimumLength=2}"/>
+        <TextBox Text="{Binding StringLengthValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+
+        <TextBlock Text="CustomValidation"/>
+        <TextBox Text="{Binding CustomValidationValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Validation.ErrorTemplate="{StaticResource ValidationTemplate}"/>
+    </StackPanel>
+</Window>
