@@ -13,7 +13,9 @@ WPFの入力値検証についてのサンプルプログラム
     - Validation属性を使用するため、`System.ComponentModel.DataAnnotations`への参照追加が必要
 - ValidationAttributeSample
     - `System.ComponentModel.DataAnnotations`の`ValidationAttribute`クラスを用いたサンプル
-- ValidatinRule
+- ValidationAttributeSample2
+    - `ValidationAttribute`の派生クラスにて、独自の検証メソッドを実装したサンプル
+- ValidationRule
     - ValidationRuleによる入力値検証サンプル
 
 # 備忘録
