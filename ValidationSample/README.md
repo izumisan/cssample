@@ -11,6 +11,10 @@ WPFの入力値検証についてのサンプルプログラム
 - ErrorContainerSample
     - prismの`ErrorContainer`を用いて、`INotifyDataErrorInfo`インターフェースを（少しだけ楽に）実装したサンプル
     - Validation属性を使用するため、`System.ComponentModel.DataAnnotations`への参照追加が必要
+- ErrorMessageSample
+    - エラーメッセージをツールチップに表示するサンプル
+- ErrorTemplateSample
+    - `Validation.ErrorTemplate`添付プロパティにより、エラーメッセージを表示するサンプル
 - ValidationAttributeSample
     - `System.ComponentModel.DataAnnotations`の`ValidationAttribute`クラスを用いたサンプル
 - ValidationAttributeSample2
@@ -62,3 +66,14 @@ WPFの入力値検証についてのサンプルプログラム
     - 2の方が若干できることが多い
         - ValidationContextから対象のプロパティを取得
         - ErrorMessageを独自指定 etc.
+
+## エラーメッセージ表示例
+
+### ErrorTemplate
+
+![](errortemplate.png)
+![](errortemplate2.png)
+
+### ToolTip
+
+![](tooltip.png)
