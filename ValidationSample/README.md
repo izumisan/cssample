@@ -66,3 +66,14 @@ WPFの入力値検証についてのサンプルプログラム
     - 2の方が若干できることが多い
         - ValidationContextから対象のプロパティを取得
         - ErrorMessageを独自指定 etc.
+
+## エラーメッセージ表示例
+
+### ErrorTemplate
+
+![](errortemplate.png)
+![](errortemplate2.png)
+
+### ToolTip
+
+![](tooltip.png)
