@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Navigation", "03_Navigat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationApp", "Navigation\NavigationApp\NavigationApp.csproj", "{D55ED8EB-4B0D-472A-89D3-4C24349408D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_DialogService", "04_DialogService", "{FF37E497-80CB-4508-BA2D-8AB79C38273A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogServiceApp", "DialogService\DialogServiceApp\DialogServiceApp.csproj", "{25D7A2A0-4900-4505-94E3-26ADE0A77F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,10 @@ Global
 		{D55ED8EB-4B0D-472A-89D3-4C24349408D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D55ED8EB-4B0D-472A-89D3-4C24349408D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D55ED8EB-4B0D-472A-89D3-4C24349408D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D7A2A0-4900-4505-94E3-26ADE0A77F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D7A2A0-4900-4505-94E3-26ADE0A77F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D7A2A0-4900-4505-94E3-26ADE0A77F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D7A2A0-4900-4505-94E3-26ADE0A77F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,7 @@ Global
 		{723C6BEF-60AF-4EB7-B86E-9FA644F0FE0D} = {8B78F353-A34E-4F93-85E8-553D198F4172}
 		{63C015BA-A6E6-49CC-AF5C-61B9F6E8C4E4} = {8B78F353-A34E-4F93-85E8-553D198F4172}
 		{D55ED8EB-4B0D-472A-89D3-4C24349408D6} = {6D7DC84E-CF97-48DF-9CEE-4E3917931D78}
+		{25D7A2A0-4900-4505-94E3-26ADE0A77F11} = {FF37E497-80CB-4508-BA2D-8AB79C38273A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CBEDEFB4-F7A1-40E8-AE24-4ADDE097B11A}
