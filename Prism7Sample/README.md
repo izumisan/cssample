@@ -17,6 +17,8 @@
         - コンテナ自体をDIして、コンテナから直接オブジェクトを取得するサンプル
 - NavigationApp
     - ナビゲーションの復習
+- DialogServiceApp
+    - v7.2で追加された`DialogService`によるダイアログ表示のサンプル
 
 # 基本用語
 
