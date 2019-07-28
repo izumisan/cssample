@@ -56,10 +56,18 @@ namespace ToastNotificationsSample.ViewModels
                 _wtrNotifier.ClearMessages( new ClearAll() );
                 _sbrNotifier.ClearMessages( new ClearAll() );
             } );
+
+            OnClosingCommand = new DelegateCommand( () =>
+            {
+                _wbcNotifier.Dispose();
+                _wtrNotifier.Dispose();
+                _sbrNotifier.Dispose();
+            } );
         }
 
         ~MainWindowViewModel()
         {
+            // これでは例外発生する...(UIスレッドでDisposeする必要がある...?)
             //_wbcNotifier.Dispose();
             //_wtrNotifier.Dispose();
             //_sbrNotifier.Dispose();
@@ -78,6 +86,8 @@ namespace ToastNotificationsSample.ViewModels
         public DelegateCommand ScreenBottomRightCommand { get; private set; } = null;
 
         public DelegateCommand ClearCommand { get; private set; } = null;
+
+        public DelegateCommand OnClosingCommand { get; private set; } = null;
 
         private void WindowBottomCenterCommandExecute()
         {
