@@ -1,0 +1,27 @@
+﻿<Window x:Class="InteractionRequestDialog2.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:InteractionRequestDialog2.Views"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="InteractinRequestDialog2" Height="300" Width="400">
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding FooDialogRequest}">
+            <prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True">
+                <!-- WindowContentにカスタムViewを指定する -->
+                <prism:PopupWindowAction.WindowContent>
+                    <view:FooDialogView/>
+                </prism:PopupWindowAction.WindowContent>
+            </prism:PopupWindowAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    
+    <Grid>
+        <Button Content="Foo Dialog" Command="{Binding FooDialogCommand}" Margin="4"/>
+    </Grid>
+</Window>
