@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestDialog", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionRequestDialog2", "InteractionRequestDialog2\InteractionRequestDialog2.csproj", "{6432785E-80EE-4C8B-B072-EB8E79225334}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxService", "MessageBoxService\MessageBoxService.csproj", "{5E5CA4AE-089C-4C3A-B092-11FAE19130BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6432785E-80EE-4C8B-B072-EB8E79225334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6432785E-80EE-4C8B-B072-EB8E79225334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6432785E-80EE-4C8B-B072-EB8E79225334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5CA4AE-089C-4C3A-B092-11FAE19130BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5CA4AE-089C-4C3A-B092-11FAE19130BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5CA4AE-089C-4C3A-B092-11FAE19130BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5CA4AE-089C-4C3A-B092-11FAE19130BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
