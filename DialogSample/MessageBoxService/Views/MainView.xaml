@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MessageBoxService.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:view="clr-namespace:MessageBoxService.Views"
+             xmlns:ta="clr-namespace:MessageBoxService.TriggerActions"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <i:Interaction.Triggers>
+        <!-- MessageBoxService.MessageRquestをトリガにMessageBoxActionを実行する -->
+        <prism:InteractionRequestTrigger SourceObject="{Binding MessageBoxService.MessageRquest}">
+            <ta:MessageBoxAction/>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    <UniformGrid Columns="1">
+        <Button Content="Information" Command="{Binding InformationCommand}" Margin="4,4,4,2"/>
+        <Button Content="Confirmation" Command="{Binding ConfirmationCommand}" Margin="4,2"/>
+        <Button Content="Yes No Cancel" Command="{Binding YesNoCancelCommand}" Margin="4,2,4,4"/>
+    </UniformGrid>
+</UserControl>
