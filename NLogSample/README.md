@@ -11,8 +11,11 @@ NLogのサンプル
 - ArchiveLog
     - 古い日付のログファイルを自動的に削除するサンプル
 - ChangeMinLevelByConfiguration
-    - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`
-    となるようにしたサンプル
+    - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`となるようにしたサンプル
+    - コード上でルールを書き換えたパターン
+- ChangeMinLevelByConfiguration2
+    - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`となるようにしたサンプル（その2）
+    - whenフィルタを用いて、config上でルールを無効化したパターン（`Debug`と`Release`で条件分岐用の変数をコード上から切り替える）
 
 # 備忘録
 
@@ -20,4 +23,12 @@ NLogのサンプル
     ```xml
     <!-- これはダメ -->
     <logger name="*" minlevel="${var:outlevel}" writeTo="f" />
+    ```
+- `<when>`フィルタにより、ルールを無効化
+    ```xml
+    <logger name="*" minlevel="Trace" writeTo="debuglog">
+      <filters>
+        <when condition="equals('${var:debuglog}','ignore')" action="Ignore"/>
+      </filters>
+    </logger>
     ```
