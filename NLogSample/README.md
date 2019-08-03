@@ -11,7 +11,7 @@ NLogのサンプル
 - ArchiveLog
     - 古い日付のログファイルを自動的に削除するサンプル
 - ChangeMinLevelByConfiguration
-    - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`となるようにしたサンプル
+    - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`となるようにしたサンプル（その1）
     - コード上でルールを書き換えたパターン
 - ChangeMinLevelByConfiguration2
     - 出力ログレベルを`Debug`モードの場合は`Trace`, `Release`モードの場合は`Info`となるようにしたサンプル（その2）
@@ -32,3 +32,10 @@ NLogのサンプル
       </filters>
     </logger>
     ```
+
+# NLogドキュメント
+
+- [Configuration file](https://github.com/NLog/NLog/wiki/Configuration-file)
+- [File target](https://github.com/NLog/NLog/wiki/File-target)
+- [FileTarget Archive Examples](https://github.com/NLog/NLog/wiki/FileTarget-Archive-Examples)
+- [When Filter](https://github.com/NLog/NLog/wiki/When-filter)
