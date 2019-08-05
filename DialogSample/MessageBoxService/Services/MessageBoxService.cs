@@ -15,7 +15,7 @@ namespace MessageBoxService.Services
         {
         }
 
-        public InteractionRequest<MessageContext> MessageRquest { get; } = new InteractionRequest<MessageContext>();
+        public InteractionRequest<MessageContext> MessageRequest { get; } = new InteractionRequest<MessageContext>();
 
         public MessageBoxResult ShowInformation( string message )
         {
@@ -40,16 +40,19 @@ namespace MessageBoxService.Services
         public MessageBoxResult Show( string title, string message, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult = MessageBoxResult.None )
         {
             var result = defaultResult;
-            MessageRquest.Raise(
-                new MessageContext
-                {
-                    Title = title,
-                    Message = message,
-                    Button = button,
-                    Icon = icon,
-                    DefaultResult = defaultResult
-                },
-                ( c ) => result = c.Result );
+            Application.Current.Dispatcher.Invoke( () =>
+            {
+                MessageRequest.Raise(
+                    new MessageContext
+                    {
+                        Title = title,
+                        Message = message,
+                        Button = button,
+                        Icon = icon,
+                        DefaultResult = defaultResult
+                    },
+                    ( c ) => result = c.Result );
+            } );
             return result;
         }
     }
