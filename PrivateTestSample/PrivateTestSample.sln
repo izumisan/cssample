@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateTestSample", "Privat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FooLibrary", "FooLibrary\FooLibrary.csproj", "{AD3D6966-999D-444D-B5F8-D35AC46935B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateTestSample2", "PrivateTestSample2\PrivateTestSample2.csproj", "{2BFC6B2D-C026-45F4-9652-31AF56C8D3B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AD3D6966-999D-444D-B5F8-D35AC46935B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD3D6966-999D-444D-B5F8-D35AC46935B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD3D6966-999D-444D-B5F8-D35AC46935B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BFC6B2D-C026-45F4-9652-31AF56C8D3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BFC6B2D-C026-45F4-9652-31AF56C8D3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BFC6B2D-C026-45F4-9652-31AF56C8D3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BFC6B2D-C026-45F4-9652-31AF56C8D3B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
