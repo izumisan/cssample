@@ -11,6 +11,8 @@
 - MessageBoxService
     - `InteractionRequest`を利用してWPF標準のメッセージボックスを表示するサービスクラスの実装サンプル
     - `MessageBoxResult`による分岐処理をメソッドチェインでつなげてみたサンプル
+- DialogService
+    - prism v7.2で追加された`DialogService`によるダイアログサンプル
 
 # Note
 
@@ -41,3 +43,9 @@
 ![](2019-08-02-16-43-15.png)
 
 ![](2019-08-02-16-43-25.png)
+
+### DialogService
+
+![](2019-08-08-21-37-41.png)
+
+![](2019-08-08-21-37-57.png)
