@@ -12,7 +12,7 @@
              d:DesignHeight="400" d:DesignWidth="500">
     <i:Interaction.Triggers>
         <!-- MessageBoxService.MessageRquestをトリガにMessageBoxActionを実行する -->
-        <prism:InteractionRequestTrigger SourceObject="{Binding MessageBoxService.MessageRquest}">
+        <prism:InteractionRequestTrigger SourceObject="{Binding MessageBoxService.MessageRequest}">
             <ta:MessageBoxAction/>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>

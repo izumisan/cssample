@@ -5,7 +5,7 @@ namespace MessageBoxService.Services
 {
     public interface IMessageBoxService
     {
-        InteractionRequest<MessageContext> MessageRquest { get; }
+        InteractionRequest<MessageContext> MessageRequest { get; }
         
         MessageBoxResult ShowInformation( string message );
         MessageBoxResult ShowConfirmation( string message );
