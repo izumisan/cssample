@@ -23,12 +23,19 @@ namespace DialogService.ViewModels
                 _dialogService.ShowDialog(
                     "NotificationView", 
                     new DialogParameters(), 
-                    ( c ) => Debug.WriteLine( $"result: { c.Result }" ) );  // 閉じるボタンから閉じた場合は ButtonResult.None となる
+                    ( c ) => Debug.WriteLine( $"result: { c.Result }, ok: { c.Parameters.GetValue<int>( "ok" ) }, cancel: { c.Parameters.GetValue<int>( "cancel" ) }" ) );
             } );
 
             ConfirmationCommand = new DelegateCommand( () =>
             {
-                Debug.Print( "bar" );
+                _dialogService.ShowDialog(
+                    "ConfirmationView",
+                    new DialogParameters
+                    {
+                        { "title", "Confirmation" },
+                        { "message", "おｋ？　きゃんせる？" }
+                    },
+                    ( c ) => Debug.WriteLine( $"result: { c.Result }, ok: { c.Parameters.GetValue<int>( "ok" ) }, cancel: { c.Parameters.GetValue<int>( "cancel" ) }" ) );
             } );
         }
 

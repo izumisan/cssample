@@ -28,6 +28,7 @@ namespace DialogService
             // ダイアログ用Viewの登録
             // (RegisterではなくRegisterDialogで登録する)
             containerRegistry.RegisterDialog<NotificationView>( nameof( NotificationView ) );
+            containerRegistry.RegisterDialog<ConfirmationView>( nameof( ConfirmationView ) );
         }
 
         protected override void OnInitialized()

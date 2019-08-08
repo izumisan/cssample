@@ -22,7 +22,7 @@ namespace DialogService.ViewModels
 
         public event Action<IDialogResult> RequestClose = null;
 
-        public string Title { get; } = "たいとる";
+        public string Title { get; } = "Notification";
 
         public void OnDialogOpened( IDialogParameters parameters )
         {
