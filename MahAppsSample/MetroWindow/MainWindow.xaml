@@ -1,0 +1,52 @@
+﻿<controls:MetroWindow 
+    x:Class="MetroWindow.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:MetroWindow"
+    mc:Ignorable="d"
+    Title="MetroWindow" TitleCaps="False"
+    ShowTitleBar="True" ShowInTaskbar="True" Topmost="False"
+    IconScalingMode="ScaleDownLargerFrame"
+    GlowBrush="{DynamicResource AccentColorBrush}"
+    EnableDWMDropShadow="False"
+    WindowTransitionsEnabled="True"
+    ResizeMode="CanResizeWithGrip"
+    Width="800" SizeToContent="Height">
+    
+    <!-- ウィンドウタイトルにアイコンを設定する -->
+    <controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconpacks:PackIconMaterial 
+                Kind="GithubCircle"
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}"
+                Foreground="{DynamicResource IdealForegroundColorBrush}"
+                Margin="4"/>
+        </DataTemplate>
+    </controls:MetroWindow.IconTemplate>
+    
+    <!-- ウィンドウタイトルバーにコマンドボタンを設定する -->
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands ShowSeparators="False"
+                                 ShowLastSeparator="False">
+            <Button Content="{iconpacks:Modern Kind=SocialGithubOctocat, Width=20, Height=20}"/>
+            <Button Content="{iconpacks:Material Kind=Settings}"/>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content=""/>
+        </StatusBar>
+        
+        <StackPanel Orientation="Vertical">
+            <Image Source="Resources/code1.png" Margin="4,4,4,2"/>
+            <Image Source="Resources/code2.png" Margin="4,2"/>
+            <Image Source="Resources/code3.png" Margin="4,2,4,4"/>
+        </StackPanel>
+    </DockPanel>
+</controls:MetroWindow>
