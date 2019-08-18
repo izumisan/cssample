@@ -1,0 +1,33 @@
+﻿<Window x:Class="EventToReactiveProperty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:ri="clr-namespace:Reactive.Bindings.Interactivity;assembly=ReactiveProperty.NET46"
+        xmlns:local="clr-namespace:EventToReactiveProperty"
+        mc:Ignorable="d"
+        Title="EventToReactivePropertyさんぷる" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Canvas Width="500" Height="300" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Background="LightSteelBlue">
+            <i:Interaction.Triggers>
+                <!-- MouseMoveイベントをMouseEventToPointConverterでIObservable<Point>に変換し、
+                     VMのMousePointプロパティにバインドする-->
+                <i:EventTrigger EventName="MouseMove">
+                    <ri:EventToReactiveProperty ReactiveProperty="{Binding MousePoint}">
+                        <local:MouseEventToPointConverter/>
+                    </ri:EventToReactiveProperty>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Canvas>
+        <Label Content="{Binding MousePoint.Value}" 
+               ContentStringFormat="{}({0})"
+               FontSize="32"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
