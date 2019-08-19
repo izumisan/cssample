@@ -1,0 +1,112 @@
+﻿<controls:MetroWindow 
+    x:Class="HamburgerMenuDefault.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconpacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:view="clr-namespace:HamburgerMenuDefault.Views"
+    xmlns:ta="clr-namespace:HamburgerMenuDefault.TriggerActions"
+    mc:Ignorable="d"
+    Title="HamburgerMenuさんぷる" TitleCaps="False"
+    EnableDWMDropShadow="True"
+    ResizeMode="CanResizeWithGrip"
+    Height="450" Width="600">
+    
+    <controls:MetroWindow.Resources>
+        <!-- HamburgerメニューアイテムのUI設定 -->
+        <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type controls:HamburgerMenuIconItem}">
+            <Grid Height="48">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <ContentControl Grid.Column="0"
+                                Content="{Binding Icon}"
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Focusable="False"
+                                IsTabStop="False"/>
+                <TextBlock Grid.Column="1"
+                           Text="{Binding Label}"
+                           FontSize="16"
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </controls:MetroWindow.Resources>
+    
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content=""/>
+        </StatusBar>
+        
+        <!-- Hamburgerメニュー -->
+        <controls:HamburgerMenu SelectedIndex="0"
+                                ItemTemplate="{StaticResource MenuItemTemplate}"
+                                OptionsItemTemplate="{StaticResource MenuItemTemplate}">
+            <!-- メニューアイテムクリック時のアクション設定 -->
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="ItemClick">
+                    <ta:HamburgerMenuItemClickAction/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="OptionsItemClick">
+                    <ta:HamburgerMenuItemClickAction/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            
+            <!-- メニュー -->
+            <controls:HamburgerMenu.ItemsSource>
+                <controls:HamburgerMenuItemCollection>
+                    <!-- メニューアイテム1 -->
+                    <controls:HamburgerMenuIconItem Label="GitHub" Icon="{iconpacks:SimpleIcons Kind=GitHub}">
+                        <controls:HamburgerMenuIconItem.Tag>
+                            <view:GitHubView/>
+                        </controls:HamburgerMenuIconItem.Tag>
+                    </controls:HamburgerMenuIconItem>
+                    <!-- メニューアイテム2 -->
+                    <controls:HamburgerMenuIconItem Label="VisualStudioCode" Icon="{iconpacks:SimpleIcons Kind=VisualStudioCode}">
+                        <controls:HamburgerMenuIconItem.Tag>
+                            <view:VisualStudioCodeView/>
+                        </controls:HamburgerMenuIconItem.Tag>
+                    </controls:HamburgerMenuIconItem>
+                </controls:HamburgerMenuItemCollection>
+            </controls:HamburgerMenu.ItemsSource>
+            
+            <!-- オプションメニュー -->
+            <controls:HamburgerMenu.OptionsItemsSource>
+                <controls:HamburgerMenuItemCollection>
+                    <!-- オプションメニューアイテム1 -->
+                    <controls:HamburgerMenuIconItem Label="Option" Icon="{iconpacks:Octicons Kind=Gear}">
+                        <controls:HamburgerMenuIconItem.Tag>
+                            <view:OptionView/>
+                        </controls:HamburgerMenuIconItem.Tag>
+                    </controls:HamburgerMenuIconItem>
+                </controls:HamburgerMenuItemCollection>
+            </controls:HamburgerMenu.OptionsItemsSource>
+
+            <!-- コンテンツ部分のUI設定 -->
+            <controls:HamburgerMenu.ContentTemplate>
+                <DataTemplate DataType="{x:Type controls:HamburgerMenuIconItem}">
+                    <Grid Margin="20,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0"
+                                   Text="{Binding Label}"
+                                   FontSize="{DynamicResource HeaderFontSize}"
+                                   FontFamily="{DynamicResource HeaderFontFamily}"
+                                   Margin="0,15,0,5"
+                                   Padding="0"/>
+                        <ContentControl Grid.Row="1"
+                                        Content="{Binding Tag}"
+                                        Focusable="False"
+                                        Margin="2"/>
+                    </Grid>
+                </DataTemplate>
+            </controls:HamburgerMenu.ContentTemplate>
+        </controls:HamburgerMenu>
+    </DockPanel>
+</controls:MetroWindow>
