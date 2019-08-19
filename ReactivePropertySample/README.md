@@ -4,57 +4,45 @@ ReactivePropertyのサンプル
 
 # overview
 
-## ReactivePropertySample
-
-ReactivePropertyの基礎
-- ReactiveProperty
-- ReactiveCommand
-- IObservable<T>じゃないものからRxプロパティへの接続
-- RxプロパティとRxプロパティの連動
-
-## ReactivePropertySample2
-
-ReactivePropertyの基礎（その2）
-- CompositeDisposable
-- RxプロパティからRxコマンドの生成
-
-## ReactivePropertySample3
-
-ReactivePropertyの基礎（その3）
-- ReactivePropertyによる値の検証
-
-## ObservableSample
-
-IObservable\<T\>の生成
-- Observable.Repeat()
-- Observable.Range()
-- Observable.Generate()
-- Observable.Defer()
-- Observable.Skip()
-- Observable.Take()
-
-## ObservableSample2
-
-IObservable\<T\>の生成（その2）
-- Observable.Timer()
-- Observable.Interval()
-- Observable.Delay()
-- Observable.Sample()
-
-## Notifier系クラス
-
+- ReactivePropertySample
+    - ReactivePropertyの基礎（その1）
+    - IObservable<T>じゃないものからRxプロパティへの接続
+    - RxプロパティとRxプロパティの連動
+- ReactivePropertySample2
+    - ReactivePropertyの基礎（その2）
+    - RxプロパティからRxコマンドの生成
+- ReactivePropertySample3
+    - ReactivePropertyの基礎（その3）
+    - ReactivePropertyによる値の検証
+- ObservableSample
+    - IObservable\<T\>の生成（その1）
+        - Observable.Repeat()
+        - Observable.Range()
+        - Observable.Generate()
+        - Observable.Defer()
+        - Observable.Skip()
+        - Observable.Take()
+- ObservableSample2
+    - IObservable\<T\>の生成（その2）
+        - Observable.Timer()
+        - Observable.Interval()
+        - Observable.Delay()
+        - Observable.Sample()
 - BooleanNotifierSample
     - BooleanNotifierのサンプルプログラム
 - CountNotifierSample
     - CountNotifierのサンプルプログラム
 - SingleProcessByCountNotifier
     - CountNotifierによる、多重実行を抑制したサンプルプログラム
-    - 多重実行の抑制（ver. CountNotifier）
+    - 多重実行の抑制（その1）（ver.CountNotifier）
 - ScheduledNotifierSample
     - ScheduledNotifierによる遅延実行サンプル
 - BusyNotifierSample
     - BusyNotifierによる、多重実行を抑制したサンプルプログラム
-    - 多重実行の抑制（ver. BusyNotifier）
+    - 多重実行の抑制（その2）（ver.BusyNotifier）
+- AsyncReactiveCommandSample
+    - AsyncReactiveCommandによる、多重実行を抑制したサンプルプログラム
+    - 多重実行の抑制（その3）（ver.AsyncReactiveCommand）
 
 # 覚書
 
