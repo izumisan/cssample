@@ -8,6 +8,8 @@ MahApps.Metroのサンプル
     - MetroWindowのウィンドウ設定サンプル
 - HamburgerMenuDefault
     - HamburberMenuのサンプル
+- HamburgerMenuCreatorsUpdate
+    - HamburgerMenuCreatorsUpdateのサンプル
 
 # 覚書
 
