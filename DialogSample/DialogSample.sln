@@ -16,6 +16,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogService", "DialogService\DialogService.csproj", "{07B8D315-E707-47F7-B619-B9F85E944C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxSample", "MessageBoxSample\MessageBoxSample.csproj", "{108F73CC-04ED-4465-9731-50CC27A573B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. MessageBoxSample", "1. MessageBoxSample", "{7B20C3BE-8B2E-4CD8-A7CE-60F94D223435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. InteractionRequestDialog", "2. InteractionRequestDialog", "{22B1C9DA-EFAE-44B5-8911-63032862D919}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. InteractionRequestDialog2", "3. InteractionRequestDialog2", "{B86771E2-7199-4EAB-A0A5-046A632B92E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. MessageBoxService", "4. MessageBoxService", "{C671F2F9-7988-41FC-9C3B-5B93EDB62423}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. DialogService", "5. DialogService", "{C0FFF3AA-9B3F-4D71-90AD-7571C90239EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,9 +50,20 @@ Global
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EA14C85-8BA3-4538-AD26-08A528E2B797} = {22B1C9DA-EFAE-44B5-8911-63032862D919}
+		{6432785E-80EE-4C8B-B072-EB8E79225334} = {B86771E2-7199-4EAB-A0A5-046A632B92E8}
+		{5E5CA4AE-089C-4C3A-B092-11FAE19130BC} = {C671F2F9-7988-41FC-9C3B-5B93EDB62423}
+		{07B8D315-E707-47F7-B619-B9F85E944C64} = {C0FFF3AA-9B3F-4D71-90AD-7571C90239EE}
+		{108F73CC-04ED-4465-9731-50CC27A573B1} = {7B20C3BE-8B2E-4CD8-A7CE-60F94D223435}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3DABBD15-4E14-47CD-8161-67C76F7B22CF}

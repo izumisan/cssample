@@ -4,14 +4,16 @@
 
 # overview
 
-- InteractionRequestDialog
+- **1. MessageBoxSample**
+    - 一般的なMessengerパターンによるダイアログ実装サンプル
+- **2. InteractionRequestDialog**
     - prismの`InteractionRequest`と`PopupWindowAction`を用いたダイアログサンプル
-- InteractionRequestDialog2
+- **3. InteractionRequestDialog2**
     - `IInteractionRequestAware`によるカスタムViewのダイアログサンプル
-- MessageBoxService
+- **4. MessageBoxService**
     - `InteractionRequest`を利用してWPF標準のメッセージボックスを表示するサービスクラスの実装サンプル
     - `MessageBoxResult`による分岐処理をメソッドチェインでつなげてみたサンプル
-- DialogService
+- **5. DialogService**
     - prism v7.2で追加された`DialogService`によるダイアログサンプル
 
 # Note
