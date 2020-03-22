@@ -10,7 +10,7 @@
         xmlns:view="clr-namespace:MessageBoxSample.Views"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="MessageBox Trial" 
+        Title="MessageBox sample" 
         Height="300" Width="400">
     
     <i:Interaction.Triggers>
