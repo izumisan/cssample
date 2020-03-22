@@ -1,0 +1,33 @@
+﻿<Window x:Class="MessageBoxSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:t="clr-namespace:MessageBoxSample.Triggers"
+        xmlns:ta="clr-namespace:MessageBoxSample.TriggerActions"
+        xmlns:view="clr-namespace:MessageBoxSample.Views"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="MessageBox Trial" 
+        Height="300" Width="400">
+    
+    <i:Interaction.Triggers>
+        <t:MessageBoxRequestTrigger SourceObject="{Binding MessageBoxRequest}">
+            <ta:MessageBoxAction/>
+        </t:MessageBoxRequestTrigger>
+    </i:Interaction.Triggers>
+    
+    <StackPanel>
+        <Button Content="Information Dialog"
+                Command="{Binding InformationCommand}"
+                Height="80"
+                Margin="4,2"/>
+        <Button Content="Confirmation Dialog"
+                Command="{Binding ConfirmationCommand}"
+                Height="80"
+                Margin="4,2"/>
+        <TextBlock Text="{Binding Message}" Margin="4,2"/>
+    </StackPanel>
+</Window>
