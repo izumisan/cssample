@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileSystemWatcherSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FileSystemWatcherさんぷる" Height="300" Width="400">
     
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
     
-    <ScrollViewer>
-        <TextBlock Text="{Binding Contents.Value}" TextWrapping="Wrap"/>
+    <ScrollViewer x:Name="_scrollViewer">
+        <!-- NotifyOnTargetUpdated=Trueとすることで、TargetUpdatedイベントが発行される -->
+        <TextBlock x:Name="_textBlock"
+                   Text="{Binding Contents.Value, NotifyOnTargetUpdated=True}" 
+                   TextWrapping="Wrap"/>
     </ScrollViewer>
 </Window>

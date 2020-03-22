@@ -23,6 +23,9 @@ namespace FileSystemWatcherSample
         public MainWindow()
         {
             InitializeComponent();
+
+            // TextBlockのText更新時に最終位置にスクロールさせる
+            _textBlock.TargetUpdated += ( s, e ) => _scrollViewer.ScrollToEnd();
         }
     }
 }

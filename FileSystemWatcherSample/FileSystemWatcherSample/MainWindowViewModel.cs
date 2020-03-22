@@ -28,6 +28,7 @@ namespace FileSystemWatcherSample
 
             //_reader = new StreamReader( new FileStream( "debug.log", FileMode.Open, FileAccess.Read, FileShare.ReadWrite | FileShare.Delete ) );
 
+            // FileSystemWatcher.Changedイベントを購読する
             Observable.FromEvent<FileSystemEventHandler, FileSystemEventArgs>(
                 h => ( s, e ) => h( e ),
                 h => _watcher.Changed += h,
@@ -35,13 +36,14 @@ namespace FileSystemWatcherSample
                 )
                 .Subscribe( x =>
                 {
-                    System.Diagnostics.Debug.WriteLine( "changed" );
-
                     if ( _reader == null )
                     {
                         _reader = new StreamReader( new FileStream( "debug.log", FileMode.Open, FileAccess.Read, FileShare.ReadWrite ) );
                     }
-                    Contents.Value += _reader.ReadToEnd();
+                    var contents = _reader.ReadToEnd();
+                    Contents.Value += contents;
+
+                    System.Diagnostics.Debug.WriteLine( contents.Trim() );
                 } )
                 .AddTo( _disposables );
 
