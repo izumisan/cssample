@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogService", "DialogService\DialogService.csproj", "{07B8D315-E707-47F7-B619-B9F85E944C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxSample", "MessageBoxSample\MessageBoxSample.csproj", "{108F73CC-04ED-4465-9731-50CC27A573B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07B8D315-E707-47F7-B619-B9F85E944C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108F73CC-04ED-4465-9731-50CC27A573B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
