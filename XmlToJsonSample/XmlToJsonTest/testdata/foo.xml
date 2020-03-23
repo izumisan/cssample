@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User id="001">
+    <name>太郎</name>
+    <age>30</age>
+  </User>
+  <User id="002">
+    <name>次郎</name>
+    <age>20</age>
+  </User>
+  <User id="003">
+    <name>三郎</name>
+    <age>10</age>
+  </User>
+</Users>
