@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumSample", "EnumSample\En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializeFormatSample", "SerializeFormatSample\SerializeFormatSample.csproj", "{116B17C7-8A04-4F01-A11D-30A97AF8F390}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlToJsonTest", "XmlToJsonTest\XmlToJsonTest.csproj", "{A05D721E-CBD6-4634-9A0B-ECCD5AB3A511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{116B17C7-8A04-4F01-A11D-30A97AF8F390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{116B17C7-8A04-4F01-A11D-30A97AF8F390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{116B17C7-8A04-4F01-A11D-30A97AF8F390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05D721E-CBD6-4634-9A0B-ECCD5AB3A511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05D721E-CBD6-4634-9A0B-ECCD5AB3A511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05D721E-CBD6-4634-9A0B-ECCD5AB3A511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05D721E-CBD6-4634-9A0B-ECCD5AB3A511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
