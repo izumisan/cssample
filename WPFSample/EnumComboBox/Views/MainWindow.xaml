@@ -1,0 +1,35 @@
+﻿<Window x:Class="EnumComboBox.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:EnumComboBox.Views"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="MainWindow" Height="400" Width="300">
+
+    <StackPanel>
+        <GroupBox Header="#1">
+            <StackPanel DataContext="{Binding MonthEnumVM1}">
+                <Label Content="EnumMonthVM1"/>
+                <ComboBox SelectedIndex="{Binding SelectedMonthIndex}">
+                    <ComboBoxItem Content="睦月"/>
+                    <ComboBoxItem Content="如月"/>
+                    <ComboBoxItem Content="弥生"/>
+                    <ComboBoxItem Content="卯月"/>
+                    <ComboBoxItem Content="皐月"/>
+                    <ComboBoxItem Content="水無月"/>
+                    <ComboBoxItem Content="文月"/>
+                    <ComboBoxItem Content="葉月"/>
+                    <ComboBoxItem Content="長月"/>
+                    <ComboBoxItem Content="神無月"/>
+                    <ComboBoxItem Content="霜月"/>
+                    <ComboBoxItem Content="師走"/>
+                </ComboBox>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
+
+    </StackPanel>
+</Window>
