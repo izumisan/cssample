@@ -11,7 +11,7 @@
 
     <StackPanel>
         <GroupBox Header="#1">
-            <StackPanel DataContext="{Binding MonthEnumVM1}">
+            <StackPanel DataContext="{Binding MonthVM1}">
                 <Label Content="EnumMonthVM1"/>
                 <ComboBox SelectedIndex="{Binding SelectedMonthIndex}">
                     <ComboBoxItem Content="睦月"/>
@@ -31,5 +31,15 @@
             </StackPanel>
         </GroupBox>
 
+        <GroupBox Header="#2">
+            <StackPanel DataContext="{Binding MonthVM2}">
+                <Label Content="EnumMonthVM2"/>
+                <ComboBox ItemsSource="{Binding MonthSource}" 
+                          SelectedValue="{Binding SelectedMonth}"
+                          SelectedValuePath="Key"
+                          DisplayMemberPath="Value"/>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
     </StackPanel>
 </Window>

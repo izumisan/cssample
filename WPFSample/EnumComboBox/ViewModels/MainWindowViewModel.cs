@@ -15,6 +15,8 @@ namespace EnumComboBox.ViewModels
         {
         }
 
-        public MonthEnumViewModel1 MonthEnumVM1 { get; } = new MonthEnumViewModel1();
+        public MonthEnumViewModel1 MonthVM1 { get; } = new MonthEnumViewModel1();
+
+        public MonthEnumViewModel2 MonthVM2 { get; } = new MonthEnumViewModel2();
     }
 }
