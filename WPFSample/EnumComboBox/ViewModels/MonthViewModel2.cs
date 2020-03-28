@@ -10,9 +10,9 @@ using Prism.Commands;
 
 namespace EnumComboBox.ViewModels
 {
-    public class MonthEnumViewModel2 : BindableBase
+    public class MonthViewModel2 : BindableBase
     {
-        public MonthEnumViewModel2()
+        public MonthViewModel2()
             : base()
         {
             MonthSource = new Dictionary<MonthEnum, string>
@@ -33,19 +33,19 @@ namespace EnumComboBox.ViewModels
 
             ChangeCommand = new DelegateCommand( () =>
             {
-                SelectedMonth = (MonthEnum)( _random.Next() % 12 + 1 );
+                SelectedMonth = (MonthEnum)( _random.Next( 1, 12 ) );
             } );
         }
 
         private MonthEnum _selectedMonth = MonthEnum.January;
-        private Random _random = new Random();
+        private Random _random = new Random( Seed: 2 );
 
         public IReadOnlyDictionary<MonthEnum, string> MonthSource { get; set; }
 
         public MonthEnum SelectedMonth
         {
             get => _selectedMonth;
-            set => SetProperty( ref _selectedMonth, value, () => Debug.WriteLine( value ) );
+            set => SetProperty( ref _selectedMonth, value, () => Debug.WriteLine( $"#2: { value }" ) );
         }
 
         public DelegateCommand ChangeCommand { get; }

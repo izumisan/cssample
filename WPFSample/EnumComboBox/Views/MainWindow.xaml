@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
         xmlns:view="clr-namespace:EnumComboBox.Views"
+        xmlns:cnv="clr-namespace:EnumComboBox.Converters"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="MainWindow" Height="400" Width="300">
+        Title="EnumComboBox" Height="400" Width="300">
+    <Window.Resources>
+        <cnv:MonthEnumConverter x:Key="MonthEnumConverter"/>
+    </Window.Resources>
 
     <StackPanel>
         <GroupBox Header="#1">
@@ -38,6 +42,21 @@
                           SelectedValue="{Binding SelectedMonth}"
                           SelectedValuePath="Key"
                           DisplayMemberPath="Value"/>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="#3">
+            <StackPanel DataContext="{Binding MonthVM3}">
+                <Label Content="EnumMonthVM3"/>
+                <ComboBox ItemsSource="{Binding MonthSource}" 
+                          SelectedValue="{Binding SelectedMonth}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource MonthEnumConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Button Content="変更" Command="{Binding ChangeCommand}"/>
             </StackPanel>
         </GroupBox>
