@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDrop", "FileDrop\FileDr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventToReactiveProperty", "EventToCommand\EventToReactiveProperty\EventToReactiveProperty.csproj", "{B10070C2-BFD6-4240-B3F4-A87ADAB8F0BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnumComboBox", "EnumComboBox", "{E3C5DCCB-9FDC-4442-9F78-98B9DA94AD37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumComboBox", "EnumComboBox\EnumComboBox.csproj", "{CBDB4927-5781-458C-A34B-F4CEDFBA2577}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +99,10 @@ Global
 		{B10070C2-BFD6-4240-B3F4-A87ADAB8F0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10070C2-BFD6-4240-B3F4-A87ADAB8F0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B10070C2-BFD6-4240-B3F4-A87ADAB8F0BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDB4927-5781-458C-A34B-F4CEDFBA2577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDB4927-5781-458C-A34B-F4CEDFBA2577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDB4927-5781-458C-A34B-F4CEDFBA2577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDB4927-5781-458C-A34B-F4CEDFBA2577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +119,7 @@ Global
 		{87D72B69-2452-4F31-A698-990EEA918BF5} = {95A40A42-CBE1-4785-9150-392245F055DF}
 		{BDC7EBE7-D569-4EFC-BD8D-1EAA4F449210} = {4732869F-623D-4E9A-84D6-9DC234A61E48}
 		{B10070C2-BFD6-4240-B3F4-A87ADAB8F0BC} = {9517991E-4CB3-488D-B4DD-A707B27D5253}
+		{CBDB4927-5781-458C-A34B-F4CEDFBA2577} = {E3C5DCCB-9FDC-4442-9F78-98B9DA94AD37}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDFA6F13-22C2-4C65-8D49-135C4E6BCF5F}

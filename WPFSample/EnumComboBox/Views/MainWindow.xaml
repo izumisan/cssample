@@ -1,0 +1,77 @@
+﻿<Window x:Class="EnumComboBox.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:view="clr-namespace:EnumComboBox.Views"
+        xmlns:cnv="clr-namespace:EnumComboBox.Converters"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="EnumComboBox" Height="400" Width="300">
+    <Window.Resources>
+        <cnv:MonthEnumConverter x:Key="MonthEnumConverter"/>
+    </Window.Resources>
+
+    <StackPanel>
+        <GroupBox Header="#1">
+            <StackPanel DataContext="{Binding MonthVM1}">
+                <Label Content="EnumMonthVM1"/>
+                <!-- #1
+                ComboBoxのSelectedIndexをVMにバインド
+                表示データはXAML上で指定
+                -->
+                <ComboBox SelectedIndex="{Binding SelectedMonthIndex}">
+                    <ComboBoxItem Content="睦月"/>
+                    <ComboBoxItem Content="如月"/>
+                    <ComboBoxItem Content="弥生"/>
+                    <ComboBoxItem Content="卯月"/>
+                    <ComboBoxItem Content="皐月"/>
+                    <ComboBoxItem Content="水無月"/>
+                    <ComboBoxItem Content="文月"/>
+                    <ComboBoxItem Content="葉月"/>
+                    <ComboBoxItem Content="長月"/>
+                    <ComboBoxItem Content="神無月"/>
+                    <ComboBoxItem Content="霜月"/>
+                    <ComboBoxItem Content="師走"/>
+                </ComboBox>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="#2">
+            <StackPanel DataContext="{Binding MonthVM2}">
+                <Label Content="EnumMonthVM2"/>
+                <!-- #2 
+                VMのKeyValuePairをバインド
+                DisplayMenmberPathに表示用データのプロパティを指定
+                SelectedValuePathにバインド用データのプロパティを指定
+                -->
+                <ComboBox ItemsSource="{Binding MonthSource}" 
+                          SelectedValue="{Binding SelectedMonth}"
+                          SelectedValuePath="Key"
+                          DisplayMemberPath="Value"/>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="#3">
+            <StackPanel DataContext="{Binding MonthVM3}">
+                <Label Content="EnumMonthVM3"/>
+                <!-- #3 
+                列挙型をバインド
+                コンバーターで列挙型を表示用データに変換
+                -->
+                <ComboBox ItemsSource="{Binding MonthSource}" 
+                          SelectedValue="{Binding SelectedMonth}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource MonthEnumConverter}}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Button Content="変更" Command="{Binding ChangeCommand}"/>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>
