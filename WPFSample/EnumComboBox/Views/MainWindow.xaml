@@ -17,6 +17,10 @@
         <GroupBox Header="#1">
             <StackPanel DataContext="{Binding MonthVM1}">
                 <Label Content="EnumMonthVM1"/>
+                <!-- #1
+                ComboBoxのSelectedIndexをVMにバインド
+                表示データはXAML上で指定
+                -->
                 <ComboBox SelectedIndex="{Binding SelectedMonthIndex}">
                     <ComboBoxItem Content="睦月"/>
                     <ComboBoxItem Content="如月"/>
@@ -38,6 +42,11 @@
         <GroupBox Header="#2">
             <StackPanel DataContext="{Binding MonthVM2}">
                 <Label Content="EnumMonthVM2"/>
+                <!-- #2 
+                VMのKeyValuePairをバインド
+                DisplayMenmberPathに表示用データのプロパティを指定
+                SelectedValuePathにバインド用データのプロパティを指定
+                -->
                 <ComboBox ItemsSource="{Binding MonthSource}" 
                           SelectedValue="{Binding SelectedMonth}"
                           SelectedValuePath="Key"
@@ -49,6 +58,10 @@
         <GroupBox Header="#3">
             <StackPanel DataContext="{Binding MonthVM3}">
                 <Label Content="EnumMonthVM3"/>
+                <!-- #3 
+                列挙型をバインド
+                コンバーターで列挙型を表示用データに変換
+                -->
                 <ComboBox ItemsSource="{Binding MonthSource}" 
                           SelectedValue="{Binding SelectedMonth}">
                     <ComboBox.ItemTemplate>
