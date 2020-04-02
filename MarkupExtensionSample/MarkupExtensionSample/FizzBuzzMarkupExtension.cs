@@ -8,11 +8,11 @@ using System.Windows.Markup;
 
 namespace MarkupExtensionSample
 {
-    public class FooMarkupExtension : MarkupExtension
+    public class FizzBuzzMarkupExtension : MarkupExtension
     {
         public override object ProvideValue( IServiceProvider serviceProvider )
         {
-            return "はじめてのマークアップ拡張";
+            return "Fizz Buzz";
         }
     }
 }

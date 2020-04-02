@@ -6,10 +6,9 @@
         xmlns:local="clr-namespace:MarkupExtensionSample"
         mc:Ignorable="d"
         Title="マークアップ拡張さんぷる" Height="300" Width="400">
-    <Grid>
-        <Label Content="{local:FooMarkup}"
+    <StackPanel>
+        <Label Content="{local:FizzBuzzMarkup}"
                FontSize="24"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
-    </Grid>
+               HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>
