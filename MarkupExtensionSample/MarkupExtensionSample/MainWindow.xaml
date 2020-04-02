@@ -14,16 +14,20 @@
             </Style>
         </StackPanel.Resources>
         
+        <!-- FizzBuzzMarkup1Extension -->
+        <!-- (末尾のExtensionは省略できる) -->
         <Label Content="{local:FizzBuzzMarkup1}"/>
 
         <Separator/>
 
+        <!-- FizzBuzzMarkup2Extension -->
         <Label Content="{local:FizzBuzzMarkup2 Value=3}"/>
         <Label Content="{local:FizzBuzzMarkup2 Value=4}"/>
         <Label Content="{local:FizzBuzzMarkup2 Value=5}"/>
 
         <Separator/>
 
+        <!-- FizzBuzzMarkup3Extension -->
         <Label Content="{local:FizzBuzzMarkup3 9}"/>
         <Label Content="{local:FizzBuzzMarkup3 10}"/>
         <Label Content="{local:FizzBuzzMarkup3 11}"/>
