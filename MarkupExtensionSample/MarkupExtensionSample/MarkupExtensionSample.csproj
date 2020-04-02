@@ -63,7 +63,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FizzBuzzMarkupExtension.cs" />
+    <Compile Include="FizzBuzzMarkup2Extension.cs" />
+    <Compile Include="FizzBuzzMarkup3Extension.cs" />
+    <Compile Include="FizzBuzzMarkup1Extension.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -8,7 +8,7 @@ using System.Windows.Markup;
 
 namespace MarkupExtensionSample
 {
-    public class FizzBuzzMarkupExtension : MarkupExtension
+    public class FizzBuzzMarkup1Extension : MarkupExtension
     {
         public override object ProvideValue( IServiceProvider serviceProvider )
         {

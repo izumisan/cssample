@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarkupExtensionSample"
         mc:Ignorable="d"
-        Title="マークアップ拡張さんぷる" Height="300" Width="400">
+        Title="マークアップ拡張さんぷる" Height="350" Width="300">
     <StackPanel>
-        <Label Content="{local:FizzBuzzMarkup}"
-               FontSize="24"
-               HorizontalAlignment="Center"/>
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <Label Content="{local:FizzBuzzMarkup1}"/>
+
+        <Separator/>
+
+        <Label Content="{local:FizzBuzzMarkup2 Value=3}"/>
+        <Label Content="{local:FizzBuzzMarkup2 Value=4}"/>
+        <Label Content="{local:FizzBuzzMarkup2 Value=5}"/>
+
+        <Separator/>
+
+        <Label Content="{local:FizzBuzzMarkup3 9}"/>
+        <Label Content="{local:FizzBuzzMarkup3 10}"/>
+        <Label Content="{local:FizzBuzzMarkup3 11}"/>
+
     </StackPanel>
 </Window>
