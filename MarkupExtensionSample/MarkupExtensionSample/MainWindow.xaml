@@ -1,0 +1,36 @@
+﻿<Window x:Class="MarkupExtensionSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarkupExtensionSample"
+        mc:Ignorable="d"
+        Title="マークアップ拡張さんぷる" Height="350" Width="300">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+        </StackPanel.Resources>
+        
+        <!-- FizzBuzzMarkup1Extension -->
+        <!-- (末尾のExtensionは省略できる) -->
+        <Label Content="{local:FizzBuzzMarkup1}"/>
+
+        <Separator/>
+
+        <!-- FizzBuzzMarkup2Extension -->
+        <Label Content="{local:FizzBuzzMarkup2 Value=3}"/>
+        <Label Content="{local:FizzBuzzMarkup2 Value=4}"/>
+        <Label Content="{local:FizzBuzzMarkup2 Value=5}"/>
+
+        <Separator/>
+
+        <!-- FizzBuzzMarkup3Extension -->
+        <Label Content="{local:FizzBuzzMarkup3 9}"/>
+        <Label Content="{local:FizzBuzzMarkup3 10}"/>
+        <Label Content="{local:FizzBuzzMarkup3 11}"/>
+
+    </StackPanel>
+</Window>
