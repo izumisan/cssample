@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBehaviorsWpfSample", "XamlBehaviorsWpfSample\XamlBehaviorsWpfSample.csproj", "{05B1879E-41AB-4B7D-BF9E-1B7F7BEFB9DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlBehaviorsWpfSample2", "XamlBehaviorsWpfSample2\XamlBehaviorsWpfSample2.csproj", "{6940BE3A-5E55-410F-B9AF-B2BB9B1EEFF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{05B1879E-41AB-4B7D-BF9E-1B7F7BEFB9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B1879E-41AB-4B7D-BF9E-1B7F7BEFB9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B1879E-41AB-4B7D-BF9E-1B7F7BEFB9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6940BE3A-5E55-410F-B9AF-B2BB9B1EEFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6940BE3A-5E55-410F-B9AF-B2BB9B1EEFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6940BE3A-5E55-410F-B9AF-B2BB9B1EEFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6940BE3A-5E55-410F-B9AF-B2BB9B1EEFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

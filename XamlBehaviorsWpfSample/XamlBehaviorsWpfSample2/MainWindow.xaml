@@ -1,14 +1,23 @@
-﻿<Window x:Class="XamlBehaviorsWpfSample.MainWindow"
+﻿<Window x:Class="XamlBehaviorsWpfSample2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:XamlBehaviorsWpfSample2"
+        mc:Ignorable="d"
+        Title="XamlBehavirosWpf" Height="450" Width="800">
+    <!--
+    BlendSDKを使用した既存プログラムから、i, eiを置き換えただけ.
+    
+    [Before]
         xmlns:i ="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
-        xmlns:local="clr-namespace:XamlBehaviorsWpfSample"
-        mc:Ignorable="d"
-        Title="BlendSDK" Height="450" Width="800">
-
+    [After]
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:ei="http://schemas.microsoft.com/xaml/behaviors"
+    -->
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
@@ -28,7 +37,7 @@
         <Rectangle Grid.Row="0" Grid.Column="0"
                    Stroke="Green" StrokeThickness="5" RadiusX="20" RadiusY="20" Fill="LightGreen"
                    Margin="10,10,9.5,10" Grid.ColumnSpan="2">
-            <!-- BlendSDKのInvokeCommandActionにより、MouseEnter, MouseLeaveイベントをハンドリング -->
+            <!-- Microsoft.Xaml.Behaviors.InvokeCommandActionにより、MouseEnter, MouseLeaveイベントをハンドリング -->
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseEnter">
                     <i:InvokeCommandAction Command="{Binding MouseEnterCommand}"/>
@@ -39,7 +48,7 @@
             </i:Interaction.Triggers>
         </Rectangle>
         <TextBlock Grid.Row="0" Grid.Column="0" 
-                   Text="System.Windows.Interactivity.InvokeCommandAction"
+                   Text="Microsoft.Xaml.Behaviors.InvokeCommandAction"
                    FontSize="14" Foreground="Green" 
                    HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="36,96,34.5,96"/>
 
@@ -47,7 +56,7 @@
         <Rectangle Grid.Row="0" Grid.Column="2"
                    Stroke="Blue" StrokeThickness="5" RadiusX="20" RadiusY="20" Fill="LightBlue"
                    Margin="10.5,10,10,10">
-            <!-- BlendSDKのCallMethodActionにより、MouseEnter, MouseLeaveイベントをハンドリング -->
+            <!-- Microsoft.Xaml.Behaviors.Core.CallMethodActionにより、MouseEnter, MouseLeaveイベントをハンドリング -->
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseEnter">
                     <ei:CallMethodAction TargetObject="{Binding}" MethodName="OnMouseEnter"/>
@@ -58,7 +67,7 @@
             </i:Interaction.Triggers>
         </Rectangle>
         <TextBlock Grid.Row="0" Grid.Column="2" 
-                   Text="Microsoft.Expression.Interactivity.Core.CallMethodAction"
+                   Text="Microsoft.Xaml.Behaviors.Core.CallMethodAction"
                    FontSize="14" Foreground="Blue" 
                    HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24.5,96,25,96"/>
 
