@@ -1,0 +1,25 @@
+﻿<Window x:Class="Converter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Converter"
+        mc:Ignorable="d"
+        Title="Converter" Height="300" Width="400">
+    <Window.Resources>
+        <local:FizzBuzzConverter x:Key="FizzBuzzConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" 
+               Content="{Binding ElementName=_slider, Path=Value, Converter={StaticResource FizzBuzzConverter}}" 
+               FontSize="36"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Slider Grid.Row="1"
+                x:Name="_slider"
+                Minimum="0" Maximum="100" SmallChange="1"/>
+    </Grid>
+</Window>
