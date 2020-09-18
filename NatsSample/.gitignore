@@ -1,0 +1,3 @@
+# NatsSample/.gitignore
+
+/nats-server-*/

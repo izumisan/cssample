@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher", "Publisher\Publ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscriber", "Subscriber\Subscriber.csproj", "{36CC501F-9CAB-42A3-A6E7-F82AB18ABBBB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PubSub", "PubSub", "{0E287C47-E4A6-43BF-9D80-C47ABDFEA392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEA42694-FE98-4413-8E69-C219DA024418} = {0E287C47-E4A6-43BF-9D80-C47ABDFEA392}
+		{36CC501F-9CAB-42A3-A6E7-F82AB18ABBBB} = {0E287C47-E4A6-43BF-9D80-C47ABDFEA392}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F814E735-5C85-47B4-8E27-84D4C7B196A7}
