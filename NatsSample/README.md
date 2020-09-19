@@ -15,6 +15,17 @@
 公式ページによると、スループットはRabbitMQやKafkaに比較して大きい（see. https://nats.io/about/）
 
 
+# overview
+
+1. Pub/Subサンプル
+    - Publisherプログラムから送信したメッセージをSubsriberプログラムで受信するサンプル
+    - Subscriberプログラムを複数起動した場合、全てのSubscriberプログラムで受信する
+1. Request/Replyサンプル
+    - Requestorプログラムから送信したメッセージ内容に応じて、ReplierプログラムがFizzBuzzを返信するサンプル
+1. QueueGroupサンプル
+    - NATSがサポートしているQueueGroupメッセージモデルのサンプル
+    - Subscriberプログラムを複数起動した場合、特定のSubscriberプログラムのみがメッセージを受信する
+
 # NATS server
 
 - 起動
