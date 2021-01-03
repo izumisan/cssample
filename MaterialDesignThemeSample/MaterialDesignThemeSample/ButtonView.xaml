@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:MaterialDesignThemeSample"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="720" d:DesignWidth="800">
     <StackPanel>
         <Label Content="Button" FontSize="24"/>
         <StackPanel Orientation="Horizontal">
@@ -118,5 +118,95 @@
                 </materialDesign:ToggleButtonAssist.OnContent>
             </ToggleButton>
         </StackPanel>
+
+        <Label Content="Tool Button" FontSize="24"/>
+        <!-- メニューバーによくあるツールボタン -->
+        <ListBox Style="{StaticResource MaterialDesignToolToggleListBox}"
+                 SelectedIndex="0">
+            <ListBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="MaterialDesignToolToggleListBox" />
+                    <TextBlock Text="Exclusive selection" />
+                    <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                </StackPanel>
+            </ListBox.ToolTip>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Play" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Pause" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Stop" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="FastForward" />
+            </ListBoxItem>
+        </ListBox>
+
+        <!-- ツールボタン(縦配置) -->
+        <!-- materialDesign:ListBoxAssist.IsToggle="False"とすることで、
+             ラジオボタンのような挙動（どれか１つが選択されている）となる
+             (defaultはTrueなので、選択解除ができる) -->
+        <ListBox Style="{StaticResource MaterialDesignToolVerticalToggleListBox}"
+                 SelectedIndex="0"
+                 materialDesign:ListBoxAssist.IsToggle="False"
+                 Width="50"
+                 HorizontalAlignment="Left"
+                 Margin="10">
+            <ListBox.ToolTip>
+                <StackPanel>
+                    <TextBlock Text="MaterialDesignToolToggleListBox" />
+                    <TextBlock Text="Exclusive selection" />
+                    <TextBlock Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                </StackPanel>
+            </ListBox.ToolTip>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Play" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Pause" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="Stop" />
+            </ListBoxItem>
+            <ListBoxItem>
+                <materialDesign:PackIcon Kind="FastForward" />
+            </ListBoxItem>
+        </ListBox>
+
+        <!-- タブボタンのように、選択アイテムに下線が表示される -->
+        <StackPanel Orientation="Horizontal" Margin="4">
+            <RadioButton Content="FIRST" 
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="True" 
+                         Margin="4" />
+            <RadioButton Content="SECOND"
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="False"
+                         Margin="4" />
+            <RadioButton Content="THIRD"
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="False"
+                         Margin="4" />
+        </StackPanel>
+
+        <materialDesign:ColorZone Mode="PrimaryMid">
+            <StackPanel Orientation="Horizontal" 
+                        Margin="2">
+                <RadioButton Content="FIRST" 
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="True" 
+                         Margin="4" />
+                <RadioButton Content="SECOND"
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="False"
+                         Margin="4" />
+                <RadioButton Content="THIRD"
+                         Style="{StaticResource MaterialDesignTabRadioButton}"
+                         IsChecked="False"
+                         Margin="4" />
+            </StackPanel>
+        </materialDesign:ColorZone>
     </StackPanel>
 </UserControl>
