@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialDesignThemeSample",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialog", "Dialog\Dialog.csproj", "{72A88CFA-9FE6-4694-A91D-FCE900815405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dialog2", "Dialog2\Dialog2.csproj", "{7279A2EF-D1F4-4A90-AE04-D3A3B76C5846}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{72A88CFA-9FE6-4694-A91D-FCE900815405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72A88CFA-9FE6-4694-A91D-FCE900815405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72A88CFA-9FE6-4694-A91D-FCE900815405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7279A2EF-D1F4-4A90-AE04-D3A3B76C5846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7279A2EF-D1F4-4A90-AE04-D3A3B76C5846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7279A2EF-D1F4-4A90-AE04-D3A3B76C5846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7279A2EF-D1F4-4A90-AE04-D3A3B76C5846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
