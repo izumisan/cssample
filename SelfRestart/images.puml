@@ -1,0 +1,15 @@
+@startuml self-restart
+title Self Restart
+
+activate App
+App -> Restarter : 起動
+activate Restarter
+
+App -> App : 終了
+destroy App
+
+App <- Restarter : 起動
+activate App
+destroy Restarter
+
+@enduml
