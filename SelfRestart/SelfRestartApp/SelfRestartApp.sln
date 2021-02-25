@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfRestartApp", "SelfRestartApp\SelfRestartApp.csproj", "{0FC40E6F-870C-4AC2-8535-9D12DD9A9AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restarter", "Restarter\Restarter.csproj", "{3E8CADF9-C877-493D-A0C2-7F0BF64BEC28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC40E6F-870C-4AC2-8535-9D12DD9A9AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC40E6F-870C-4AC2-8535-9D12DD9A9AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC40E6F-870C-4AC2-8535-9D12DD9A9AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC40E6F-870C-4AC2-8535-9D12DD9A9AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8CADF9-C877-493D-A0C2-7F0BF64BEC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8CADF9-C877-493D-A0C2-7F0BF64BEC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8CADF9-C877-493D-A0C2-7F0BF64BEC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8CADF9-C877-493D-A0C2-7F0BF64BEC28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D91B3639-729A-419F-9666-DF6F9CFD600D}
+	EndGlobalSection
+EndGlobal
