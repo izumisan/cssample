@@ -1,0 +1,42 @@
+﻿<Window x:Class="ValidationSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValidationSample"
+        mc:Ignorable="d"
+        Title="Validationさんぷる" Height="400" Width="300">
+    
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <GroupBox Header="サンプル1">
+            <StackPanel>
+                <TextBox Text="{Binding Text1.Value, UpdateSourceTrigger=PropertyChanged}">
+                    <!-- エラーがある場合、エラーメッセージをツールチップに表示する -->
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Style.Triggers>
+                                <Trigger Property="Validation.HasError" Value="True">
+                                    <Setter Property="ToolTip"
+                                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors).CurrentItem.ErrorContent}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <Button Content="空文字でない場合に押せるボタン" Command="{Binding Command1}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="サンプル2">
+            <StackPanel>
+                <TextBox Text="{Binding Text2A.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Text="{Binding Text2B.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="両方が空文字でない場合に押せるボタン" Command="{Binding Command2}"/>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>
