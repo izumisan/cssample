@@ -12,30 +12,61 @@
     </Window.DataContext>
 
     <StackPanel>
+        <!--***** サンプル1 ***** -->
         <GroupBox Header="サンプル1">
             <StackPanel>
+                <!-- エラーがある場合、エラーメッセージをツールチップに表示するサンプル -->
                 <TextBox Text="{Binding Text1.Value, UpdateSourceTrigger=PropertyChanged}">
-                    <!-- エラーがある場合、エラーメッセージをツールチップに表示する -->
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Style.Triggers>
                                 <Trigger Property="Validation.HasError" Value="True">
                                     <Setter Property="ToolTip"
-                                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors).CurrentItem.ErrorContent}"/>
+                                            Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors).CurrentItem.ErrorContent}"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
                     </TextBox.Style>
                 </TextBox>
-                <Button Content="空文字でない場合に押せるボタン" Command="{Binding Command1}"/>
+                <Button Content="空文字でない場合に押せるボタン" 
+                        Command="{Binding Command1}"/>
             </StackPanel>
         </GroupBox>
 
+        <!--***** サンプル2 ***** -->
         <GroupBox Header="サンプル2">
+            <GroupBox.Resources>
+                <!-- TextBoxの右側にエラーメッセージを表示するErrorTemplateサンプル -->
+                <ControlTemplate x:Key="_validationTemplate">
+                    <StackPanel Orientation="Horizontal">
+                        <AdornedElementPlaceholder x:Name="adornedelem"/>
+                        <ItemsControl ItemsSource="{Binding AdornedElement.(Validation.Errors), ElementName=adornedelem}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ErrorContent}" Foreground="Red"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ControlTemplate>
+            </GroupBox.Resources>
             <StackPanel>
-                <TextBox Text="{Binding Text2A.Value, UpdateSourceTrigger=PropertyChanged}"/>
-                <TextBox Text="{Binding Text2B.Value, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Content="両方が空文字でない場合に押せるボタン" Command="{Binding Command2}"/>
+                <TextBox Text="{Binding Text2.Value, UpdateSourceTrigger=PropertyChanged}"
+                         Validation.ErrorTemplate="{StaticResource _validationTemplate}"
+                         Width="150"
+                         HorizontalAlignment="Left"/>
+                <Button Content="空文字でない場合に押せるボタン" 
+                        Command="{Binding Command2}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!--***** サンプル3 ***** -->
+        <GroupBox Header="サンプル3">
+            <StackPanel>
+                <TextBox Text="{Binding Text3A.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Text="{Binding Text3B.Value, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Content="両方が空文字でない場合に押せるボタン" 
+                        Command="{Binding Command3}"/>
             </StackPanel>
         </GroupBox>
     </StackPanel>

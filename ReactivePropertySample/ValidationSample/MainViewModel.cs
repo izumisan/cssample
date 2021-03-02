@@ -18,6 +18,7 @@ namespace ValidationSample
         {
             // サンプル1: SetValidateAttribute()によるバリデーション
             {
+                // SetValidateAttribute()に、ValidationAttributeが付与されたプロパティ（自プロパティ）取得式を指定する
                 Text1.SetValidateAttribute( () => Text1 );
 
                 Command1 = Text1
@@ -25,16 +26,27 @@ namespace ValidationSample
                     .Select( x => !x )
                     .ToReactiveCommand();
             }
-            // サンプル2: 複合条件によるバリデーション
+            // サンプル2: SetValidateNotifyError()によるバリデーション
             {
-                Text2A.SetValidateAttribute( () => Text2A );
-                Text2B.SetValidateAttribute( () => Text2B );
+                // SetValidateNotifyError()に、Validator（エラーがある場合はエラーメッセージを、エラーがない場合はnullを返す式）を指定する
+                // (SetValidateAttribute()とSetValidateNotifyError()の同時適用は不可)
+                Text2.SetValidateNotifyError( x => string.IsNullOrEmpty( x ) ? "Please input string." : null );
+
+                Command2 = Text2
+                    .ObserveHasErrors
+                    .Select( x => !x )
+                    .ToReactiveCommand();
+            }
+            // サンプル3: 複合条件によるバリデーション
+            {
+                Text3A.SetValidateAttribute( () => Text3A );
+                Text3B.SetValidateAttribute( () => Text3B );
 
                 // 両者のObserveHasErrorsを合成することで、複合条件によるバリデーションが可能
-                Command2 = new[]
+                Command3 = new[]
                 {
-                    Text2A.ObserveHasErrors.Select( x => !x ),
-                    Text2B.ObserveHasErrors.Select( x => !x )
+                    Text3A.ObserveHasErrors.Select( x => !x ),
+                    Text3B.ObserveHasErrors.Select( x => !x )
                 }
                 .CombineLatestValuesAreAllTrue()
                 .ToReactiveCommand();
@@ -45,10 +57,13 @@ namespace ValidationSample
         public ReactiveProperty<string> Text1 { get; set; } = new ReactiveProperty<string>( string.Empty );
         public ReactiveCommand Command1 { get; } = null;
 
-        [Required]
-        public ReactiveProperty<string> Text2A { get; } = new ReactiveProperty<string>( string.Empty );
-        [Required]
-        public ReactiveProperty<string> Text2B { get; } = new ReactiveProperty<string>( string.Empty );
+        public ReactiveProperty<string> Text2 { get; set; } = new ReactiveProperty<string>( string.Empty );
         public ReactiveCommand Command2 { get; } = null;
+
+        [Required]
+        public ReactiveProperty<string> Text3A { get; } = new ReactiveProperty<string>( string.Empty );
+        [Required]
+        public ReactiveProperty<string> Text3B { get; } = new ReactiveProperty<string>( string.Empty );
+        public ReactiveCommand Command3 { get; } = null;
     }
 }
