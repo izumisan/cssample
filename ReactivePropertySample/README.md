@@ -14,6 +14,8 @@ ReactivePropertyのサンプル
 - ReactivePropertySample3
     - ReactivePropertyの基礎（その3）
     - ReactivePropertyによる値の検証
+- ValidationSample
+    - ReactivePropertyによる入力値検証サンプル
 - ObservableSample
     - IObservable\<T\>の生成（その1）
         - Observable.Repeat()
