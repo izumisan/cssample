@@ -5,6 +5,15 @@
 自プログラムを再起動する場合は、
 自身を起動するための別プログラムを起動した後、自分は終了し、その別プログラムに起こしてもらうという方法が一般的らしいので実装してみた
 
-# overview
 
 ![](./images/self-restart.png)
+
+# overview
+
+- SelfRestartApp
+    - 再起動するプログラム
+- Restarter
+    - 「再起動するプログラム」から起動され、「再起動するプログラム」を起動するプログラム
+- restart.ps1
+    - Restarterのpowershell版
+
