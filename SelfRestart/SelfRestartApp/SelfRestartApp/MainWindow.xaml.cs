@@ -28,17 +28,30 @@ namespace SelfRestartApp
         {
             InitializeComponent();
 
-            this.label.Content = $"PID: { PID }";
+            this.ProcessIdLabel.Content = $"PID: { PID }";
         }
 
         public int PID => Process.GetCurrentProcess().Id;
 
-        private void Button_Click( object sender, RoutedEventArgs e )
+        private void RestarterEXE_Clicked( object sender, RoutedEventArgs e )
         {
-            // 自身を起動するようにResterterを起動する
+            // Resterter.exeを起動し、自身を再起動してもらう
             var process = Process.GetCurrentProcess();
             var args = $"{ process.MainModule.FileName } { process.Id }";
             Process.Start( "Restarter.exe", args );
+
+            Thread.Sleep( 5000 );  // 動作確認用ウェイト
+
+            Application.Current.Shutdown();
+        }
+
+        private void RestarterPS1_Clicked( object sender, RoutedEventArgs e )
+        {
+            // restarter.ps1を実行し、自身を再起動してもらう
+            var process = Process.GetCurrentProcess();
+            var args = $"-ExecutionPolicy RemoteSigned -File restarter.ps1 { process.MainModule.FileName } { process.Id }";
+
+            Process.Start( "powershell.exe", args );
 
             Thread.Sleep( 5000 );  // 動作確認用ウェイト
 

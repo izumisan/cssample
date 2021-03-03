@@ -5,12 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SelfRestartApp"
         mc:Ignorable="d"
-        Title="自己再起動さんぷる" Height="250" Width="400">
-    <Grid>
-        <Label x:Name="label"/>
-        <Button Content="Restart" 
-                Click="Button_Click"
+        Title="自己再起動さんぷる" Height="350" Width="400">
+    <StackPanel>
+        <Label x:Name="ProcessIdLabel" Height="50"/>
+        
+        <Button Content="Restarter.exe" 
+                Click="RestarterEXE_Clicked"
                 Width="200" 
                 Height="100"/>
-    </Grid>
+
+        <Button Content="restarter.ps1" 
+                Click="RestarterPS1_Clicked"
+                Width="200" 
+                Height="100"/>
+    </StackPanel>
 </Window>
