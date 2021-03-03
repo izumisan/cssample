@@ -28,22 +28,7 @@ namespace Restarter
                 programPath = args.ElementAt( 0 );
                 processId = int.Parse( args.ElementAt( 1 ) );
 
-                Restart( programPath, processId );
-            }
-        }
-
-        private static void Restart( string path, int pid )
-        {
-            if ( File.Exists( path ) )
-            {
-                var monitorProcess = Process.GetProcesses().FirstOrDefault( p => p.Id == pid );
-                if ( monitorProcess != null )
-                {
-                    Console.WriteLine( $"waiting... pid: { pid }" );
-                    monitorProcess.WaitForExit( 60000 );  // 60000 msec = 60 sec
-                }
-
-                Process.Start( path );
+                Restarter.Restart( programPath, processId );
             }
         }
     }
