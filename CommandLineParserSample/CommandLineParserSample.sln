@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1401
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParserSample", "CommandLineParserSample\CommandLineParserSample.csproj", "{963FBCB1-DA28-4052-9B3D-32EDECDC58E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParserSample2", "CommandLineParserSample2\CommandLineParserSample2.csproj", "{927E4BB2-6999-4896-8557-E746A746C8D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{963FBCB1-DA28-4052-9B3D-32EDECDC58E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{963FBCB1-DA28-4052-9B3D-32EDECDC58E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{963FBCB1-DA28-4052-9B3D-32EDECDC58E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{927E4BB2-6999-4896-8557-E746A746C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927E4BB2-6999-4896-8557-E746A746C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927E4BB2-6999-4896-8557-E746A746C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927E4BB2-6999-4896-8557-E746A746C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
