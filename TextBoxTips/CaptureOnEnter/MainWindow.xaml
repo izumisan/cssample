@@ -1,0 +1,32 @@
+﻿<Window x:Class="CaptureOnEnter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:CaptureOnEnter"
+        mc:Ignorable="d"
+        Title="Capture on Enter Behavior" 
+        Height="300" Width="400">
+    
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <!-- ***** UI ***** -->
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock Text="{Binding Text.Value}" FontSize="48"/>
+        
+        <!-- 
+            Enterキー押下でバイディングソースを更新するビヘイビア
+        -->
+        <TextBox Text="{Binding Text.Value}" FontSize="24">
+            <i:Interaction.Behaviors>
+                <local:CaptureOnEnterBehavior/>
+            </i:Interaction.Behaviors>
+        </TextBox>
+
+        <!-- フォーカス移動用のダミーボタン -->
+        <Button Content="Clear" Command="{Binding ClearCommand}" FontSize="24"/>
+    </StackPanel>
+</Window>
