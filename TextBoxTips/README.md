@@ -5,9 +5,15 @@ TextBoxのEnterキー押下で入力を確定（VMへ反映）する実装サン
 # overview
 
 - TextBoxDeterminedOnEnter
-    - Enterキー押下でVMのコマンドを実行し、VM側でプロパティを更新する実装パターン
+    - Commandによる実装パターン
+    - Enterキー押下でVMのコマンドを実行し、VM側でプロパティを更新する
 - CaptureOnEnter
-    - Enterキー押下でTextBox.Textプロパティのバイディングソースを更新するビヘイビア
+    - ビヘイビアによる実装パターン
+    - Enterキー押下でTextBox.Textプロパティのバイディングソースを更新する
+- CaptureOnEnter2
+    - 添付ビヘイビアによる実装パターン
+    - Enterキー押下でTextBox.Textプロパティのバイディングソースを更新する
+
 # 参考
 
 - [Capturing the Enter key in a TextBox - Stack overflow](https://stackoverflow.com/questions/5556489/capturing-the-enter-key-in-a-textbox)
