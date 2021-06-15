@@ -1,8 +1,10 @@
 # gRPC
 
+GoogleによるRPC(Remote Procedure Call)を実現したプロトコル
+
 # overview
 
-## Basic
+## 1. Basic
 
 gRPCの基本的な使い方
 
@@ -11,6 +13,14 @@ gRPCの基本的な使い方
 - Basic.Server
 - Basic.Client
 
+## 2. Calculator
+
+1つのサービスに複数のメソッドを定義したサンプル
+
+- Calculator.Server
+- Calculator.Client
+- Calculator.Shared
+
 # 備忘録
 
 - protoファイルの自動コンバート
@@ -18,6 +28,23 @@ gRPCの基本的な使い方
     - プロジェクトにprotoファイルを追加した後、`<None Include="protos\foo.proto" />` の部分を `<Protobuf Include="protos\foo.proto" />` のようにタグを変更する
     - ビルド実行により、protoファイルからcsファイル（ProtocolBuffer, gRPC用クラス）が自動生成、ビルドされる
         - 自動生成されたcsファイルは、`obj`ディレクトリ下に生成されている
+- `foo.proto` から `Foo.cs` と `FooGrpc.cs` が生成される
+    - `Foo.cs`には、Protobuf用のクラスが既定されている
+        - `message`で定義したクラス
+    - `FooGrpc.cs`には、gRPC用のクラスが既定されている
+        - `{サービス名}` クラス
+        - `{サービス名}.{サービス名}Base` クラス
+        - `{サービス名}.{サービス名}Client` クラス
+- 実装手順（サーバー側）
+    1. `{サービス名}.{サービス名}Base`クラスを継承したサービスクラスを作成する
+    1. サービスクラスで、protoファイルで定義した関数を実装する
+    1. `Grpc.Core.Server`を生成する
+        - `Grpc.Core.Server`に、作成したサービスクラスを登録する
+    1. 生成したサーバーを開始する
+- 実装手順（クライアント側）
+    1. `Grpc.Core.Channel`を生成する
+    1. `{サービス名}.{サービス名}Client`を生成する
+        - このクライアントを介して、サービスクラスの関数を呼び出す
 
 # 参考
 
