@@ -10,7 +10,7 @@ namespace Calculator.Server
 {
     class Program
     {
-        public static int Port => 5678;
+        public static int Port => 27182;
 
         static void Main( string[] args )
         {

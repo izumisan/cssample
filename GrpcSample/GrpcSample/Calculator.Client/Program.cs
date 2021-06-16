@@ -10,9 +10,11 @@ namespace Calculator.Client
 {
     class Program
     {
+        public static int Port => 27182;
+
         static void Main( string[] args )
         {
-            Channel channel = new Channel( "127.0.0.1:5678", ChannelCredentials.Insecure );
+            Channel channel = new Channel( $"127.0.0.1:{ Port }", ChannelCredentials.Insecure );
 
             var client = new Calculator.CalculatorClient( channel );
 
