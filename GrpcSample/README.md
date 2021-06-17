@@ -2,6 +2,10 @@
 
 GoogleによるRPC(Remote Procedure Call)を実現したプロトコル
 
+- [gRPC](https://grpc.io/)
+    - [Quick start - C#](https://www.grpc.io/docs/languages/csharp/quickstart/)
+    - [Basics tutorial - C#](https://www.grpc.io/docs/languages/csharp/basics/)
+
 # overview
 
 ## 1. Basic
@@ -20,6 +24,27 @@ gRPCの基本的な使い方
 - Calculator.Server
 - Calculator.Client
 - Calculator.Shared
+
+## 3. MultiService
+
+複数サービスのサンプル
+
+- MultiService.Server
+- MultiService.Client
+- MultiService.Proto
+
+# 通信方式
+
+1. Simple RPC
+    - 1リクエスト / 1レスポンス
+1. Server-side streaming RPC
+    - 1リクエスト / 複数レスポンス
+1. Client-side streaming RPC
+    - 複数リクエスト / 1レスポンス
+1. Bidirectional streaming RPC
+    - 双方向ストリーミング
+
+[Implementing RouteGuide - gRPC](https://www.grpc.io/docs/languages/csharp/basics/#implementing-routeguide)
 
 # 備忘録
 
@@ -46,8 +71,10 @@ gRPCの基本的な使い方
     1. `{サービス名}.{サービス名}Client`を生成する
         - このクライアントを介して、サービスクラスの関数を呼び出す
 
-# 参考
+# Link
 
 - [C# を使用した gRPC サービス - Microsoft docs](https://docs.microsoft.com/ja-jp/aspnet/core/grpc/basics?view=aspnetcore-5.0)
 - [gRPC C#環境を作成する - Qiita](https://qiita.com/muroon/items/4e12dde47b9e8b1e94d3)
 - [gRPC / MagicOnion 入門 (2) - 4 種類の通信方式](https://blog.xin9le.net/entry/2017/06/11/182515)
+- [Protocol Buffers/gRPC Codegen Integration Into .NET Build](https://github.com/grpc/grpc/blob/master/src/csharp/BUILD-INTEGRATION.md)
+    - `Grpc.Tools` についてのページ
