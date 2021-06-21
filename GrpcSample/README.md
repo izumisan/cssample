@@ -33,6 +33,15 @@ gRPCの基本的な使い方
 - MultiService.Client
 - MultiService.Proto
 
+## 4. ServerStreamingRpc
+
+Server-side streaming RPC のサンプル  
+1リクエストに対し、5レスポンスしている
+
+- ServerStreamingRpc.Server
+- ServerStreamingRpc.Client
+- ServerStreamingRpc.Shared
+
 # 通信方式
 
 1. Simple RPC
