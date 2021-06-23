@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Grpc.Core;
-using ServerStreamingRpc;
 
 namespace ServerStreamingRpc.Client
 {
@@ -23,9 +22,12 @@ namespace ServerStreamingRpc.Client
             var ret = new List<int>();
 
             var req = new FooRequest { Value = value };
-            using ( var call = _client.GetFooList( req ) )
+            using ( var call = _client.GetFooList( req ) )  // リクエストの送信
             {
+                // リクエストに対するレスポンスは、ResponseStreamプロパティで取得できる
+                // (レスポンスは、キューとして取得される)
                 IAsyncStreamReader<FooResponse> resstream = call.ResponseStream;
+
                 while ( await resstream.MoveNext() )
                 {
                     var res = resstream.Current;

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Grpc.Core;
-using ServerStreamingRpc;
 
 namespace ServerStreamingRpc.Server
 {
@@ -15,6 +14,7 @@ namespace ServerStreamingRpc.Server
         {
             for ( int i = 0; i < 5; ++i )
             {
+                // リクエストに対するレスポンスは、IServerStreamWriter<T>に書き込む
                 await responseStream.WriteAsync( new FooResponse { Value = request.Value + i } );
             }
         }

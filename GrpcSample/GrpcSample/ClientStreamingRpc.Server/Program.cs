@@ -8,6 +8,11 @@ using Grpc.Core;
 
 namespace ClientStreamingRpc.Server
 {
+    /// <summary>
+    /// Client-side streaming RPC のサンプルプログラム（サーバー側）
+    /// 
+    /// クライアントからの複数リクエストに対し、1レスポンスを返す
+    /// </summary>
     class Program
     {
         public static int Port => 27182;
