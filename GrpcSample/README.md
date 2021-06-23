@@ -36,11 +36,20 @@ gRPCの基本的な使い方
 ## 4. ServerStreamingRpc
 
 Server-side streaming RPC のサンプル  
-1リクエストに対し、5レスポンスしている
+1リクエストに対し、5レスポンス得る
 
 - ServerStreamingRpc.Server
 - ServerStreamingRpc.Client
 - ServerStreamingRpc.Shared
+
+## 5. ClientStreamingRpc
+
+Client-side streaming RPC のサンプル  
+複数リクエストに対し、1レスポンスを得る
+
+- ClientStreamingRpc.Server
+- ClientStreamingRpc.Client
+- ClientStreamingRpc.Shared
 
 # 通信方式
 
