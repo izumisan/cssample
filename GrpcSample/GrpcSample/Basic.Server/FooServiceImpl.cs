@@ -26,6 +26,7 @@ namespace Basic.Server
         string value = 1;
     }
     */
+
     // protoファイルから自動生成された`FooService.FooServiceBase`を継承した
     // サービスクラスを定義し、関数を実装する
 

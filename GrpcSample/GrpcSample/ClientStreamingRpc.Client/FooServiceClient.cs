@@ -25,10 +25,14 @@ namespace ClientStreamingRpc.Client
             {
                 foreach ( var req in requests )
                 {
+                    // リクエストは、RequestStreamを使って順次書き込む
                     await call.RequestStream.WriteAsync( req );
                 }
+
+                // リクエスト完了を通知するため、CompleteAsync()を呼び出す
                 await call.RequestStream.CompleteAsync();
 
+                // サーバーからのレスポンスは、ResponseAsyncプロパティで取得できる
                 response = await call.ResponseAsync;
             }
 

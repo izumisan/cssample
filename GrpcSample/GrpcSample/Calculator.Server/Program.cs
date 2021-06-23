@@ -8,6 +8,9 @@ using Grpc.Core;
 
 namespace Calculator.Server
 {
+    /// <summary>
+    /// 1サービスに複数メソッドを定義したサンプルプログラム（サーバー側）
+    /// </summary>
     class Program
     {
         public static int Port => 27182;

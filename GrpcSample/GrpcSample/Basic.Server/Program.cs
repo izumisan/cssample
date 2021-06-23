@@ -10,6 +10,7 @@ using Grpc.Core;
 // 
 // 1. protoファイルより自動生成された`FooService.FooServiceBase`を継承したサービスクラスを実装する
 // 2. 作成したサービスクラスを`Grpc.Core.Server`に登録する
+// 3. サーバー(`Grpc.Core.Server`)を起動する
 
 namespace Basic.Server
 {

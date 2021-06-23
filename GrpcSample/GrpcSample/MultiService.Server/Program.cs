@@ -8,6 +8,9 @@ using Grpc.Core;
 
 namespace MultiService.Server
 {
+    /// <summary>
+    /// 複数サービスを有するgRPCサーバーのサーバー側プログラム
+    /// </summary>
     class Program
     {
         public static int Port => 27182;

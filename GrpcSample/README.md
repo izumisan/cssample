@@ -89,6 +89,22 @@ Client-side streaming RPC のサンプル
     1. `{サービス名}.{サービス名}Client`を生成する
         - このクライアントを介して、サービスクラスの関数を呼び出す
 
+# nuget
+
+- サーバープログラム / クライアントプログラム
+    - **Grpc**
+    - Grpc.Core
+    - Grpc.Core.Api
+    - **Google.Protobuf**
+    - etc.
+- protobufによる自動生成コードを含むライブラリプロジェクト
+    - **Grpc**
+    - Grpc.Core
+    - Grpc.Core.Api
+    - **Grpc.Tools**  （ビルド時にprotoファイルからコードを自動生成する場合）
+    - **Google.Protobuf**
+    - etc.
+
 # Link
 
 - [C# を使用した gRPC サービス - Microsoft docs](https://docs.microsoft.com/ja-jp/aspnet/core/grpc/basics?view=aspnetcore-5.0)

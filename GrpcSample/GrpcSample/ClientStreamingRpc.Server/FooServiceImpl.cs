@@ -12,6 +12,9 @@ namespace ClientStreamingRpc.Server
     {
         public override async Task<FooResponse> Total( IAsyncStreamReader<FooRequest> requestStream, ServerCallContext context )
         {
+            // クライアントからの複数リクエストはQueueとして引数で渡されるので、
+            // Queueからリクエストを取り出し、レスポンスを返す
+
             int total = 0;
             while ( await requestStream.MoveNext() )
             {
