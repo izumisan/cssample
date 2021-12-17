@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1259
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpReceiver", "UdpReceiver\UdpReceiver.csproj", "{6D439C86-164D-42C4-97A3-98C7786F54E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpSender", "UdpSender\UdpSender.csproj", "{041898B2-9F82-46BF-93C3-7AC275096449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udp.Shared", "Udp.Shared\Udp.Shared.csproj", "{CD7FC500-2A44-409E-808E-EBA5304460D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D439C86-164D-42C4-97A3-98C7786F54E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D439C86-164D-42C4-97A3-98C7786F54E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D439C86-164D-42C4-97A3-98C7786F54E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D439C86-164D-42C4-97A3-98C7786F54E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041898B2-9F82-46BF-93C3-7AC275096449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041898B2-9F82-46BF-93C3-7AC275096449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041898B2-9F82-46BF-93C3-7AC275096449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041898B2-9F82-46BF-93C3-7AC275096449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD7FC500-2A44-409E-808E-EBA5304460D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7FC500-2A44-409E-808E-EBA5304460D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7FC500-2A44-409E-808E-EBA5304460D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7FC500-2A44-409E-808E-EBA5304460D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {442B0124-4DE7-400E-8D8D-D49A9F3AADBD}
+	EndGlobalSection
+EndGlobal
