@@ -14,6 +14,9 @@
 - ValueSample
     - `Value属性`サンプル
     - `Value属性`に指定するindexは、引数の並び順を表す数値であり、引数リストのインデックスではない
+- VerbSample
+    - `Verb属性`サンプル
+    - オプションクラスに`VerbAttribute`を付加することで、サブコマンドとなる
 
 # 備忘録
 
